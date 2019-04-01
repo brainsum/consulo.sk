@@ -9,41 +9,120 @@
 
 .view-id-consulo_frontpage {
   .slick_slider {
-    position: relative;
-    button {
+    .slick-prev,
+    .slick-next {
+      @include translate(0, -50%);
+      border: 0;
+      background-color: transparent;
       position: absolute;
       top: 50%;
       z-index: 999;
-      &.slick-prew {
-        left: 0;
+      display: none !important;
+      &:focus {
+        border: 0;
+        outline: 0;
       }
-      &.slick-next {
-        right: 0;
+      @include breakpoint(medium) {
+        display: inline-block !important;
       }
+    }
+    .slick-prev {
+      left: 4.5rem;
+    }
+    .slick-next {
+      right: 4.5rem;
     }
     .slick-dots {
+      @include flex;
+      @include flex-direction(row);
       position: absolute;
-      bottom: 20%;
-      right: 30%;
+      bottom: 25%;
+      right: 3.6rem;
+      display: none !important;
+      @include breakpoint(medium) {
+        display: flex !important;
+      }
+      li {
+        list-style: none;
+        button {
+          text-indent: -9999px;
+          width: 11px;
+          height: 11px;
+          border-radius: 50%;
+          background-color: $c--grey;
+          border: 0;
+          margin: 0 6px;
+          white-space: nowrap;
+          overflow: hidden;
+        }
+        &.slick-active {
+          button {
+            background-color: $c--primary-red;
+          }
+        }
+      }
+    }
+    .slick-background {
+      position: absolute;
     }
     .slider-item {
-      position: relative;
-      img {
-        width: 100vw;
-        max-width: 100vw;
-        height: auto;
-      }
       .slider-text-holder {
-        position: absolute;
-        left: 60%;
-        top: 0;
-        bottom: 0;
-        max-width: 30%;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+
+          background-color: $c--light-grey;
+          padding: 3rem;
+          max-width: 80%;
+          margin: -5rem auto 0;
+          z-index: 99;
+          text-align: center;
+
+        @include breakpoint(medium) {
+          position: absolute;
+          left: 60%;
+          top: 0;
+          bottom: 0;
+          max-width: 30%;
+          height: 100vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          background-color: transparent;
+          padding: 0;
+          text-align: left;
+          margin: auto;
+        }
       }
     }
   }
 }
+
+.carousel-image-cover {
+  position: relative;
+  width: 100vw;
+  height: 50vh;
+  display: block;
+  z-index: -1;
+  @include breakpoint(medium) {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+    width: auto;
+    height: auto;
+    z-index: 0;
+  }
+}
+
+.carousel-image {
+  z-index: 0;
+  height: 100%;
+  width: 100%;
+  background: no-repeat top left;
+  background-size: cover;
+}
+
+.slick-slide {
+  height: 100vh !important;
+}
+

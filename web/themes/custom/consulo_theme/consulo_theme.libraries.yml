@@ -2,6 +2,7 @@ global-styling:
   css:
     base:
       css/base.css: {}
+      //use.fontawesome.com/releases/v5.8.1/css/all.css: { external: true }
     layout:
       css/layout.css: {}
     component:
@@ -10,6 +11,10 @@ global-styling:
       css/theme.css: {}
   js:
     js/dist/theme.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/modernizr
 slick_slider:
   css:
     theme:

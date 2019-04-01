@@ -70,29 +70,26 @@
  *   in different view modes.
  */
 #}
-{#{%
-  set classes = [
-    'node',
-    'node--type-' ~ node.bundle|clean_class,
-    node.isPromoted() ? 'node--promoted',
-    node.isSticky() ? 'node--sticky',
-    not node.isPublished() ? 'node--unpublished',
-    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
-  'slider-content-holder slider-item'
-  ]
-%}#}
 
 {{ attach_library('consulo_theme/slick_slider') }}
 
-
-
-    {{ content.field_slider_image }}
+<div class="slider-item">
+    <div class="carousel-image-cover">
+        <div style="background-image:url({{ content.field_slider_image[0]['#markup'] }})" class="carousel-image"></div>
+    </div>
     <div class="slider-text-holder">
-      <h2>{{ label }}</h2>
+        {% if content.field_slider_link[0] %}
+            <a href="{{ content.field_slider_link[0]['#url'] }}"><h2>{{ label }}</h2></a>
+        {% else %}
+            <h2>{{ label }}</h2>
+        {% endif %}
+
       <div class="slider-description">
         {{ content.body }}
       </div>
-      {{ content.field_slider_link }}
+    {% if content.field_slider_link[0] %}
+        {{ content.field_slider_link }}
+    {% endif %}
     </div>
 
-
+</div>

@@ -13,6 +13,10 @@
     @include flex;
     @include flex-direction(row);
     @include justify-content(flex-start);
+    display: none;
+    @include breakpoint(medium) {
+      @include flex;
+    }
   }
   .menu-item {
     &:not(:last-child) {

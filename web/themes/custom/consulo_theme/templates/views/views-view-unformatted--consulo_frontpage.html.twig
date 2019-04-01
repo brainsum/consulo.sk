@@ -15,15 +15,11 @@
  * @see template_preprocess_views_view_unformatted()
  */
 #}
+
 <div class="slick_slider">
   {% for row in rows %}
-    {%
-      set row_classes = [
-        default_row_class ? 'slider-item',
-      ]
-    %}
-    <div{{ row.attributes.addClass(row_classes) }}>
+
       {{- row.content -}}
-    </div>
+
   {% endfor %}
 </div>

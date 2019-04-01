@@ -27,11 +27,17 @@
 /** Slider **/
 
 .slider-text-holder {
+  a,
   h2 {
+    @include transition(all .3s);
     font-family: $font--playfair;
     font-size: $fs--mega;
     font-weight: $fw--100;
     margin-bottom: 1.3rem;
+    color: $c--primary-brown;
+  }
+  a:hover h2 {
+    color: $c--primary-red;
   }
   .slider-description {
     font-family: $font--rubik;
