@@ -1,0 +1,18 @@
+uuid: fd11af7e-08e0-4144-8a95-0b1e7b30492c
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.frontpage_slider
+id: node.frontpage_slider.title
+field_name: title
+entity_type: node
+bundle: frontpage_slider
+label: Slider
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

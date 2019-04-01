@@ -1,0 +1,25 @@
+uuid: 0b335b17-e00e-4321-8d04-011b354bf734
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:d2c4f9de-b830-42df-a4fe-fc59ab73622d'
+  module:
+    - block_content
+  theme:
+    - consulo_theme
+id: footer
+theme: consulo_theme
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:d2c4f9de-b830-42df-a4fe-fc59ab73622d'
+settings:
+  id: 'block_content:d2c4f9de-b830-42df-a4fe-fc59ab73622d'
+  label: Footer
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

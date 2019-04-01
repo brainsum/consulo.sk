@@ -1,0 +1,20 @@
+/**
+ * @file
+ * Site Header
+ *
+ * Header is not a component, it's a layout section. Therefore all header
+ * related styles, rules come here except what has an independent component, ie.
+ * Navigation component.
+ */
+
+.region-header {
+  @include flex;
+  @include flex-direction(row);
+  @include justify-content(space-between);
+  padding: 0 4.4rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}

@@ -1,0 +1,276 @@
+@charset "UTF-8";
+/**
+ * @file
+ * SMACSS: layout
+ *
+ * Design-patterns, and macro arrangement of a web page,
+ * including any grid systems.
+ *
+ * ITCSS: objects
+ */
+/**
+ * Imports
+ * First import our custom variables and mixins
+ */
+/**
+ * @file
+ * Sass index file
+ *
+ * The main importer and organizer sass file.
+ *
+ */
+/**
+ * Settings
+ *
+ * Setting files contain **global** configurations that are shared by more than
+ * one modules.
+ * Settings that are connected to one and only module are a part of the module
+ * itself.
+ * Local configurations should be contained into the modules (objects,
+ * components, etc.) that are related to.
+ */
+/**
+ * @file
+ * Settings
+ *
+ * Setting files contain **global** configurations that are shared by more than
+ * one modules. Settings that are connected to one and only module are a part
+ * of the module itself.
+ * Local configurations should be contained into the modules (objects,
+ * components, etc.) that are related to.
+ * It’s important not to output any CSS in the first 2 layers.
+ */
+/**
+ * @file
+ * Breakpoint Settings
+ *
+ * - Define breakpoint variables
+ */
+/**
+ * @file
+ * Color Settings
+ *
+ * - Define color variables
+ */
+/**
+ * @file
+ * Breakpoint Settings
+ *
+ * - Define breakpoint variables
+ */
+/**
+ * @file
+ * Typography Settings
+ *
+ * - Import Webfonts
+ * - Define Font-families
+ * - Define Typography-related global variables
+ */
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display");
+@import url("https://fonts.googleapis.com/css?family=Rubik:400,500,700");
+/**
+ * Tools
+ *
+ * Globally used mixins and functions.
+ * It’s important not to output any CSS in the first 2 layers.
+ */
+/**
+ * @file
+ * Tools
+ *
+ * Tools are sets of globally used sass mixins and functions. Mixins that are
+ * connected to one and only module are a part of the module itself.
+ * It’s important not to output any CSS in the first 2 layers.
+ */
+/**
+ * @file
+ *** FOUNDATION FOR SITES AND CUSTOM MIXINS
+ */
+/**
+ * @group Foundation for Sites mixins
+ * Mixins placeholder file
+ * @todo These are mostly from Foundation and should be removed and used straight from Foundation.
+ */
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/**
+ * Horizontally or vertically aligns the items within a flex container.
+ *
+ * @param {Keyword} $x [null] - Horizontal alignment to use. Can be `left`,
+ * `right`, `center`, `justify`, or `spaced`. Or, set it to `null`
+ * (the default) to not set horizontal alignment.
+ * @param {Keyword} $y [null] - Vertical alignment to use. Can be `top`,
+ * `bottom`, `middle`, or `stretch`. Or, set it to `null` (the default) to not
+ * set vertical alignment.
+ */
+/**
+ * Vertically align a single column within a flex row. Apply this mixin to a
+ * flex column.
+ *
+ * @param {Keyword} $y [null] - Vertical alignment to use. Can be `top`,
+ * `bottom`, `middle`, or `stretch`. Or, set it to `null` (the default) to not
+ * set vertical alignment.
+ */
+/**
+ * Changes the source order of a flex child. Children with lower numbers appear
+ * first in the layout.
+ *
+ * @param {Number} $order [0] - Order number to apply.
+ */
+/**
+ * Change flex-direction
+ *
+ * @param {Keyword} $direction [row] - Flex direction to use. Can be
+ * - row (default): same as text direction
+ * - row-reverse: opposite to text direction
+ * - column: same as row but top to bottom
+ * - column-reverse: same as row-reverse top to bottom
+ */
+/**
+ * @include flex-wrap(nowrap | wrap | wrap-reverse);
+ * Default: nowrap
+ */
+/**
+ * @include flex-flow(values);
+ * Default: row nowrap
+ */
+/**
+ * @include order(int);
+ * Default: 0
+ */
+/**
+ * @include flex-grow(int);
+ * Default: 1
+ */
+/**
+ * @include flex-shrink(int);
+ * Default: 0
+ */
+/**
+ * @include flex-basis(int);
+ * Default: auto
+ */
+/**
+ * @include justify-content(flex-start | flex-end | center | space-between
+ * | space-around);
+ * Default: flex-start
+ */
+/**
+ * @include align-items(flex-start | flex-end | center | baseline | stretch);
+ * Default: stretch
+ */
+/**
+ * @include align-self(auto | flex-start | flex-end | center | baseline | stretch);
+ * Default: auto
+ */
+/**
+ * @include align-content(flex-start | flex-end | center | space-between | space-around | stretch);
+ * Default: stretch
+ */
+/**
+ * @group theming mixins
+ */
+/**
+ * Utilities
+ *
+ * Utilities and helper classes with ability to override anything which goes
+ * before in the triangle, eg. hide helper class.
+ * They are usually one line of code and have !important to make sure they
+ * override all element styles when used.
+ */
+/**
+ * Layout
+ *
+ * Class-based selectors which define undecorated design patterns,
+ * for example media object known from OOCSS. They provide structure to your
+ * content, do not contain any cosmetic CSS and they should never been directly
+ * overwritten.
+ * This is the first layer in which we find class-based selectors. These are
+ * concerned with styling non-cosmetic design patterns, or 'objects'. Objects
+ * can range from something as simple as a .wrapper element, to layout systems,
+ * through to things.
+ */
+/**
+ * @file
+ * Site Footer
+ *
+ * Footer is not a component, it's a layout section. Therefore all footer
+ * related styles, rules come here except what has an independent component, ie.
+ * Scroll to Top button.
+ */
+.region-footer {
+  height: 4rem;
+  background-color: #564b59;
+  padding: 0 4.4rem;
+}
+
+.region-footer #block-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.path-frontpage .region-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: rgba(86, 75, 89, 0.5);
+}
+
+/**
+ * @file
+ * Site Header
+ *
+ * Header is not a component, it's a layout section. Therefore all header
+ * related styles, rules come here except what has an independent component, ie.
+ * Navigation component.
+ */
+.region-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+  -font-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0 4.4rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+/**
+ * @file
+ * Site Content
+ *
+ *
+ */
+.path-frontpage {
+  overflow: hidden;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibGF5b3V0LmNzcyIsInNvdXJjZXMiOlsibGF5b3V0LnNjc3MiLCJfaW5kZXguc2NzcyIsIjEuc2V0dGluZ3MvX3NldHRpbmdzLmFsbC5zY3NzIiwiMS5zZXR0aW5ncy9fc2V0dGluZ3MuYnJlYWtwb2ludHMuc2NzcyIsIjEuc2V0dGluZ3MvX3NldHRpbmdzLmNvbG9ycy5zY3NzIiwiMS5zZXR0aW5ncy9fc2V0dGluZ3MuZ3JpZC5zY3NzIiwiMS5zZXR0aW5ncy9fc2V0dGluZ3MudHlwb2dyYXBoeS5zY3NzIiwiMi50b29scy9fdG9vbHMuYWxsLnNjc3MiLCIyLnRvb2xzL190b29scy5taXhpbnMuc2NzcyIsIjQubGF5b3V0L19sYXlvdXQuZm9vdGVyLnNjc3MiLCI0LmxheW91dC9fbGF5b3V0LmhlYWRlci5zY3NzIiwiNC5sYXlvdXQvX2xheW91dC5sYXlvdXQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQUE7Ozs7Ozs7O0dBUUc7QUFFSDs7O0dBR0c7QUNiSDs7Ozs7O0dBTUc7QUFFSDs7Ozs7Ozs7O0dBU0c7QUNqQkg7Ozs7Ozs7Ozs7R0FVRztBQ1ZIOzs7OztHQUtHO0FDTEg7Ozs7O0dBS0c7QUNMSDs7Ozs7R0FLRztBQ0xIOzs7Ozs7O0dBT0c7QUFJSCxPQUFPLENBQUMsK0RBQUk7QUFDWixPQUFPLENBQUMsZ0VBQUk7QUxTWjs7Ozs7R0FLRztBTTFCSDs7Ozs7OztHQU9HO0FDTEg7OztHQUdHO0FBS0g7Ozs7R0FJRztBQWdESCxBQVZFLFNBVU8sQUFWTixPQUFPLEVBVVYsU0FBUyxBQVROLE1BQU0sQ0FBQztFQUNOLE9BQU8sRUFBRSxHQUFHO0VBQ1osT0FBTyxFQUFFLEtBQUs7Q0FDZjs7QUFNSCxBQUxFLFNBS08sQUFMTixNQUFNLENBQUM7RUFDTixLQUFLLEVBQUUsSUFBSTtDQUNaOztBQWtLSDs7Ozs7Ozs7O0dBU0c7QUEyQkg7Ozs7Ozs7R0FPRztBQWdCSDs7Ozs7R0FLRztBQU1IOzs7Ozs7OztHQVFHO0FBTUg7OztHQUdHO0FBaUJIOzs7R0FHRztBQVNIOzs7R0FHRztBQVVIOzs7R0FHRztBQVVIOzs7R0FHRztBQVNIOzs7R0FHRztBQVFIOzs7O0dBSUc7QUFtQ0g7OztHQUdHO0FBeUJIOzs7R0FHRztBQW9CSDs7O0dBR0c7QUFxQkg7O0dBRUc7QVB4ZEg7Ozs7Ozs7R0FPRztBRHJCSDs7Ozs7Ozs7Ozs7R0FXRztBUzNCSDs7Ozs7OztHQU9HO0FBRUgsQUFBQSxjQUFjLENBQUM7RUFDYixNQUFNLEVBQUUsSUFBSTtFQUNaLGdCQUFnQixFTEhDLE9BQU87RUtJeEIsT0FBTyxFQUFFLFFBQVE7Q0FjbEI7O0FBakJELEFBSUUsY0FKWSxDQUlaLGFBQWEsQ0FBQztFQUNaLE9BQU8sRUFBRSxJQUFJO0VBQ2IsY0FBYyxFQUFFLEdBQUc7RUFDbkIsZUFBZSxFQUFFLGFBQWE7Q0FDL0I7O0FBQ0QsQUFBQSxlQUFlLENBVGpCLGNBQWMsQ0FTTTtFQUNoQixRQUFRLEVBQUUsS0FBSztFQUNmLE1BQU0sRUFBRSxDQUFDO0VBQ1QsSUFBSSxFQUFFLENBQUM7RUFDUCxLQUFLLEVBQUUsQ0FBQztFQUNSLE9BQU8sRUFBRSxHQUFHO0VBQ1osZ0JBQWdCLEVMaEJELHFCQUFPO0NLaUJ2Qjs7QUN6Qkg7Ozs7Ozs7R0FPRztBQUVILEFBQUEsY0FBYyxDQUFDO0VGbU1iLE9BQU8sRUFBRSxXQUFXO0VBQ3BCLE9BQU8sRUFBRSxRQUFRO0VBQ2pCLE9BQU8sRUFBRSxZQUFZO0VBQ3JCLE9BQU8sRUFBRSxXQUFXO0VBRXBCLE9BQU8sRUFBRSxJQUFJO0VBNkZiLGNBQWMsRUVuU1UsR0FBRztFRjJZekIsZ0JBQWdCLEVBQUUsT0FBTztFQUN6QixjQUFjLEVBQUUsT0FBTztFQUN2QixhQUFhLEVBQUUsT0FBTztFQWF4Qix1QkFBdUIsRUV6WkUsYUFBYTtFRjBadEMsZUFBZSxFRTFaVSxhQUFhO0VBQ3RDLE9BQU8sRUFBRSxRQUFRO0VBQ2pCLFFBQVEsRUFBRSxLQUFLO0VBQ2YsR0FBRyxFQUFFLENBQUM7RUFDTixJQUFJLEVBQUUsQ0FBQztFQUNQLEtBQUssRUFBRSxDQUFDO0VBQ1IsT0FBTyxFQUFFLEdBQUc7Q0FDYjs7QUNuQkQ7Ozs7O0dBS0c7QUFFSCxBQUFBLGVBQWUsQ0FBQztFQUNkLFFBQVEsRUFBRSxNQUFNO0NBQ2pCIn0= */
+
+/*# sourceMappingURL=layout.css.map */

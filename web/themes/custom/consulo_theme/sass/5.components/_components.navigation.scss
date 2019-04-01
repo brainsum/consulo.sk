@@ -1,0 +1,22 @@
+/**
+ * @file
+ * Navigation component
+ *
+ * Main navigation menu of site.
+ *
+ * @package: navigation
+ */
+
+#block-consulo-theme-main-menu {
+  padding-top: 1.5rem;
+  .menu {
+    @include flex;
+    @include flex-direction(row);
+    @include justify-content(flex-start);
+  }
+  .menu-item {
+    &:not(:last-child) {
+      margin-right: 3rem;
+    }
+  }
+}

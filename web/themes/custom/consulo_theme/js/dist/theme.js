@@ -1,0 +1,1 @@
+!function(a){"use strict";Drupal.behaviors.frontpageSlider={attach:function(e){var i=a(".slick_slider",e);0<i.length&&i.not(".slick-initialized").slick({accessibility:!1,arrows:!0,autoplay:!0,slidesToShow:1,slidesToScroll:1,lazyLoad:"ondemand",adaptiveHeight:!0,autoplaySpeed:4e3,speed:800,dots:!0,fade:!0,pauseOnFocus:!0,swipe:!0})}}}(jQuery);

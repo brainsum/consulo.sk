@@ -1,0 +1,18 @@
+global-styling:
+  css:
+    base:
+      css/base.css: {}
+    layout:
+      css/layout.css: {}
+    component:
+      css/components.css: {}
+    theme:
+      css/theme.css: {}
+  js:
+    js/dist/theme.js: {}
+slick_slider:
+  css:
+    theme:
+      vendors/slick/slick.css: {}
+  js:
+    vendors/slick/slick.js: {}

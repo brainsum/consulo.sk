@@ -1,0 +1,18 @@
+uuid: 25af8d25-9107-4258-b305-0b31a47eb536
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Frontpage slider'
+type: frontpage_slider
+description: 'Frontpage slider content.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

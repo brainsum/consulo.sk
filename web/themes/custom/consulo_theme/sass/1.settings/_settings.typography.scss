@@ -1,0 +1,33 @@
+/**
+ * @file
+ * Typography Settings
+ *
+ * - Import Webfonts
+ * - Define Font-families
+ * - Define Typography-related global variables
+ */
+
+
+// font families
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+@import url('https://fonts.googleapis.com/css?family=Rubik:400,500,700');
+
+$font--playfair: 'Playfair Display', serif;
+$font--rubik: 'Rubik', sans-serif;
+
+// font sizes
+$fs--tiny: 1rem;
+$fs--tiny-plus: 1.3rem;
+$fs--small: 1.4rem;
+$fs--normal: 1.6rem;
+$fs--medium: 1.8rem;
+$fs--large: 2.4rem;
+$fs--huge: 4rem;
+$fs--mega: 5.1rem;
+
+// font weight
+$fw--100: 100;
+$fw--400: 400;
+$fw--500: 500;
+$fw--600: 600;
+$fw--700: 700;

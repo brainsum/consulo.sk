@@ -1,0 +1,22 @@
+uuid: 1b0474ce-a263-4279-b9f8-19e4f9e013ab
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - consulo_theme
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: consulo_theme_messages
+theme: consulo_theme
+region: header
+weight: -2
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }
