@@ -7,20 +7,54 @@
  * @package: navigation
  */
 
+#block-consulo-theme-branding {
+  .site-logo img {
+    height: 40px;
+    @include breakpoint(medium) {
+      height: auto;
+    }
+  }
+}
+
 #block-consulo-theme-main-menu {
-  padding-top: 1.5rem;
+  @include breakpoint(mobile down) {
+    @include transform(right, .3s);
+    padding: 3rem;
+    background-color: $c--primary-brown;
+    height: 100vh;
+    width: 70%;
+    position: absolute;
+    top: 0;
+    right: -100%;
+    bottom: 0;
+    .active {
+      right: 0;
+    }
+  }
+
+  @include breakpoint(medium) {
+    padding-top: 1.5rem;
+  }
   .menu {
     @include flex;
-    @include flex-direction(row);
+    @include flex-direction(column);
     @include justify-content(flex-start);
-    display: none;
     @include breakpoint(medium) {
-      @include flex;
+      @include flex-direction(row);
+    }
+    .menu-item {
+      @include breakpoint(mobile down) {
+        padding: 15px 0;
+        &:not(:last-child) {
+          border-bottom: 1px solid rgba($c--white, .5);
+        }
+      }
+      @include breakpoint(medium) {
+        &:not(:last-child) {
+          margin-right: 3rem;
+        }
+      }
     }
   }
-  .menu-item {
-    &:not(:last-child) {
-      margin-right: 3rem;
-    }
-  }
+
 }

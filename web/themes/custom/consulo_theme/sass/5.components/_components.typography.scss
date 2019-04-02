@@ -14,12 +14,16 @@
   .menu-item a {
     @include transition(all .3s);
     font-family: $font--rubik;
-    font-size: $fs--small;
-    color: $c--primary-brown;
+    font-size: $fs--medium;
+    color: $c--white;
     font-weight: $fw--500;
     text-transform: uppercase;
-    &:hover {
-      color: $c--primary-red;
+    @include breakpoint(medium) {
+      color: $c--primary-brown;
+      font-size: $fs--small;
+      &:hover {
+        color: $c--primary-red;
+      }
     }
   }
 }
@@ -70,11 +74,16 @@
 #block-footer span {
   font-family: $font--rubik;
   color: $c--white;
-  line-height: 4rem;
+  line-height: 2rem;
   font-size: $fs--tiny;
   text-transform: uppercase;
   letter-spacing: .1rem;
-  opacity: .8;
+  text-align: center;
+  @include breakpoint(medium) {
+    opacity: .8;
+    line-height: 4rem;
+    text-align: initial;
+  }
   a {
     color: $c--white;
   }

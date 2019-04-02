@@ -8,20 +8,30 @@
  */
 
 .region-footer {
-  height: 4rem;
   background-color: $c--primary-brown;
-  padding: 0 4.4rem;
+  padding: 1.5rem 0;
+  @include breakpoint(medium) {
+    height: 4rem;
+    padding: 0 4.4rem;
+  }
   #block-footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    @include flex;
+    @include flex-direction(column);
+    @include justify-content(center);
+    @include breakpoint(medium) {
+      @include flex;
+      @include flex-direction(row);
+      @include justify-content(space-between);
+    }
   }
   .path-frontpage & {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-    background-color: rgba($c--primary-brown, .5);
+    @include breakpoint(medium) {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background-color: rgba($c--primary-brown, .5);
+    }
   }
 }
