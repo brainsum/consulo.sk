@@ -19,15 +19,19 @@
 .hamburger {
   position: relative;
   margin-top: 15px;
-  @include breakpoint(medium) {
-    display: none;
-  }
 }
 
 .close {
   position: absolute;
   right: 22px;
   top: 15px;
+}
+
+.hamburger,
+.close {
+  @include breakpoint(medium) {
+    display: none;
+  }
 }
 
 #block-consulo-theme-main-menu {
