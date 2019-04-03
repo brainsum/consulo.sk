@@ -31,4 +31,26 @@
       }
     }
   };
+
+  Drupal.behaviors.mobileMenu = {
+    attach: function () {
+      var hamburgerIcon, closeIcon, menuHolder;
+
+      hamburgerIcon = $('.hamburger .fa');
+      closeIcon = $('.close .fa');
+      menuHolder = $('#block-consulo-theme-main-menu');
+
+      hamburgerIcon.on('click', function () {
+        console.log('opend');
+        menuHolder.addClass('active');
+      });
+      closeIcon.on('click', function () {
+        menuHolder.removeClass('active');
+        console.log('closed');
+      })
+    }
+  };
+
+
 })(jQuery);
+

@@ -14,13 +14,12 @@
   .menu-item a {
     @include transition(all .3s);
     font-family: $font--rubik;
-    font-size: $fs--medium;
-    color: $c--white;
+    font-size: $fs--12;
+    color: $c--primary-brown;
     font-weight: $fw--500;
     text-transform: uppercase;
     @include breakpoint(medium) {
-      color: $c--primary-brown;
-      font-size: $fs--small;
+      font-size: $fs--14;
       &:hover {
         color: $c--primary-red;
       }
@@ -35,18 +34,28 @@
   h2 {
     @include transition(all .3s);
     font-family: $font--playfair;
-    font-size: $fs--mega;
+    font-size: $fs--large;
     font-weight: $fw--100;
     margin-bottom: 1.3rem;
     color: $c--primary-brown;
+    @include breakpoint(medium) {
+      font-size: $fs--mega;
+    }
   }
-  a:hover h2 {
-    color: $c--primary-red;
+  @include breakpoint(medium) {
+    a:hover h2 {
+      color: $c--primary-red;
+    }
   }
   .slider-description {
     font-family: $font--rubik;
-    font-size: $fs--small;
+    font-size: $fs--12;
+    line-height: $lh--16;
     margin-bottom: 3.5rem;
+    @include breakpoint(medium) {
+      font-size: $fs--14;
+      line-height: $lh--20;
+    }
   }
 
   .slider-button {
