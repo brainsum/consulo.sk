@@ -80,7 +80,7 @@
 
         @include breakpoint(medium) {
           position: absolute;
-          left: 60%;
+          left: 61%;
           top: 0;
           bottom: 0;
           max-width: 30%;
@@ -116,12 +116,11 @@
     z-index: 0;
   }
 }
-
 .carousel-image {
   z-index: 0;
   height: 100%;
   width: 100%;
-  background: no-repeat top left;
+  background: no-repeat center left;
   background-size: cover;
 }
 
