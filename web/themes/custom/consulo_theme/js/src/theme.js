@@ -32,6 +32,65 @@
     }
   };
 
+  Drupal.behaviors.aboutSlider = {
+    attach: function (context) {
+
+      if ($('.slick_slider_4', context).length > 0) {
+        $('.slick_slider_4', context).not('.slick-initialized').slick({
+          accessibility: false,
+          arrows: false,
+          autoplay: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          lazyLoad: 'ondemand',
+          adaptiveHeight: true,
+          autoplaySpeed: 3000,
+          speed: 800,
+          dots: false,
+          fade: true,
+          pauseOnFocus: true,
+          swipe: true
+        });
+      }
+
+      if ($('.slick_slider_5', context).length > 0) {
+        $('.slick_slider_5', context).not('.slick-initialized').slick({
+          accessibility: false,
+          arrows: false,
+          autoplay: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          lazyLoad: 'ondemand',
+          adaptiveHeight: true,
+          autoplaySpeed: 3000,
+          speed: 800,
+          dots: false,
+          fade: true,
+          pauseOnFocus: true,
+          swipe: true
+        });
+      }
+
+      if ($('.slick_slider_6', context).length > 0) {
+        $('.slick_slider_6', context).not('.slick-initialized').slick({
+          accessibility: false,
+          arrows: false,
+          autoplay: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          lazyLoad: 'ondemand',
+          adaptiveHeight: true,
+          autoplaySpeed: 3000,
+          speed: 800,
+          dots: false,
+          fade: true,
+          pauseOnFocus: true,
+          swipe: true
+        });
+      }
+    }
+  };
+
   Drupal.behaviors.mobileMenu = {
     attach: function () {
       var hamburgerIcon, closeIcon, menuHolder;

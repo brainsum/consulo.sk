@@ -12,12 +12,22 @@
   @include flex-direction(row);
   @include justify-content(space-between);
   padding: 0 2rem;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
   z-index: 100;
+  background-color: $c--white;
+  margin-bottom: -1rem;
+  .path-frontpage & {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    margin-bottom: 0;
+  }
   @include breakpoint(medium) {
     padding: 0 4.4rem;
+  }
+  #block-consulo-theme-branding {
+    position: relative;
+    z-index: 100;
   }
 }

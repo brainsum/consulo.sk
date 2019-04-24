@@ -1,0 +1,39 @@
+
+.block-page-title-block {
+  @include flex;
+  @include flex-direction(colum);
+  @include align-items(center);
+  @include justify-content(flex-start);
+  background-color: $c--dark-red;
+  position: relative;
+  height: 100px;
+  @include breakpoint(mobile down) {
+    z-index: -1;
+  }
+  @include breakpoint(medium) {
+    height: 160px;
+  }
+  .page-title-image {
+    @include opacity(.1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 10;
+  }
+  .page-title {
+    @extend %wide-container;
+    position: relative;
+    font-family: $font--playfair;
+    font-size: $fs--36;
+    color: $c--white;
+    z-index: 20;
+    @include breakpoint(medium) {
+      font-size: $fs--64;
+    }
+  }
+}

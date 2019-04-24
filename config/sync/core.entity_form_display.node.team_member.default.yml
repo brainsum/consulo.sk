@@ -1,45 +1,71 @@
-uuid: 6233f3ec-8054-4c0d-b6ea-374d39fb4d57
+uuid: f9d957e2-574a-4379-860f-1934457292ce
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.page.body
-    - field.field.node.page.field_image
+    - field.field.node.team_member.body
+    - field.field.node.team_member.field_email_address
+    - field.field.node.team_member.field_facebook_link
+    - field.field.node.team_member.field_image
+    - field.field.node.team_member.field_phone_number
     - image.style.thumbnail
-    - node.type.page
+    - node.type.team_member
   module:
     - image
+    - link
     - path
     - text
-_core:
-  default_config_hash: sb0qCkzU_8mNq29NehYAU8jCBXWPLeX0UN8sYFVGVcw
-id: node.page.default
+id: node.team_member.default
 targetEntityType: node
-bundle: page
+bundle: team_member
 mode: default
 content:
   body:
     type: text_textarea_with_summary
     weight: 7
-    region: content
     settings:
       rows: 9
       summary_rows: 3
       placeholder: ''
     third_party_settings: {  }
+    region: content
   created:
     type: datetime_timestamp
     weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_email_address:
+    weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_facebook_link:
+    weight: 10
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
   field_image:
-    weight: 6
+    weight: 8
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
+  field_phone_number:
+    weight: 11
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
     region: content
   path:
     type: path
@@ -58,7 +84,7 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 8
+    weight: 6
     region: content
     third_party_settings: {  }
   sticky:
@@ -79,10 +105,10 @@ content:
   uid:
     type: entity_reference_autocomplete
     weight: 1
-    region: content
     settings:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
+    region: content
     third_party_settings: {  }
 hidden: {  }

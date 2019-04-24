@@ -1,0 +1,15 @@
+
+%wide-container {
+  max-width: 108.8rem;
+  width: 100%;
+  padding: 0 4.4rem;
+  margin: 0 auto;
+}
+
+%transition {
+  @include transition(all, .3s);
+}
+
+%transition_slow {
+  @include transition(all, .5s);
+}

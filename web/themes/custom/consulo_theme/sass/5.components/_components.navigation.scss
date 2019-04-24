@@ -50,10 +50,6 @@
       right: 0;
     }
   }
-
-  @include breakpoint(medium) {
-    padding-top: 1.5rem;
-  }
   .menu {
     @include flex;
     @include flex-direction(column);
@@ -63,14 +59,21 @@
     }
     .menu-item {
       @include breakpoint(mobile down) {
-        padding: 15px 0;
+        padding: 1.5rem 0;
         &:not(:last-child) {
-          border-bottom: 1px solid rgba($c--primary-brown, .5);
+          border-bottom: 0.1rem solid rgba($c--primary-brown, .5);
         }
       }
       @include breakpoint(medium) {
+        padding: 2rem 1rem 0;
+        border-top: .5rem solid transparent;
+        &--active-trail {
+          border-top-color: $c--primary-red;
+        }
+      }
+      @include breakpoint(tablet) {
         &:not(:last-child) {
-          margin-right: 3rem;
+          margin-right: 2rem;
         }
       }
     }

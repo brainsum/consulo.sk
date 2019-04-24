@@ -1,0 +1,18 @@
+uuid: ac9640fc-d56f-446d-a3c1-f87211e14b97
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.team_member
+id: node.team_member.title
+field_name: title
+entity_type: node
+bundle: team_member
+label: Name
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
