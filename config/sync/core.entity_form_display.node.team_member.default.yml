@@ -7,7 +7,9 @@ dependencies:
     - field.field.node.team_member.field_email_address
     - field.field.node.team_member.field_facebook_link
     - field.field.node.team_member.field_image
-    - field.field.node.team_member.field_phone_number
+    - field.field.node.team_member.field_phone
+    - field.field.node.team_member.field_position
+    - field.field.node.team_member.field_praxis
     - image.style.thumbnail
     - node.type.team_member
   module:
@@ -36,7 +38,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_email_address:
-    weight: 9
+    weight: 11
     settings:
       size: 60
       placeholder: ''
@@ -44,7 +46,7 @@ content:
     type: email_default
     region: content
   field_facebook_link:
-    weight: 10
+    weight: 12
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -59,8 +61,24 @@ content:
     third_party_settings: {  }
     type: image_image
     region: content
-  field_phone_number:
-    weight: 11
+  field_phone:
+    weight: 13
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_position:
+    weight: 10
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_praxis:
+    weight: 9
     settings:
       size: 60
       placeholder: ''

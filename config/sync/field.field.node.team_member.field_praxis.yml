@@ -1,0 +1,21 @@
+uuid: ade9440f-4a4f-45c0-9518-6e95e0e2acd2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_praxis
+    - node.type.team_member
+  module:
+    - text
+id: node.team_member.field_praxis
+field_name: field_praxis
+entity_type: node
+bundle: team_member
+label: Praxis
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

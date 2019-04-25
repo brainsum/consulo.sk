@@ -7,7 +7,9 @@ dependencies:
     - field.field.node.team_member.field_email_address
     - field.field.node.team_member.field_facebook_link
     - field.field.node.team_member.field_image
-    - field.field.node.team_member.field_phone_number
+    - field.field.node.team_member.field_phone
+    - field.field.node.team_member.field_position
+    - field.field.node.team_member.field_praxis
     - node.type.team_member
   module:
     - image
@@ -54,8 +56,24 @@ content:
     third_party_settings: {  }
     type: image
     region: content
-  field_phone_number:
-    weight: 104
+  field_phone:
+    weight: 109
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_position:
+    weight: 107
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_praxis:
+    weight: 108
     label: hidden
     settings: {  }
     third_party_settings: {  }

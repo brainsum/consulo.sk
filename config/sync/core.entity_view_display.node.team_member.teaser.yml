@@ -8,7 +8,8 @@ dependencies:
     - field.field.node.team_member.field_email_address
     - field.field.node.team_member.field_facebook_link
     - field.field.node.team_member.field_image
-    - field.field.node.team_member.field_phone_number
+    - field.field.node.team_member.field_position
+    - field.field.node.team_member.field_praxis
     - node.type.team_member
   module:
     - text
@@ -35,4 +36,5 @@ hidden:
   field_email_address: true
   field_facebook_link: true
   field_image: true
-  field_phone_number: true
+  field_position: true
+  field_praxis: true
