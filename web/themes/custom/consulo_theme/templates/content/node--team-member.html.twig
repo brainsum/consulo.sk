@@ -88,6 +88,9 @@
   <div class="image-holder">
     <div class="image-text">
       {{ content.body }}
+      {% if content.field_praxis[0] %}
+        {{ content.field_praxis }}
+      {% endif %}
     </div>
     <div class="{{ 'slick_slider_' ~ elements['#node'].id }}">
       {{ content.field_image }}
@@ -96,6 +99,15 @@
   <div class="text-holder">
     <div class="text-holder--name">
       {{ label[0]['#context'].value }}
+      {% if content.field_position[0]['#context'].value %}
+        <span>{{ content.field_position[0]['#context'].value }}</span>
+      {% endif %}
+    </div>
+    <div class="text-holder--mobile">
+      {{ content.body }}
+      {% if content.field_praxis[0] %}
+        {{ content.field_praxis }}
+      {% endif %}
     </div>
     <div class="text-holder--data">
       {% if content.field_email_address[0] %}
@@ -104,8 +116,8 @@
       {% if content.field_facebook_link[0] %}
         <a class="icon-rounded" href="{{ content.field_facebook_link[0]['#url_title'] }}" target="_blank"><i class="fab fa-facebook-f"></i></a>
       {% endif %}
-      {% if content.field_phone_number[0] %}
-        <a class="icon-phone" href="tel:{{ content.field_phone_number[0]['#text'] }}"><i class="fas fa-phone fa-flip-horizontal"></i> {{ content.field_phone_number[0]['#text'] }}</a>
+      {% if content.field_phone[0]['#context'].value %}
+        <a class="icon-phone" href="tel:{{ content.field_phone[0]['#context'].value }}"><i class="fas fa-phone fa-flip-horizontal"></i> {{ content.field_phone[0]['#context'].value }}</a>
       {% endif %}
     </div>
   </div>

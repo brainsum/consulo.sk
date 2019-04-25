@@ -69,7 +69,7 @@
       @include flex-direction(column);
       @include align-items(center);
       position: relative;
-      background-color: $c--light-red;
+      background-color: $c--light-grey;
       padding: 2rem;
       >div {
         @include breakpoint(medium) {
@@ -110,7 +110,7 @@
         position: absolute;
         width: 100%;
         height: 34rem;
-        background-color: $c--light-red;
+        background-color: $c--light-grey;
         z-index: 5;
         bottom: 0;
         left: 0;
@@ -130,6 +130,9 @@
     font-family: $font--rubik;
     font-size: $fs--15;
     line-height: $lh--23;
+    @include breakpoint(tablet) {
+      padding-left: 5rem;
+    }
   }
   .node--type-team-member {
     overflow: hidden;
@@ -150,6 +153,8 @@
         bottom: -5px;
       }
       .image-text {
+        @include flex-direction(column);
+        @include justify-content(space-between);
         @extend %transition_slow;
         position: absolute;
         top: -100%;
@@ -159,18 +164,33 @@
         padding: 4rem 2.5rem;
         background-color: rgba($c--dark-red, .85);
         margin-bottom: 2.5rem;
+        display: none;
         p {
           font-family: $font--playfair;
+          font-weight: $fw--400;
           color: $c--white;
           font-size: $fs--21;
           font-style: italic;
           line-height: $lh--28;
         }
+        .field--name-field-praxis {
+          font-family: $font--rubik;
+          font-weight: $fw--400;
+          color: $c--white;
+          font-size: $fs--15;
+          line-height: $lh--23;
+        }
       }
-      &:hover .image-text {
-        top: 0;
-        z-index: 100;
+      @include breakpoint(medium) {
+        .image-text {
+          @include flex;
+        }
+        &:hover .image-text {
+          top: 0;
+          z-index: 100;
+        }
       }
+
       .slick-slider {
         @include breakpoint(medium) {
           width: 280px;
@@ -184,11 +204,46 @@
       z-index: 10;
       padding-top: 2.5rem;
       &--name {
+        @include flex;
+        @include flex-direction(column);
+        @include align-items(flex-start);
         font-size: $fs--20;
         color: $c--primary-brown;
         font-family: $font--rubik;
         font-weight: $fw--500;
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
+        @include breakpoint(medium) {
+          margin-bottom: 2rem;
+          min-height: 43px;
+        }
+        span {
+          font-size: $fs--15;
+          font-weight: $fw--400;
+        }
+      }
+      &--mobile {
+        margin-bottom: 1.5rem;
+        @include breakpoint(medium) {
+          display: none;
+        }
+        .field--name-body {
+          max-width: 28rem;
+          margin-bottom: 1.5rem;
+          p {
+            font-family: $font--playfair;
+            font-weight: $fw--400;
+            font-size: $fs--21;
+            font-style: italic;
+            line-height: $lh--28;
+          }
+        }
+        .field--name-field-praxis {
+          max-width: 28rem;
+          font-family: $font--rubik;
+          font-weight: $fw--400;
+          font-size: $fs--15;
+          line-height: $lh--23;
+        }
       }
       &--data {
         @include flex;
@@ -219,6 +274,17 @@
           margin-right: 1.5rem;
         }
         &.icon-phone {
+          @include breakpoint(medium) {
+            display: block;
+            width: 100%;
+            margin-top: 1rem;
+          }
+          @include breakpoint(tablet) {
+            display: inline-block;
+            width: auto;
+            margin-top: auto;
+            margin-bottom: auto;
+          }
           .fa-phone {
             @extend %transition;
             @include opacity(.5);
