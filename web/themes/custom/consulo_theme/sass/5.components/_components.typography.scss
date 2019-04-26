@@ -11,9 +11,6 @@
 
 
 #block-consulo-theme-main-menu {
-  @include flex;
-  @include justify-content(flex-end);
-  @include flex-direction(row);
   .menu-item a {
     @include transition(all .3s);
     font-family: $font--rubik;
