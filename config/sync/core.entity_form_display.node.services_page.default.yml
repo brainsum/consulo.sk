@@ -1,0 +1,352 @@
+uuid: 5d99defd-63f7-4207-a77e-798bab21b4b6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.services_page.body
+    - field.field.node.services_page.field_element_1_icon
+    - field.field.node.services_page.field_element_1_item
+    - field.field.node.services_page.field_element_1_title
+    - field.field.node.services_page.field_element_2_icon
+    - field.field.node.services_page.field_element_2_item
+    - field.field.node.services_page.field_element_2_title
+    - field.field.node.services_page.field_element_3_icon
+    - field.field.node.services_page.field_element_3_item
+    - field.field.node.services_page.field_element_3_title
+    - field.field.node.services_page.field_image
+    - field.field.node.services_page.field_section_2_item
+    - field.field.node.services_page.field_section_2_title
+    - field.field.node.services_page.field_section_3_item
+    - field.field.node.services_page.field_section_3_title
+    - field.field.node.services_page.field_section_4_title
+    - image.style.thumbnail
+    - node.type.services_page
+  module:
+    - field_group
+    - image
+    - path
+    - text
+third_party_settings:
+  field_group:
+    group_sections:
+      children:
+        - group_section_1
+        - group_section_2
+        - group_section_3
+        - group_section_4
+      parent_name: ''
+      weight: 2
+      format_type: tabs
+      format_settings:
+        id: ''
+        classes: ''
+        direction: horizontal
+      label: Sections
+      region: content
+    group_section_1:
+      children:
+        - group_elements
+      parent_name: group_sections
+      weight: 9
+      format_type: tab
+      format_settings:
+        id: section1
+        classes: ''
+        formatter: open
+        description: ''
+        required_fields: false
+      label: 'Section 1'
+      region: content
+    group_section_2:
+      children:
+        - field_section_2_title
+        - field_section_2_item
+      parent_name: group_sections
+      weight: 10
+      format_type: tab
+      format_settings:
+        id: section2
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: false
+      label: 'Section 2'
+      region: content
+    group_section_3:
+      children:
+        - field_section_3_title
+        - field_section_3_item
+      parent_name: group_sections
+      weight: 11
+      format_type: tab
+      format_settings:
+        id: section3
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: false
+      label: 'Section 3'
+      region: content
+    group_section_4:
+      children:
+        - field_section_4_title
+        - body
+      parent_name: group_sections
+      weight: 12
+      format_type: tab
+      format_settings:
+        id: section4
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: false
+      label: 'Section 4'
+      region: content
+    group_elements:
+      children:
+        - group_element_1
+        - group_element_2
+        - group_element_3
+      parent_name: group_section_1
+      weight: 20
+      format_type: tabs
+      format_settings:
+        label: Elements
+        direction: vertical
+        id: ''
+        classes: ''
+      label: Elements
+      region: content
+    group_element_1:
+      children:
+        - field_element_1_icon
+        - field_element_1_title
+        - field_element_1_item
+      parent_name: group_elements
+      weight: 20
+      format_type: tab
+      format_settings:
+        id: element1
+        classes: ''
+        formatter: open
+        description: ''
+        required_fields: false
+      label: 'Element 1'
+      region: content
+    group_element_2:
+      children:
+        - field_element_2_icon
+        - field_element_2_title
+        - field_element_2_item
+      parent_name: group_elements
+      weight: 21
+      format_type: tab
+      format_settings:
+        id: element2
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: false
+      label: 'Element 2'
+      region: content
+    group_element_3:
+      children:
+        - field_element_3_icon
+        - field_element_3_title
+        - field_element_3_item
+      parent_name: group_elements
+      weight: 22
+      format_type: tab
+      format_settings:
+        id: element3
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: false
+      label: 'Element 3'
+      region: content
+id: node.services_page.default
+targetEntityType: node
+bundle: services_page
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 29
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  created:
+    type: datetime_timestamp
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_element_1_icon:
+    weight: 30
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_element_1_item:
+    weight: 32
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_element_1_title:
+    weight: 31
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_element_2_icon:
+    weight: 31
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_element_2_item:
+    weight: 33
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_element_2_title:
+    weight: 32
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_element_3_icon:
+    weight: 32
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_element_3_item:
+    weight: 34
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_element_3_title:
+    weight: 33
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_image:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_section_2_item:
+    weight: 27
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_section_2_title:
+    weight: 26
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_section_3_item:
+    weight: 28
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_section_3_title:
+    weight: 27
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_section_4_title:
+    weight: 28
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  path:
+    type: path
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 5
+    region: content
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 8
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 6
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 3
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+hidden: {  }

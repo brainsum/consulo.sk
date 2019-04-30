@@ -1,0 +1,19 @@
+uuid: b13dca81-8bf8-4e90-96de-a92b8d04fbeb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_element_3_item
+    - node.type.services_page
+id: node.services_page.field_element_3_item
+field_name: field_element_3_item
+entity_type: node
+bundle: services_page
+label: 'Element item'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

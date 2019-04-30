@@ -1,0 +1,19 @@
+uuid: c3a0a7e4-c3b8-41d8-ad60-aa581207bbea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_section_3_item
+    - node.type.services_page
+id: node.services_page.field_section_3_item
+field_name: field_section_3_item
+entity_type: node
+bundle: services_page
+label: 'Section item'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

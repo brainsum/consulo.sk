@@ -2,9 +2,12 @@
 .block-system-main-block {
   .node--type-page {
     @extend %wide-container;
-    padding: 4rem 4.4rem;
+    padding: 2rem 2.2rem;
     position: relative;
     min-height: 350px;
+    @include breakpoint(medium) {
+      padding: 4rem 4.4rem;
+    }
     .field--name-body {
       font-family: $font--rubik;
       font-weight: normal;
@@ -39,11 +42,8 @@
   @include breakpoint(medium) {
     padding-bottom: 15rem;
   }
-  >h2,
-  .view-team-members {
-    @extend %wide-container;
-  }
   >h2 {
+    @extend %wide-container;
     font-family: $font--playfair;
     font-weight: normal;
     font-size: $fs--42;
@@ -64,6 +64,13 @@
     }
   }
   .view-team-members {
+    max-width: 108.8rem;
+    width: 100%;
+    padding: 2rem 0;
+    margin: 0 auto;
+    @include breakpoint(medium) {
+      padding: 0 4.4rem;
+    }
     .view-content {
       @include flex;
       @include flex-direction(column);
@@ -130,8 +137,12 @@
     font-family: $font--rubik;
     font-size: $fs--15;
     line-height: $lh--23;
+    padding: 0 2.2rem;
+    @include breakpoint(medium) {
+
+    }
     @include breakpoint(tablet) {
-      padding-left: 5rem;
+      padding-left: 6rem;
     }
   }
   .node--type-team-member {
@@ -165,7 +176,7 @@
         background-color: rgba($c--dark-red, .85);
         margin-bottom: 2.5rem;
         display: none;
-        p {
+        .field--name-body p {
           font-family: $font--playfair;
           font-weight: $fw--400;
           color: $c--white;
@@ -173,7 +184,7 @@
           font-style: italic;
           line-height: $lh--28;
         }
-        .field--name-field-praxis {
+        .field--name-field-praxis p {
           font-family: $font--rubik;
           font-weight: $fw--400;
           color: $c--white;
@@ -301,4 +312,228 @@
   }
 }
 
-
+.page-node-type-services-page {
+  #services-section1 {
+    .services-section--inner {
+      @include flex;
+      @include flex-direction(column);
+      @include justify-content(flex-start);
+      @include breakpoint(medium) {
+        @include flex-direction(row);
+        @include justify-content(space-between);
+        margin: 0 -1rem;
+      }
+    }
+    .section-element {
+      padding: 0 1rem;
+      &:not(:last-child) {
+        margin-bottom: 3rem;
+        @include breakpoint(medium) {
+          margin-bottom: 0;
+        }
+      }
+      .field--type-image {
+        padding-left: 1rem;
+        margin-bottom: 1rem;
+        @include breakpoint(medium) {
+          padding-left: 2rem;
+          margin-bottom: 2.3rem;
+        }
+        img {
+          @include breakpoint(medium down) {
+            max-width: 5rem;
+            height: auto;
+          }
+        }
+      }
+      .field--name-field-element-1-title,
+      .field--name-field-element-2-title,
+      .field--name-field-element-3-title {
+        font-family: $font--playfair;
+        font-weight: 400;
+        font-size: $fs--28;
+        position: relative;
+        margin-bottom: 2.5rem;
+        &:after {
+          content: '';
+          width: 7rem;
+          height: .5rem;
+          position: absolute;
+          bottom: -.8rem;
+          left: 0;
+          background-color: $c--primary-red;
+          z-index: -1;
+        }
+      }
+      .field--name-field-element-1-item,
+      .field--name-field-element-2-item,
+      .field--name-field-element-3-item {
+        .field__item {
+          position: relative;
+          padding-left: 1.2rem;
+          font-family: $font--rubik;
+          font-size: $fs--15;
+          line-height: $lh--30;
+          letter-spacing: 0;
+          &:before {
+            @include border-radius(2px);
+            content: '';
+            width: 4px;
+            height: 4px;
+            background-color: $c--primary-red;
+            position: absolute;
+            left: 0;
+            top: 1.3rem;
+            margin: auto 0;
+            display: block;
+          }
+        }
+      }
+    }
+  }
+  #services-section2 {
+    background-image: url('/themes/custom/consulo_theme/images/layer_9.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #services-section3 {
+    background-color: $c--white;
+  }
+  #services-section4 {
+    background-image: url('/themes/custom/consulo_theme/images/layer_11.png');
+    background-position: center 92%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 425px;
+  }
+  .services-section {
+    padding: 3rem 0 4rem;
+    @include breakpoint(medium) {
+      padding: 6rem 0 8rem;
+    }
+    &--inner {
+      @extend %wide-container;
+    }
+    .field--name-field-section-2-title,
+    .field--name-field-section-3-title,
+    .field--name-field-section-4-title {
+      font-family: $font--playfair;
+      font-weight: 400;
+      font-size: $fs--28;
+      position: relative;
+      margin-bottom: 3rem;
+      z-index: 50;
+      @include breakpoint(medium) {
+        font-size: $fs--42;
+      }
+      &:after {
+        content: '';
+        width: 15rem;
+        height: 2rem;
+        position: absolute;
+        bottom: -.6rem;
+        left: -3.4rem;
+        z-index: -1;
+        @include breakpoint(medium) {
+          height: 3rem;
+        }
+      }
+    }
+    .field--name-field-section-2-title {
+      &:after {
+        background-color: $c--primary-red;
+      }
+    }
+    .field--name-field-section-3-title {
+      &:after {
+        background-color: $c--light-red;
+      }
+    }
+    .field--name-field-section-4-title {
+      &:after {
+        background-color: $c--white;
+      }
+    }
+    .field--name-field-section-2-title,
+    .field--name-field-section-2-item {
+      color: $c--white;
+    }
+    .field--name-field-section-3-title,
+    .field--name-field-section-4-title,
+    .field--name-field-section-3-item,
+    .field--name-body p {
+      color: $c--primary-brown;
+    }
+    .field--name-field-section-2-item,
+    .field--name-field-section-3-item,
+    .field--name-body p {
+      font-family: $font--rubik;
+      font-size: $fs--15;
+      line-height: $lh--23;
+      letter-spacing: 0;
+    }
+    .field--name-field-section-2-item {
+      .field__item {
+        position: relative;
+        padding-left: 1.2rem;
+        &:before {
+          @include border-radius(2px);
+          content: '';
+          width: 4px;
+          height: 4px;
+          background-color: $c--primary-red;
+          position: absolute;
+          left: 0;
+          top: 1rem;
+          margin: auto 0;
+          display: block;
+        }
+      }
+    }
+    .field--name-field-section-3-item {
+      @include flex;
+      @include justify-content(flex-start);
+      @include flex-direction(column);
+      @include breakpoint(bigmobile) {
+        @include flex-direction(row);
+        @include flex-wrap(wrap);
+        margin: 0 -1rem;
+      }
+      @include breakpoint(medium) {
+        @include flex-direction(row);
+        @include flex-wrap(wrap);
+        margin: 0 -1.7rem;
+      }
+      .field__item {
+        width: 100%;
+        margin-bottom: 2rem;
+        @include breakpoint(bigmobile) {
+          width: 50%;
+          padding: 0 1rem;
+        }
+        @include breakpoint(smallmedium) {
+          width: 33.33%;
+        }
+        @include breakpoint(medium) {
+          width: 25%;
+        }
+        @include breakpoint(tablet) {
+          width: 20%;
+          margin-bottom: 4rem;
+          padding: 0 1.7rem;
+        }
+        &--inner {
+          @include flex;
+          @include flex-direction(column);
+          @include justify-content(center);
+          background-color: $c--lighter-red;
+          padding: 2rem;
+          text-align: center;
+          height: 13rem;
+          font-weight: $fw--500;
+        }
+      }
+    }
+  }
+}

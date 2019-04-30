@@ -1,0 +1,22 @@
+uuid: ff4deb1b-7fad-47c9-b4c6-9dd099cd7cf4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.services_page
+  module:
+    - text
+id: node.services_page.body
+field_name: body
+entity_type: node
+bundle: services_page
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

@@ -1,4 +1,4 @@
-uuid: 7b229450-30b0-487a-b4e3-1320ef852fa8
+uuid: 913ddf1a-6c1a-4cff-8833-3a642eb7bdf6
 langcode: en
 status: true
 dependencies:
@@ -8,9 +8,8 @@ dependencies:
 id: node.field_praxis
 field_name: field_praxis
 entity_type: node
-type: text
-settings:
-  max_length: 75
+type: text_long
+settings: {  }
 module: text
 locked: false
 cardinality: 1

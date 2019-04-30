@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.team_member.field_phone
     - field.field.node.team_member.field_position
     - field.field.node.team_member.field_praxis
+    - image.style.team_member_slider
     - node.type.team_member
   module:
     - image
@@ -24,19 +25,19 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 101
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     region: content
   field_email_address:
-    weight: 103
+    weight: 4
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_facebook_link:
-    weight: 105
+    weight: 5
     label: hidden
     settings:
       trim_length: 80
@@ -48,16 +49,16 @@ content:
     type: link_separate
     region: content
   field_image:
-    weight: 102
+    weight: 2
     label: hidden
     settings:
-      image_style: ''
+      image_style: team_member_slider
       image_link: ''
     third_party_settings: {  }
     type: image
     region: content
   field_phone:
-    weight: 109
+    weight: 7
     label: hidden
     settings:
       link_to_entity: false
@@ -65,7 +66,7 @@ content:
     type: string
     region: content
   field_position:
-    weight: 107
+    weight: 6
     label: hidden
     settings:
       link_to_entity: false
@@ -73,14 +74,14 @@ content:
     type: string
     region: content
   field_praxis:
-    weight: 108
+    weight: 3
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   links:
-    weight: 100
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }

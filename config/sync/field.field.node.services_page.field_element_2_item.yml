@@ -1,0 +1,19 @@
+uuid: 0f559480-47f7-4a67-8320-e653e154e49f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_element_2_item
+    - node.type.services_page
+id: node.services_page.field_element_2_item
+field_name: field_element_2_item
+entity_type: node
+bundle: services_page
+label: 'Element item'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

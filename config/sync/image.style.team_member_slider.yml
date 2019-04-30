@@ -1,0 +1,15 @@
+uuid: 59302ef7-5147-4de8-96e5-45784c8c9c76
+langcode: en
+status: true
+dependencies: {  }
+name: team_member_slider
+label: 'Team member slider'
+effects:
+  b62501e3-e326-4aea-942e-57ae5cb738fc:
+    uuid: b62501e3-e326-4aea-942e-57ae5cb738fc
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 280
+      height: 280
+      anchor: center-center
