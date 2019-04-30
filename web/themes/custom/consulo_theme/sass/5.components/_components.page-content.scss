@@ -321,7 +321,6 @@
       @include breakpoint(medium) {
         @include flex-direction(row);
         @include justify-content(space-between);
-        margin: 0 -1rem;
       }
     }
     .section-element {
