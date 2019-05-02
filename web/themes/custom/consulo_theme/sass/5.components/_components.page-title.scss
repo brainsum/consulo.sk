@@ -23,6 +23,9 @@
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 10;
+    .about-page & {
+      background-position: center 55%;
+    }
   }
   .page-title {
     @extend %wide-container;
