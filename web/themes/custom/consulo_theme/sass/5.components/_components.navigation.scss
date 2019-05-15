@@ -36,7 +36,7 @@
 
 #block-consulo-theme-main-menu {
   @include flex;
-  @include breakpoint(mobile down) {
+  @include breakpoint(smallmedium down) {
     @include justify-content(flex-start);
     @include flex-direction(column);
     @include transition(all .3s);
@@ -66,7 +66,7 @@
       @include flex-direction(row);
     }
     .menu-item {
-      @include breakpoint(mobile down) {
+      @include breakpoint(smallmedium down) {
         padding: 1.5rem 0;
         &:not(:last-child) {
           border-bottom: 0.1rem solid rgba($c--primary-brown, .5);
