@@ -27,4 +27,19 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-hidden: {  }
+hidden:
+  field_element_1_icon: true
+  field_element_1_item: true
+  field_element_1_title: true
+  field_element_2_icon: true
+  field_element_2_item: true
+  field_element_2_title: true
+  field_element_3_icon: true
+  field_element_3_item: true
+  field_element_3_title: true
+  field_image: true
+  field_section_2_item: true
+  field_section_2_title: true
+  field_section_3_item: true
+  field_section_3_title: true
+  field_section_4_title: true

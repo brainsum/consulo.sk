@@ -25,6 +25,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: /kto-je-consulo
+    pages: /node/3
     negate: false
     context_mapping: {  }
