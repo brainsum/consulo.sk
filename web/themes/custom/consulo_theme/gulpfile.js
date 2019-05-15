@@ -165,7 +165,7 @@ function yamlLintTask() {
  */
 function browserSyncTask(done) {
   browserSync.init({
-    proxy: 'projectname.test',
+    proxy: 'consulo.test',
     open: false
   });
   gulp.watch(paths.sass, sassDevTask);
