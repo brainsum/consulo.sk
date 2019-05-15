@@ -4,15 +4,16 @@
   width: 100%;
   padding: 0 2.2rem;
   margin: 0 auto;
+
   @include breakpoint(medium) {
     padding: 0 4.4rem;
   }
 }
 
 %transition {
-  @include transition(all, .3s);
+  @include transition(all, 0.3s);
 }
 
 %transition_slow {
-  @include transition(all, .5s);
+  @include transition(all, 0.5s);
 }

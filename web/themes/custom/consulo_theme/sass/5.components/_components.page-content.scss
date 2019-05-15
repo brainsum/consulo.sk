@@ -2,27 +2,33 @@
 .block-system-main-block {
   .node--type-page {
     @extend %wide-container;
+
     padding: 2rem 2.2rem;
     position: relative;
     min-height: 350px;
+
     @include breakpoint(medium) {
       padding: 4rem 4.4rem;
     }
+
     .field--name-body {
       font-family: $font--rubik;
       font-weight: normal;
       font-size: $fs--15;
       line-height: $lh--23;
+
       @include breakpoint(medium) {
         max-width: 50%;
       }
     }
+
     .content-bgr {
       position: relative;
       width: 100%;
       max-width: 440px;
       margin: 2.5rem auto -4rem;
       display: block;
+
       @include breakpoint(medium) {
         position: absolute;
         bottom: 0;
@@ -39,11 +45,14 @@
   background-color: $c--white;
   padding-top: 5rem;
   padding-bottom: 3rem;
+
   @include breakpoint(medium) {
     padding-bottom: 15rem;
   }
-  >h2 {
+
+  > h2 {
     @extend %wide-container;
+
     font-family: $font--playfair;
     font-weight: normal;
     font-size: $fs--42;
@@ -51,68 +60,84 @@
     position: relative;
     z-index: 10;
     margin-bottom: 3.7rem;
+
     &:before {
       content: '';
       width: 15rem;
       height: 3rem;
       display: block;
       position: absolute;
-      bottom: -.5rem;
+      bottom: -0.5rem;
       left: 1.4rem;
       background-color: $c--light-red;
       z-index: -1;
     }
   }
+
   .view-team-members {
     max-width: 108.8rem;
     width: 100%;
     padding: 2rem 0;
     margin: 0 auto;
+
     @include breakpoint(medium) {
       padding: 0 4.4rem;
     }
+
     .view-content {
       @include flex;
       @include flex-direction(column);
       @include align-items(center);
+
       position: relative;
       background-color: $c--light-grey;
       padding: 2rem;
-      >div {
+
+      > div {
         @include breakpoint(medium) {
           @include flex-shrink(1);
+
           max-width: 280px;
           width: 33%;
         }
       }
-      >div:not(:last-child) {
+
+      > div:not(:last-child) {
         @include breakpoint(medium) {
           max-width: 300px;
           padding-right: 2rem;
         }
+
         @include breakpoint(tablet) {
           max-width: 330px;
           padding-right: 5rem;
         }
       }
+
       @include breakpoint(medium) {
         @include flex-direction(row);
         @include justify-content(center);
+
         padding: 0 1rem 3rem;
         background-color: transparent;
       }
+
       @include breakpoint(tablet) {
         @include justify-content(flex-end);
+
         padding: 0 0 5.5rem;
       }
-      >div {
+
+      > div {
         position: relative;
         z-index: 10;
         margin-bottom: 2.5rem;
+
         @include breakpoint(medium) {
           margin-bottom: 0;
         }
       }
+
       &:after {
         position: absolute;
         width: 100%;
@@ -122,9 +147,11 @@
         bottom: 0;
         left: 0;
         right: 0;
+
         @include breakpoint(medium) {
           content: '';
         }
+
         @include breakpoint(tablet) {
           width: calc(100% - 4.4rem);
           right: auto;
@@ -132,27 +159,29 @@
       }
     }
   }
+
   .view-header {
     margin-bottom: 4rem;
     font-family: $font--rubik;
     font-size: $fs--15;
     line-height: $lh--23;
     padding: 0 2.2rem;
-    @include breakpoint(medium) {
 
-    }
     @include breakpoint(tablet) {
       padding-left: 6rem;
     }
   }
+
   .node--type-team-member {
     overflow: hidden;
+
     .image-holder {
       width: 100%;
       max-width: 280px;
       height: 280px;
       position: relative;
       background-color: $c--light-red;
+
       &:after {
         content: '';
         height: 5px;
@@ -163,19 +192,23 @@
         left: 0;
         bottom: -5px;
       }
+
       .image-text {
+        @extend %transition_slow;
+
         @include flex-direction(column);
         @include justify-content(space-between);
-        @extend %transition_slow;
+
         position: absolute;
         top: -100%;
         left: 0;
         right: 0;
         height: 100%;
         padding: 4rem 2.5rem;
-        background-color: rgba($c--dark-red, .85);
+        background-color: rgba($c--dark-red, 0.85);
         margin-bottom: 2.5rem;
         display: none;
+
         .field--name-body p {
           font-family: $font--playfair;
           font-weight: $fw--400;
@@ -184,6 +217,7 @@
           font-style: italic;
           line-height: $lh--28;
         }
+
         .field--name-field-praxis p {
           font-family: $font--rubik;
           font-weight: $fw--400;
@@ -192,10 +226,12 @@
           line-height: $lh--23;
         }
       }
+
       @include breakpoint(medium) {
         .image-text {
           @include flex;
         }
+
         &:hover .image-text {
           top: 0;
           z-index: 100;
@@ -205,28 +241,35 @@
       .slick-slider {
         @include breakpoint(medium) {
           width: 280px;
+
           @include translate(-50%, 0);
+
           margin-left: 50%;
         }
       }
     }
+
     .text-holder {
       position: relative;
       z-index: 10;
       padding-top: 2.5rem;
+
       &--name {
         @include flex;
         @include flex-direction(column);
         @include align-items(flex-start);
+
         font-size: $fs--20;
         color: $c--primary-brown;
         font-family: $font--rubik;
         font-weight: $fw--500;
         margin-bottom: 1.5rem;
+
         @include breakpoint(medium) {
           margin-bottom: 2rem;
           min-height: 43px;
         }
+
         span {
           font-size: $fs--15;
           font-weight: $fw--400;
@@ -234,12 +277,15 @@
       }
       &--mobile {
         margin-bottom: 1.5rem;
+
         @include breakpoint(medium) {
           display: none;
         }
+
         .field--name-body {
           max-width: 28rem;
           margin-bottom: 1.5rem;
+
           p {
             font-family: $font--playfair;
             font-weight: $fw--400;
@@ -248,6 +294,7 @@
             line-height: $lh--28;
           }
         }
+
         .field--name-field-praxis {
           max-width: 28rem;
           font-family: $font--rubik;
@@ -256,6 +303,7 @@
           line-height: $lh--23;
         }
       }
+
       &--data {
         @include flex;
         @include justify-content(flex-start);
@@ -263,12 +311,15 @@
         @include flex-wrap(wrap);
         @include align-items(center);
       }
+
       &--data a {
         font-size: $fs--15;
         color: $c--primary-brown;
         font-family: $font--rubik;
+
         &.icon-rounded {
           @extend %transition;
+
           width: 3.3rem;
           height: 3.3rem;
           border-radius: 100%;
@@ -276,33 +327,41 @@
           text-align: center;
           display: inline-block;
           line-height: 3.3rem;
+
           &:hover {
             background-color: $c--dark-red;
             color: $c--white;
           }
         }
+
         &:not(:last-child) {
           margin-right: 1.5rem;
         }
+
         &.icon-phone {
           @include breakpoint(medium) {
             display: block;
             width: 100%;
             margin-top: 1rem;
           }
+
           @include breakpoint(tablet) {
             display: inline-block;
             width: auto;
             margin-top: auto;
             margin-bottom: auto;
           }
+
           .fa-phone {
             @extend %transition;
-            @include opacity(.5);
+
+            @include opacity(0.5);
           }
+
           &:hover {
             .fa-phone {
               @include opacity(1);
+
               color: $c--dark-red;
             }
           }
@@ -318,27 +377,34 @@
       @include flex;
       @include flex-direction(column);
       @include justify-content(flex-start);
+
       @include breakpoint(medium) {
         @include flex-direction(row);
         @include justify-content(space-between);
       }
     }
+
     .section-element {
       padding: 0 1rem;
+
       &:not(:last-child) {
         margin-bottom: 3rem;
+
         @include breakpoint(medium) {
           margin-bottom: 0;
         }
       }
+
       .field--type-image {
         padding-left: 1rem;
         margin-bottom: 1rem;
+
         @include breakpoint(medium) {
           padding-left: 2rem;
           margin-bottom: 2.3rem;
           height: 71px;
         }
+
         img {
           @include breakpoint(medium down) {
             max-width: 5rem;
@@ -346,6 +412,7 @@
           }
         }
       }
+
       .field--name-field-element-1-title,
       .field--name-field-element-2-title,
       .field--name-field-element-3-title {
@@ -357,14 +424,15 @@
         &:after {
           content: '';
           width: 7rem;
-          height: .5rem;
+          height: 0.5rem;
           position: absolute;
-          bottom: -.8rem;
+          bottom: -0.8rem;
           left: 0;
           background-color: $c--primary-red;
           z-index: -1;
         }
       }
+
       .field--name-field-element-1-item,
       .field--name-field-element-2-item,
       .field--name-field-element-3-item {
@@ -375,8 +443,10 @@
           font-size: $fs--15;
           line-height: $lh--30;
           letter-spacing: 0;
+
           &:before {
             @include border-radius(2px);
+
             content: '';
             width: 4px;
             height: 4px;
@@ -391,15 +461,18 @@
       }
     }
   }
+
   #services-section2 {
     background-image: url('/themes/custom/consulo_theme/images/layer_9.png');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
   }
+
   #services-section3 {
     background-color: $c--white;
   }
+
   #services-section4 {
     background-image: url('/themes/custom/consulo_theme/images/layer_11.png');
     background-position: center 92%;
@@ -407,14 +480,18 @@
     background-size: cover;
     min-height: 425px;
   }
+
   .services-section {
     padding: 3rem 0 4rem;
+
     @include breakpoint(medium) {
       padding: 6rem 0 8rem;
     }
+
     &--inner {
       @extend %wide-container;
     }
+
     .field--name-field-section-2-title,
     .field--name-field-section-3-title,
     .field--name-field-section-4-title {
@@ -424,47 +501,56 @@
       position: relative;
       margin-bottom: 3rem;
       z-index: 50;
+
       @include breakpoint(medium) {
         font-size: $fs--42;
       }
+
       &:after {
         content: '';
         width: 15rem;
         height: 2rem;
         position: absolute;
-        bottom: -.6rem;
+        bottom: -0.6rem;
         left: -3.4rem;
         z-index: -1;
+
         @include breakpoint(medium) {
           height: 3rem;
         }
       }
     }
+
     .field--name-field-section-2-title {
       &:after {
         background-color: $c--primary-red;
       }
     }
+
     .field--name-field-section-3-title {
       &:after {
         background-color: $c--light-red;
       }
     }
+
     .field--name-field-section-4-title {
       &:after {
         background-color: $c--white;
       }
     }
+
     .field--name-field-section-2-title,
     .field--name-field-section-2-item {
       color: $c--white;
     }
+
     .field--name-field-section-3-title,
     .field--name-field-section-4-title,
     .field--name-field-section-3-item,
     .field--name-body p {
       color: $c--primary-brown;
     }
+
     .field--name-field-section-2-item,
     .field--name-field-section-3-item,
     .field--name-body p {
@@ -473,12 +559,15 @@
       line-height: $lh--23;
       letter-spacing: 0;
     }
+
     .field--name-field-section-2-item {
       .field__item {
         position: relative;
         padding-left: 1.2rem;
+
         &:before {
           @include border-radius(2px);
+
           content: '';
           width: 4px;
           height: 4px;
@@ -491,42 +580,54 @@
         }
       }
     }
+
     .field--name-field-section-3-item {
       @include flex;
       @include justify-content(flex-start);
       @include flex-direction(column);
+
       @include breakpoint(bigmobile) {
         @include flex-direction(row);
         @include flex-wrap(wrap);
+
         margin: 0 -1rem;
       }
+
       @include breakpoint(medium) {
         @include flex-direction(row);
         @include flex-wrap(wrap);
+
         margin: 0 -1.7rem;
       }
+
       .field__item {
         width: 100%;
         margin-bottom: 2rem;
+
         @include breakpoint(bigmobile) {
           width: 50%;
           padding: 0 1rem;
         }
+
         @include breakpoint(smallmedium) {
           width: 33.33%;
         }
+
         @include breakpoint(medium) {
           width: 25%;
         }
+
         @include breakpoint(tablet) {
           width: 20%;
           margin-bottom: 4rem;
           padding: 0 1.7rem;
         }
+
         &--inner {
           @include flex;
           @include flex-direction(column);
           @include justify-content(center);
+
           background-color: $c--lighter-red;
           padding: 2rem;
           text-align: center;

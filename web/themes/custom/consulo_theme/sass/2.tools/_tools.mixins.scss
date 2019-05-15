@@ -1,12 +1,8 @@
 
-
 /**
  * @file
  *** FOUNDATION FOR SITES AND CUSTOM MIXINS
  */
-
-
-
 
 /**
  * @group Foundation for Sites mixins
@@ -14,7 +10,7 @@
  * @todo These are mostly from Foundation and should be removed and used straight from Foundation.
  */
 
-@mixin border_radius($value){
+@mixin border_radius($value) {
   -webkit-border-radius: $value;
   -moz-border-radius: $value;
   border-radius: $value;
@@ -40,7 +36,7 @@
   border-top-left-radius: $radius;
 }
 
-@mixin user_select($value){
+@mixin user_select($value) {
   -webkit-touch-callout: $value;
   -webkit-user-select: $value;
   -khtml-user-select: $value;
@@ -55,6 +51,7 @@
     content: " "; // 1
     display: table; // 2
   }
+
   &:after {
     clear: both;
   }
@@ -73,6 +70,7 @@
   opacity: $opacity;
   // IE8 filter
   $opacity-ie: ($opacity * 100);
+
   filter: alpha(opacity=$opacity-ie);
 }
 
@@ -156,51 +154,43 @@ $retina-suffix: '@2x';
 @mixin background-image($name, $folder:'icons', $size:false) {
   background-image: url('#{$image-path}/#{$folder}/#{$name}.svg');
 
-  @if($size){
+  @if ($size) {
     background-size: $size+'px';
   }
 
   .no-svg & {
     background-image: url('#{$image-path}/#{$folder}/#{$name}.#{$fallback-extension}');
-
-    /*    @media  only screen and (-moz-min-device-pixel-ratio: 1.5),
-                only screen and (-o-min-device-pixel-ratio: 3/2),
-                only screen and (-webkit-min-device-pixel-ratio: 1.5),
-                only screen and (min-device-pixel-ratio: 1.5) {
-          background-image: url('#{$image-path}/#{$folder}/#{$name}#{$retina-suffix}.#{$fallback-extension}');
-        }*/
   }
 }
 
 // @include animeImage();
 @mixin animeImage() {
-  @include transition(all .15s ease-in-out);
+  @include transition(all 0.15s ease-in-out);
 }
 
-
 $-zf-flex-justify: (
-        'left': flex-start,
-        'right': flex-end,
-        'center': center,
-        'justify': space-between,
-        'spaced': space-around,
+  'left'    : flex-start,
+  'right'   : flex-end,
+  'center'  : center,
+  'justify' : space-between,
+  'spaced'  : space-around,
 );
 
 $-zf-flex-align: (
-        'top': flex-start,
-        'bottom': flex-end,
-        'middle': center,
-        'stretch': stretch,
+  'top'     : flex-start,
+  'bottom'  : flex-end,
+  'middle'  : center,
+  'stretch' : stretch,
 );
 
 $-zf-flex-direction: (
-        'row': row,
-        'row-reverse': row-reverse,
-        'column': column,
-        'column-reverse': column-reverse,
+  'row'             : row,
+  'row-reverse'     : row-reverse,
+  'column'          : column,
+  'column-reverse'  : column-reverse,
 );
 
-/// Enables flexbox by adding `display: flex` to the element.
+// Enables flexbox by adding `display: flex` to the element.
 @mixin flex {
   display: -webkit-box;
   display: -moz-box;
@@ -231,8 +221,8 @@ $-zf-flex-direction: (
  */
 
 @mixin flex-align($x: null, $y: null) {
-  @if $x {
-    @if map-has-key($-zf-flex-justify, $x) {
+  @if ($x) {
+    @if (map-has-key($-zf-flex-justify, $x)) {
       $x: map-get($-zf-flex-justify, $x);
     }
 
@@ -241,8 +231,8 @@ $-zf-flex-direction: (
     }
   }
 
-  @if $y {
-    @if map-has-key($-zf-flex-align, $y) {
+  @if ($y) {
+    @if (map-has-key($-zf-flex-align, $y)) {
       $y: map-get($-zf-flex-align, $y);
     }
 
@@ -265,8 +255,8 @@ $-zf-flex-direction: (
  */
 
 @mixin flex-align-self($y: null) {
-  @if $y {
-    @if map-has-key($-zf-flex-align, $y) {
+  @if ($y) {
+    @if (map-has-key($-zf-flex-align, $y)) {
       $y: map-get($-zf-flex-align, $y);
     }
 
@@ -312,7 +302,7 @@ $-zf-flex-direction: (
   // No Webkit/FF Box fallback.
   -webkit-flex-wrap: $value;
 
-  @if $value == nowrap {
+  @if ($value == nowrap) {
     -ms-flex-wrap: none;
   }
 
@@ -391,25 +381,25 @@ $-zf-flex-direction: (
  */
 
 @mixin justify-content($value: flex-start) {
-  @if $value == flex-start {
+  @if ($value == flex-start) {
     -webkit-box-pack: start;
     -moz-box-pack: start;
     -ms-flex-pack: start;
   }
 
-  @else if $value == flex-end {
+  @else if ($value == flex-end) {
     -webkit-box-pack: end;
     -moz-box-pack: end;
     -ms-flex-pack: end;
   }
 
-  @else if $value == space-between {
+  @else if ($value == space-between) {
     -webkit-box-pack: justify;
     -font-box-pack: justify;
     -ms-flex-pack: justify;
   }
 
-  @else if $value == space-around {
+  @else if ($value == space-around) {
     -ms-flex-pack: distribute;
   }
 
@@ -429,13 +419,13 @@ $-zf-flex-direction: (
  */
 
 @mixin align-items($value: stretch) {
-  @if $value == flex-start {
+  @if ($value == flex-start) {
     -webkit-box-align: start;
     -moz-box-align: start;
     -ms-flex-align: start;
   }
 
-  @else if $value == flex-end {
+  @else if ($value == flex-end) {
     -webkit-box-align: end;
     -moz-box-align: end;
     -ms-flex-align: end;
@@ -459,11 +449,12 @@ $-zf-flex-direction: (
 @mixin align-self($value: auto) {
   // No Webkit Box Fallback.
   -webkit-align-self: $value;
-  @if $value == flex-start {
+
+  @if ($value == flex-start) {
     -ms-flex-item-align: start;
   }
 
-  @else if $value == flex-end {
+  @else if ($value == flex-end) {
     -ms-flex-item-align: end;
   }
 
@@ -482,11 +473,12 @@ $-zf-flex-direction: (
 @mixin align-content($value: stretch) {
   // No Webkit Box Fallback.
   -webkit-align-content: $value;
-  @if $value == flex-start {
+
+  @if ($value == flex-start) {
     -ms-flex-line-pack: start;
   }
 
-  @else if $value == flex-end {
+  @else if ($value == flex-end) {
     -ms-flex-line-pack: end;
   }
 
@@ -496,7 +488,6 @@ $-zf-flex-direction: (
 
   align-content: $value;
 }
-
 
 /**
  * @group theming mixins
@@ -511,7 +502,7 @@ $-zf-flex-direction: (
   transition: all 600ms ease;
   border: 0;
 
-  @if $type == primary {
+  @if ($type == primary) {
     color: white;
     background: $c-red;
     font-weight: $fw-700;
@@ -520,6 +511,7 @@ $-zf-flex-direction: (
     text-transform: uppercase;
     height: 4rem;
     line-height: 4rem;
+
     @include breakpoint(medium) {
       height: 6rem;
       line-height: 6rem;
@@ -528,7 +520,7 @@ $-zf-flex-direction: (
     }
   }
 
-  @if $type == primary-more {
+  @if ($type == primary-more) {
     width: 100%;
     font-weight: $fw-700;
     font-size: $fs-medium;
@@ -536,8 +528,10 @@ $-zf-flex-direction: (
     text-transform: uppercase;
     color: white;
     background: $c-red url('../../images/nectel-white-arrow-right.png') no-repeat 90% center;
+
     @include breakpoint(medium) {
       width: 24rem;
+
       &:hover {
         color: $c-red;
         background: white url('../../images/nectel-red-arrow-right-big.png') no-repeat 90% center;
@@ -545,11 +539,12 @@ $-zf-flex-direction: (
     }
   }
 
-  @if $type == primary-arrow {
+  @if ($type == primary-arrow) {
     width: 6rem;
     font-size: 0;
     color: transparent;
     background: $c-red url('../../images/nectel-white-arrow-right.png') no-repeat center;
+
     @include breakpoint(medium) {
       &:hover {
         background: white url('../../images/nectel-red-arrow-right-big.png') no-repeat center;
@@ -558,20 +553,20 @@ $-zf-flex-direction: (
   }
 }
 
-
 @mixin wrapper($width: normal) {
   width: 100%;
   margin: 0 auto;
   padding: 0 2.4rem;
+
   @include breakpoint(medium) {
     padding: 0 1.5rem;
   }
 
-  @if $width == normal {
+  @if ($width == normal) {
     max-width: 97rem;
   }
 
-  @if $width == wide {
+  @if ($width == wide) {
     max-width: 114rem;
   }
 }
@@ -584,7 +579,7 @@ $-zf-flex-direction: (
   @include breakpoint(medium) {
     padding: 30px 40px;
 
-    @if $col > 1 {
+    @if ($col > 1) {
       column-count: $col;
       column-gap: 2em;
     }
@@ -594,9 +589,11 @@ $-zf-flex-direction: (
 @mixin bullet-point($level: 1) {
   position: relative;
 
-  @if $level == 1 {
+  @if ($level == 1) {
     margin-left: $base-font-size;
-  } @else if $level == 2 {
+  }
+
+  @else if ($level == 2) {
     margin-left: 1rem;
   }
 
@@ -605,14 +602,16 @@ $-zf-flex-direction: (
     position: absolute;
     display: block;
 
-    @if $level == 1 {
+    @if ($level == 1) {
       top: 1.2rem;
       margin: 0 10px 0 $base-font-size * -1;
       width: 6px;
       height: 6px;
       border-radius: 6px;
       background-color: $c-red;
-    } @else if $level == 2 {
+    }
+
+    @else if ($level == 2) {
       top: 50%;
       width: 3px;
       height: 3px;
@@ -625,6 +624,7 @@ $-zf-flex-direction: (
 
 @mixin list-item($level) {
   @include bullet-point($level);
+
   font-style: italic;
   font-weight: $fw-600;
 }

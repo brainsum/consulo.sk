@@ -5,9 +5,6 @@
  * @licence under MIT Open Source
  */
 
-
-
-
 /**
  * @group functions
  * Determine if a value is not falsey, in CSS terms.
@@ -23,15 +20,17 @@
   @if $val == null or $val == none {
     @return false;
   }
+
   @if type-of($val) == 'number' and strip-unit($val) == 0 {
     @return false;
   }
+
   @if type-of($val) == 'list' and length($val) == 0 {
     @return false;
   }
+
   @return true;
 }
-
 
 /**
  * Determine a top/right/bottom/right value on a padding, margin, etc.
@@ -47,7 +46,6 @@
  *
  * @returns {Number} A single value based on `$val` and `$side`.
  */
-
 @function get-side($val, $side) {
   $length: length($val);
 
@@ -83,7 +81,6 @@
   }
 }
 
-
 /**
  * Given border $val, find a specific element of the border, which is $elem.
  * The possible values for $elem are width, style, and color.
@@ -97,11 +94,11 @@
  * style, or black border.
  */
 
-
 @function get-border-value($val, $elem) {
   // Find the width, style, or color and return it
   @each $v in $val {
     $type: type-of($v);
+
     @if $elem == width and $type == 'number' {
       @return $v;
     }
@@ -125,7 +122,6 @@
   @return map-get($defaults, $elem);
 }
 
-
 /**
  * Finds a value in a nested map.
  *
@@ -134,14 +130,13 @@
  * @param {String} $keys... - Keys to use when looking for a value.
  * @returns {Mixed} The value found in the map.
  */
-
 @function map-deep-get($map, $keys...) {
   @each $key in $keys {
     $map: map-get($map, $key);
   }
+
   @return $map;
 }
-
 
 /**
  * Casts a map into a list.
@@ -150,7 +145,6 @@
  * @param {Map} $map - Map to pull a value from.
  * @returns {List} Depending on the flag, returns either $keys or $values or both.
  */
-
 @function map-to-list($map, $keep: 'both') {
   $keep: if(index('keys' 'values', $keep), $keep, 'both');
 
@@ -166,9 +160,11 @@
     @if $keep == 'keys' {
       @return $keys;
     }
+
     @else if $keep == 'values' {
       @return $values;
     }
+
     @else {
       @return zip($keys, $values);
     }
@@ -177,7 +173,6 @@
   @return if(type-of($map) != 'list', ($value,), $map);
 }
 
-
 /**
  * Safely return a value from a map.
  *
@@ -185,7 +180,6 @@
  * @param {String} $key - Name of the map key.
  * @returns {List} Found value.
  */
-
 @function map-safe-get($map, $key) {
   @if (type-of($map) == 'map' or (type-of($map) == 'list' and length($map) == 0)) {
     @if (map-has-key($map, $key)) {

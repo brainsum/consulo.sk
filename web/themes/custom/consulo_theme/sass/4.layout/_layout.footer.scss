@@ -11,21 +11,25 @@
   background-color: $c--primary-brown;
   padding: 1.5rem 0;
   display: none;
+
   @include breakpoint(medium) {
     display: block;
     height: 4rem;
     padding: 0 4.4rem;
   }
+
   #block-footer {
     @include flex;
     @include flex-direction(column);
     @include justify-content(center);
+
     @include breakpoint(medium) {
       @include flex;
       @include flex-direction(row);
       @include justify-content(space-between);
     }
   }
+
   .path-frontpage & {
     @include breakpoint(medium) {
       position: fixed;
@@ -33,7 +37,7 @@
       left: 0;
       right: 0;
       z-index: 100;
-      background-color: rgba($c--primary-brown, .5);
+      background-color: rgba($c--primary-brown, 0.5);
     }
   }
 }
