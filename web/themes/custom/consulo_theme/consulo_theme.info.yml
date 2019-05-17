@@ -15,13 +15,8 @@ libraries:
   - consulo_theme/global-styling
 # Regions, change it for your needs (don't forget change page template too)
 regions:
-  top_bar: Top Bar
   header: Header
-  navigation: Navigation
-  featured: Featured
-  top: Bottom
+  top: Top
   content: Content
-  sidebar: Sidebar
   bottom: Bottom
   footer: Footer
-  admin: Admin Tools

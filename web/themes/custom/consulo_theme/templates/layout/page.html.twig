@@ -42,22 +42,17 @@
  * @see html.html.twig
  */
 #}
-{{ page.top_bar }}
 <div class="layout-container">
 
   <header role="banner">
     {{ page.header }}
   </header>
 
-  {{ page.navigation }}
-
-  {{ page.breadcrumb }}
-
-  {{ page.highlighted }}
-
   {{ page.help }}
 
-  {{ top }}
+  {% if page.top %}
+    {{ page.top }}
+  {% endif %}
 
   <main role="main">
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
@@ -66,21 +61,11 @@
       {{ page.content }}
     </div>{# /.layout-content #}
 
-    {% if page.sidebar %}
-      <aside class="layout-sidebar" role="complementary">
-        {{ page.sidebar }}
-      </aside>
-    {% endif %}
-
-    {% if page.sidebar_second %}
-      <aside class="layout-sidebar-second" role="complementary">
-        {{ page.sidebar_second }}
-      </aside>
-    {% endif %}
-
   </main>
 
-  {{ bottom }}
+  {% if page.bottom %}
+    {{ page.bottom }}
+  {% endif %}
 
   {% if page.footer %}
     <footer role="contentinfo">
@@ -89,5 +74,3 @@
   {% endif %}
 
 </div>{# /.layout-container #}
-
-{{ admin }}
