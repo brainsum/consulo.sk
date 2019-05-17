@@ -1,0 +1,19 @@
+uuid: bb167452-cf06-4526-b9fd-6c1fac290576
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_quote_text
+    - node.type.partner_quote
+id: node.partner_quote.field_quote_text
+field_name: field_quote_text
+entity_type: node
+bundle: partner_quote
+label: Quote
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

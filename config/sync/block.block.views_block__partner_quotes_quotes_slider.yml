@@ -1,22 +1,22 @@
-uuid: c24832f0-0009-4841-8184-014d6bf3480f
+uuid: 704e1e81-fc3f-41ba-b89d-43497b286aa2
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.team_members
+    - views.view.partner_quotes
   module:
     - system
     - views
   theme:
     - consulo_theme
-id: views_block__team_members
+id: views_block__partner_quotes_quotes_slider
 theme: consulo_theme
 region: content
-weight: 2
+weight: 0
 provider: null
-plugin: 'views_block:team_members-team_members_block'
+plugin: 'views_block:partner_quotes-quotes_slider'
 settings:
-  id: 'views_block:team_members-team_members_block'
+  id: 'views_block:partner_quotes-quotes_slider'
   label: ''
   provider: views
   label_display: visible
@@ -25,6 +25,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: /node/3
+    pages: /node/12
     negate: false
     context_mapping: {  }

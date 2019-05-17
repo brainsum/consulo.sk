@@ -1,0 +1,22 @@
+uuid: 500515b6-26d5-4a63-b9cc-b266feebc519
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.partner_quote
+id: node.partner_quote.promote
+field_name: promote
+entity_type: node
+bundle: partner_quote
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

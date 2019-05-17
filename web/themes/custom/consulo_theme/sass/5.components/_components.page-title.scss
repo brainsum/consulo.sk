@@ -28,6 +28,14 @@
     }
   }
 
+  .node-12 & {
+    background-image: url("../images/consulo_partners_header.jpg");
+
+    @include breakpoint(desktop) {
+      background-image: url("../images/consulo_partners_header--wide.jpg");
+    }
+  }
+
   @include breakpoint(mobile down) {
     z-index: -1;
   }

@@ -1,0 +1,45 @@
+uuid: d6dd7f43-7f6f-4624-b428-dc3c411ac769
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.partner_quote.field_quote_author
+    - field.field.node.partner_quote.field_quote_company
+    - field.field.node.partner_quote.field_quote_text
+    - node.type.partner_quote
+  module:
+    - user
+id: node.partner_quote.default
+targetEntityType: node
+bundle: partner_quote
+mode: default
+content:
+  field_quote_author:
+    weight: 102
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_quote_company:
+    weight: 103
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_quote_text:
+    weight: 101
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

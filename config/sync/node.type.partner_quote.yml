@@ -1,0 +1,17 @@
+uuid: 23cacb7e-36c5-486d-a116-571c114a53ce
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Partner Quote'
+type: partner_quote
+description: 'Quotes from partners on "Parteri" page.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

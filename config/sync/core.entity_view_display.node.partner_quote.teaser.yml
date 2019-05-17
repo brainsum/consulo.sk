@@ -1,0 +1,20 @@
+uuid: 88bbbf2a-15cf-4562-8262-e3926e5f3836
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.partner_quote
+  module:
+    - user
+id: node.partner_quote.teaser
+targetEntityType: node
+bundle: partner_quote
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

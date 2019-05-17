@@ -182,6 +182,12 @@
       }
     }
   }
+
+  .slick-slide {
+    @include breakpoint(medium) {
+      height: 100vh !important;
+    }
+  }
 }
 
 .carousel-image-cover {
@@ -213,11 +219,5 @@
 
   @include breakpoint(2500) {
     background: no-repeat 0 60%;
-  }
-}
-
-.slick-slide {
-  @include breakpoint(medium) {
-    height: 100vh !important;
   }
 }

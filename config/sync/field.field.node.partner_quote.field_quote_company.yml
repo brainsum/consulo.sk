@@ -1,0 +1,19 @@
+uuid: 6ebc15cc-037c-4248-b113-004664d0ce15
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_quote_company
+    - node.type.partner_quote
+id: node.partner_quote.field_quote_company
+field_name: field_quote_company
+entity_type: node
+bundle: partner_quote
+label: Company
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -9,7 +9,7 @@ _core:
 id: consulo_theme_local_tasks
 theme: consulo_theme
 region: content
-weight: -40
+weight: -4
 provider: null
 plugin: local_tasks_block
 settings:

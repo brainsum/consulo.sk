@@ -3,12 +3,14 @@
   .node--type-page {
     @extend %wide-container;
 
-    padding: 2rem 2.2rem;
-    position: relative;
-    min-height: 350px;
+    .about-page & {
+      padding: 2rem 2.2rem;
+      position: relative;
+      min-height: 350px;
 
-    @include breakpoint(medium) {
-      padding: 4rem 4.4rem;
+      @include breakpoint(medium) {
+        padding: 4rem 4.4rem;
+      }
     }
 
     .field--name-body {
@@ -495,30 +497,7 @@
     .field--name-field-section-2-title,
     .field--name-field-section-3-title,
     .field--name-field-section-4-title {
-      font-family: $font--playfair;
-      font-weight: 400;
-      font-size: $fs--28;
-      position: relative;
-      margin-bottom: 3rem;
-      z-index: 50;
-
-      @include breakpoint(medium) {
-        font-size: $fs--42;
-      }
-
-      &:after {
-        content: "";
-        width: 15rem;
-        height: 2rem;
-        position: absolute;
-        bottom: -0.6rem;
-        left: -3.4rem;
-        z-index: -1;
-
-        @include breakpoint(medium) {
-          height: 3rem;
-        }
-      }
+      @include section-title;
     }
 
     .field--name-field-section-2-title {
@@ -636,5 +615,207 @@
         }
       }
     }
+  }
+}
+
+/**
+ * Partners page
+ */
+
+.block-views-blockpartner-quotes-quotes-slider {
+  background: url("../images/consulo_povedali-o-nas.jpg") no-repeat top center;
+  background-size: cover;
+  color: white;
+  padding: 5rem 0 6rem;
+
+  @include breakpoint(desktop) {
+    background-image: url("../images/consulo_povedali-o-nas--wide.jpg");
+  }
+
+  .inner-container {
+    @extend %wide-container;
+  }
+
+  h2 {
+    @include section-title;
+
+    &::after {
+      background-color: $c--primary-red;
+    }
+  }
+}
+
+.view-partner-quotes {
+  .quote {
+    &__text {
+      width: 65rem;
+      margin: 0 auto 0;
+
+      p {
+        font-style: italic;
+        font-size: 1.9rem;
+        line-height: 1.9;
+      }
+    }
+
+    &__author {
+      width: 65rem;
+      margin: 3rem auto 0;
+      text-align: right;
+      font-size: 1.9rem;
+      line-height: 1.9;
+
+      &-company {
+        &::before {
+          content: " / ";
+        }
+      }
+    }
+  }
+
+  .slick-prev,
+  .slick-next {
+    @include translate(0, -50%);
+
+    border: 0;
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    z-index: 999;
+    display: none !important;
+
+    &:focus {
+      border: 0;
+      outline: 0;
+    }
+
+    .icon {
+      $slider-icon-size: 1.8rem;
+
+      box-sizing: border-box;
+      display: inline-block;
+      font-size: inherit;
+      font-style: normal;
+      height: 6rem;
+      position: relative;
+      vertical-align: middle;
+      width: 6rem;
+
+      &:hover {
+        background-color: rgba(white, 0.1);
+      }
+
+      &::before,
+      &::after {
+        content: "";
+        display: block;
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      &::before {
+        border: 0.3rem solid white;
+        border-bottom: 0;
+        border-right: 0;
+        height: $slider-icon-size;
+        width: $slider-icon-size;
+      }
+
+      &--arrow-left::before {
+        transform: translate(-25%, -50%) rotate(-45deg);
+      }
+
+      &--arrow-right::before {
+        transform: translate(-75%, -50%) rotate(135deg);
+      }
+    }
+
+    @include breakpoint(medium) {
+      display: inline-block !important;
+    }
+  }
+
+  .slick-prev {
+    left: 0;
+  }
+
+  .slick-next {
+    right: 0;
+  }
+
+  .slick-dots {
+    @include flex;
+    @include flex-direction(row);
+    @include justify-content(center);
+
+    display: flex !important;
+    width: 100%;
+    margin: 4rem auto 0;
+
+    li {
+      list-style: none;
+
+      button {
+        @include transition(all 0.3s);
+
+        text-indent: -9999px;
+        width: 0.6rem;
+        height: 0.6rem;
+        border-radius: 50%;
+        background-color: #afbccd;
+        border: 0;
+        margin: 0 0.15rem;
+        padding: 0;
+        white-space: nowrap;
+        overflow: hidden;
+
+        @include breakpoint(medium) {
+          width: 1.2rem;
+          height: 1.2rem;
+          margin: 0 0.7rem;
+        }
+
+        &:focus {
+          outline: none;
+        }
+
+        &:focus,
+        &:hover {
+          width: 0.7rem;
+          height: 0.7rem;
+
+          @include breakpoint(medium) {
+            width: 1.4rem;
+            height: 1.4rem;
+          }
+        }
+      }
+
+      &.slick-active {
+        button {
+          background-color: white;
+          width: 0.7rem;
+          height: 0.7rem;
+
+          @include breakpoint(medium) {
+            width: 1.4rem;
+            height: 1.4rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.block-views-blockpartners-partners-block {
+  img {
+    filter: gray; /* IE6-9, Webkit */
+    filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
+  }
+
+  img:hover {
+    filter: none;
   }
 }

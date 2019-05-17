@@ -12,6 +12,7 @@
 
       if (slickElement.length > 0) {
         slickElement.not('.slick-initialized').slick({
+          adaptiveHeight: false,
           accessibility: false,
           arrows: true,
           prevArrow: '<button class="slick-prev" aria-label="Previous" type="button"><i class="icon icon--arrow-left"></i></button>',
@@ -19,8 +20,6 @@
           autoplay: false,
           slidesToShow: 1,
           slidesToScroll: 1,
-          lazyLoad: 'ondemand',
-          adaptiveHeight: true,
           autoplaySpeed: 4000,
           speed: 800,
           dots: true,
@@ -91,25 +90,48 @@
     }
   };
 
+  Drupal.behaviors.quotesslider = {
+    attach: function (context) {
+      var quouesSlider = $('.view-partner-quotes > .view-content', context);
+
+      if (quouesSlider.length > 0 ) {
+        quouesSlider.slick({
+          accessibility: false,
+          arrows: true,
+          prevArrow: '<button class="slick-prev" aria-label="Previous" type="button"><i class="icon icon--arrow-left"></i></button>',
+          nextArrow: '<button class="slick-next" aria-label="Next" type="button"><i class="icon icon--arrow-right"></i></button>',
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          lazyLoad: 'ondemand',
+          adaptiveHeight: true,
+          autoplaySpeed: 4000,
+          speed: 800,
+          dots: true,
+          pauseOnFocus: true,
+          swipe: true
+        });
+      }
+    }
+  };
+
   Drupal.behaviors.mobileMenu = {
     attach: function () {
-      var hamburgerIcon, closeIcon, menuHolder;
+      var hamburgerIcon;
+      var closeIcon;
+      var menuHolder;
 
       hamburgerIcon = $('.hamburger .fa');
       closeIcon = $('.close .fa');
       menuHolder = $('#block-consulo-theme-main-menu');
 
       hamburgerIcon.on('click', function () {
-        console.log('opend');
         menuHolder.addClass('active');
       });
       closeIcon.on('click', function () {
         menuHolder.removeClass('active');
-        console.log('closed');
-      })
+      });
     }
   };
 
 
 })(jQuery);
-

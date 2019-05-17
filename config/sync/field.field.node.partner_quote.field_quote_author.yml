@@ -1,0 +1,19 @@
+uuid: fb36e37f-11c1-43fe-bb54-6eea76bc921f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_quote_author
+    - node.type.partner_quote
+id: node.partner_quote.field_quote_author
+field_name: field_quote_author
+entity_type: node
+bundle: partner_quote
+label: Author
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

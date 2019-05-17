@@ -11,3 +11,12 @@ function consulo_theme_preprocess_block(&$variables) {
     }
   }
 }
+
+
+function consulo_theme_preprocess_html(&$variables) {
+  // Add node id to the body class.
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if($node) {
+    $variables['attributes']['class'][] = 'node-' . $node->id();
+  }
+}

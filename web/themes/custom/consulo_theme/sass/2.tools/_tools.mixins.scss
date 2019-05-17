@@ -628,3 +628,30 @@ $-zf-flex-direction: (
   font-style: italic;
   font-weight: $fw-600;
 }
+
+@mixin section-title {
+  font-family: $font--playfair;
+  font-weight: 400;
+  font-size: $fs--28;
+  position: relative;
+  margin-bottom: 3rem;
+  z-index: 50;
+
+  @include breakpoint(medium) {
+    font-size: $fs--42;
+  }
+
+  &:after {
+    content: "";
+    width: 15rem;
+    height: 2rem;
+    position: absolute;
+    bottom: -0.6rem;
+    left: -3.4rem;
+    z-index: -1;
+
+    @include breakpoint(medium) {
+      height: 3rem;
+    }
+  }
+}
