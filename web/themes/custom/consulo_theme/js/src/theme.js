@@ -14,8 +14,8 @@
         slickElement.not('.slick-initialized').slick({
           accessibility: false,
           arrows: true,
-          prevArrow: '<button class="slick-prev" aria-label="Previous" type="button"><i class="fa fa-chevron-left fa-3x"></i></button>',
-          nextArrow: '<button class="slick-next" aria-label="Next" type="button"><i class="fa fa-chevron-right fa-3x"></i></button>',
+          prevArrow: '<button class="slick-prev" aria-label="Previous" type="button"><i class="icon icon--arrow-left"></i></button>',
+          nextArrow: '<button class="slick-next" aria-label="Next" type="button"><i class="icon icon--arrow-right"></i></button>',
           autoplay: false,
           slidesToShow: 1,
           slidesToScroll: 1,
