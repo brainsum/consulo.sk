@@ -84,34 +84,69 @@
     .slick-dots {
       @include flex;
       @include flex-direction(row);
+      @include justify-content(center);
 
+      display: flex !important;
       position: absolute;
-      bottom: 25%;
-      right: 3.6rem;
-      display: none !important;
+      top: 27rem;
+      width: 100%;
 
       @include breakpoint(medium) {
-        display: flex !important;
+        top: auto;
+        bottom: 25%;
+        right: 3.6rem;
+        width: auto;
       }
 
       li {
         list-style: none;
 
         button {
+          @include transition(all 0.3s);
+
           text-indent: -9999px;
-          width: 11px;
-          height: 11px;
+          width: 0.6rem;
+          height: 0.6rem;
           border-radius: 50%;
           background-color: $c--grey;
           border: 0;
-          margin: 0 6px;
+          margin: 0 0.15rem;
+          padding: 0;
           white-space: nowrap;
           overflow: hidden;
+
+          @include breakpoint(medium) {
+            width: 1.2rem;
+            height: 1.2rem;
+            margin: 0 0.7rem;
+          }
+
+          &:focus {
+            outline: none;
+          }
+
+          &:focus,
+          &:hover {
+            width: 0.7rem;
+            height: 0.7rem;
+
+            @include breakpoint(medium) {
+              width: 1.4rem;
+              height: 1.4rem;
+            }
+          }
         }
 
         &.slick-active {
           button {
             background-color: $c--primary-red;
+            width: 0.7rem;
+            height: 0.7rem;
+
+            @include breakpoint(medium) {
+              width: 1.4rem;
+              height: 1.4rem;
+            }
           }
         }
       }
@@ -124,9 +159,8 @@
     .slider-item {
       .slider-text-holder {
         background-color: $c--light-grey;
-        padding: 3rem;
-        max-width: 80%;
-        margin: -5rem auto 0;
+        padding: 2rem;
+        margin: -5rem 2rem 0;
         z-index: 99;
         text-align: center;
 
@@ -153,7 +187,7 @@
 .carousel-image-cover {
   position: relative;
   width: 100vw;
-  height: 360px;
+  height: 31rem;
   display: block;
   z-index: -1;
 
@@ -174,10 +208,16 @@
   z-index: 0;
   height: 100%;
   width: 100%;
-  background: no-repeat center left;
+  background: no-repeat left center;
   background-size: cover;
+
+  @include breakpoint(2500) {
+    background: no-repeat 0 60%;
+  }
 }
 
 .slick-slide {
-  height: 100vh !important;
+  @include breakpoint(medium) {
+    height: 100vh !important;
+  }
 }

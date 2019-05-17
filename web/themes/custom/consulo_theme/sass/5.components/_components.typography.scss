@@ -76,15 +76,19 @@
 /** Slider **/
 
 .slider-text-holder {
-  a,
   h2 {
     @include transition(all 0.3s);
 
     font-family: $font--playfair;
-    font-size: $fs--28;
-    font-weight: $fw--100;
-    margin-bottom: 1.3rem;
+    font-size: $fs--26;
+    margin-bottom: 0.5em;
+    line-height: 1.2;
     color: $c--primary-brown;
+
+    @include breakpoint(bigmobile) {
+      font-size: $fs--28;
+      line-height: normal;
+    }
 
     @include breakpoint(medium) {
       font-size: $fs--36;
@@ -92,6 +96,11 @@
 
     @include breakpoint(desktop) {
       font-size: $fs--51;
+      line-height: 1.3;
+    }
+
+    @include breakpoint(1920) {
+      font-size: 7.2rem;
     }
   }
 
@@ -110,6 +119,10 @@
     @include breakpoint(medium) {
       font-size: $fs--14;
       line-height: $lh--20;
+    }
+
+    @include breakpoint(1920) {
+      font-size: $fs--18;
     }
   }
 

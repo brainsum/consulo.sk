@@ -10,10 +10,8 @@
 .region-footer {
   background-color: $c--primary-brown;
   padding: 1.5rem 0;
-  display: none;
 
   @include breakpoint(medium) {
-    display: block;
     height: 4rem;
     padding: 0 4.4rem;
   }
@@ -31,12 +29,15 @@
   }
 
   .path-frontpage & {
-    @include breakpoint(medium) {
+    @include breakpoint(mobile) {
       position: fixed;
       bottom: 0;
       left: 0;
       right: 0;
       z-index: 100;
+    }
+
+    @include breakpoint(medium) {
       background-color: rgba($c--primary-brown, 0.5);
     }
   }
