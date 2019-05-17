@@ -634,6 +634,20 @@
 
   .inner-container {
     @extend %wide-container;
+
+    position: relative;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 10.4rem;
+      content: "";
+      display: block;
+      background: url("../images/quote-sign.svg") no-repeat;
+      width: 24.8rem;
+      height: 17.9rem;
+      z-index: 2;
+    }
   }
 
   h2 {
@@ -646,6 +660,8 @@
 }
 
 .view-partner-quotes {
+  position: relative;
+  z-index: 3;
   .quote {
     &__text {
       width: 65rem;
