@@ -2,8 +2,8 @@ global-styling:
   css:
     base:
       //use.fontawesome.com/releases/v5.8.1/css/all.css: { external: true }
-      //fonts.googleapis.com/css?family=Playfair+Display:400,400i,700&subset=latin-ext: { external: true }
-      //fonts.googleapis.com/css?family=Rubik:400,700&subset=latin-ex: { external: true }
+      //fonts.googleapis.com/css?family=Playfair+Display:400,400i,700&display=swap&subset=latin-ext: { external: true }
+      //fonts.googleapis.com/css?family=Rubik:400,700&display=swap&subset=latin-ext: { external: true }
       css/base.css: {}
     layout:
       css/layout.css: {}
