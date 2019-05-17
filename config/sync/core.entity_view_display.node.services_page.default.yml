@@ -13,7 +13,6 @@ dependencies:
     - field.field.node.services_page.field_element_3_icon
     - field.field.node.services_page.field_element_3_item
     - field.field.node.services_page.field_element_3_title
-    - field.field.node.services_page.field_image
     - field.field.node.services_page.field_section_2_item
     - field.field.node.services_page.field_section_2_title
     - field.field.node.services_page.field_section_3_item
@@ -293,5 +292,4 @@ content:
     type: string
     region: content
 hidden:
-  field_image: true
   links: true

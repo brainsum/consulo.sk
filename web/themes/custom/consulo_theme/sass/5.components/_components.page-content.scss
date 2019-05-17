@@ -62,7 +62,7 @@
     margin-bottom: 3.7rem;
 
     &:before {
-      content: '';
+      content: "";
       width: 15rem;
       height: 3rem;
       display: block;
@@ -149,7 +149,7 @@
         right: 0;
 
         @include breakpoint(medium) {
-          content: '';
+          content: "";
         }
 
         @include breakpoint(tablet) {
@@ -183,7 +183,7 @@
       background-color: $c--light-red;
 
       &:after {
-        content: '';
+        content: "";
         height: 5px;
         width: 100px;
         background-color: $c--dark-red;
@@ -422,7 +422,7 @@
         position: relative;
         margin-bottom: 2.5rem;
         &:after {
-          content: '';
+          content: "";
           width: 7rem;
           height: 0.5rem;
           position: absolute;
@@ -447,7 +447,7 @@
           &:before {
             @include border-radius(2px);
 
-            content: '';
+            content: "";
             width: 4px;
             height: 4px;
             background-color: $c--primary-red;
@@ -463,7 +463,7 @@
   }
 
   #services-section2 {
-    background-image: url('../images/consulo_forma_spoluprace.jpg');
+    background-image: url("../images/consulo_forma_spoluprace.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -474,7 +474,7 @@
   }
 
   #services-section4 {
-    background-image: url('../images/consulo_ceny.jpg');
+    background-image: url("../images/consulo_ceny.jpg");
     background-position: center 92%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -507,7 +507,7 @@
       }
 
       &:after {
-        content: '';
+        content: "";
         width: 15rem;
         height: 2rem;
         position: absolute;
@@ -568,7 +568,7 @@
         &:before {
           @include border-radius(2px);
 
-          content: '';
+          content: "";
           width: 4px;
           height: 4px;
           background-color: $c--primary-red;

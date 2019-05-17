@@ -8,6 +8,25 @@
   background-color: $c--dark-red;
   position: relative;
   height: 100px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .about-page & {
+    background-image: url("../images/consulo_about_header.jpg");
+
+    @include breakpoint(desktop) {
+      background-image: url("../images/consulo_about_header--wide.jpg");
+    }
+  }
+
+  .page-node-type-services-page & {
+    background-image: url("../images/consulo_services_header.jpg");
+
+    @include breakpoint(desktop) {
+      background-image: url("../images/consulo_services_header--wide.jpg");
+    }
+  }
 
   @include breakpoint(mobile down) {
     z-index: -1;
@@ -15,22 +34,6 @@
 
   @include breakpoint(medium) {
     height: 160px;
-  }
-
-  .page-title-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-position: 0 20%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: 10;
-
-    .about-page & {
-      background-position: center 55%;
-    }
   }
 
   .page-title {
