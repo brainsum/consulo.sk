@@ -637,19 +637,19 @@ $-zf-flex-direction: (
   margin-bottom: 3rem;
   z-index: 50;
 
-  @if ($type == light) {
+  @if ($type == light or $type == white) {
     color: $c--primary-brown;
   }
 
-  @else if ($type == dark) {
-    color: white;
+  @else if ($type == red) {
+    color: $c--white;
   }
 
   @include breakpoint(medium) {
     font-size: $fs--42;
   }
 
-  &:after {
+  &::after {
     content: "";
     width: 15rem;
     height: 2rem;
@@ -662,7 +662,11 @@ $-zf-flex-direction: (
       background-color: $c--light-red;
     }
 
-    @else if ($type == dark) {
+    @if ($type == white) {
+      background-color: $c--white;
+    }
+
+    @else if ($type == red) {
       background-color: $c--primary-red;
     }
 
