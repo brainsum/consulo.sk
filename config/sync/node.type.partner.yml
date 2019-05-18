@@ -1,0 +1,17 @@
+uuid: 5df477e5-5bc9-44dc-8709-478ebefc495f
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Partner
+type: partner
+description: 'Partners with logo and website link on "Partneri" page.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

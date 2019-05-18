@@ -629,13 +629,21 @@ $-zf-flex-direction: (
   font-weight: $fw-600;
 }
 
-@mixin section-title {
+@mixin section-title($type) {
   font-family: $font--playfair;
   font-weight: 400;
   font-size: $fs--28;
   position: relative;
   margin-bottom: 3rem;
   z-index: 50;
+
+  @if ($type == light) {
+    color: $c--primary-brown;
+  }
+
+  @else if ($type == dark) {
+    color: white;
+  }
 
   @include breakpoint(medium) {
     font-size: $fs--42;
@@ -649,6 +657,14 @@ $-zf-flex-direction: (
     bottom: -0.6rem;
     left: -3.4rem;
     z-index: -1;
+
+    @if ($type == light) {
+      background-color: $c--light-red;
+    }
+
+    @else if ($type == dark) {
+      background-color: $c--primary-red;
+    }
 
     @include breakpoint(medium) {
       height: 3rem;

@@ -1,6 +1,6 @@
 /**
  * @file
- * Attaches behaviors for startertheme.
+ * Attaches behaviors for consulo_theme.
  */
 
 (function ($) {

@@ -1,0 +1,30 @@
+uuid: 6c5e77ec-65fb-4dc0-b00a-6d50d94da0a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.partners
+  module:
+    - system
+    - views
+  theme:
+    - consulo_theme
+id: views_block__partners_partners_block
+theme: consulo_theme
+region: content
+weight: 1
+provider: null
+plugin: 'views_block:partners-partners_block'
+settings:
+  id: 'views_block:partners-partners_block'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /node/12
+    negate: false
+    context_mapping: {  }

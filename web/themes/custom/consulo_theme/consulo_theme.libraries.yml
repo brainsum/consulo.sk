@@ -4,15 +4,15 @@ global-styling:
       //use.fontawesome.com/releases/v5.8.1/css/all.css: { external: true }
       //fonts.googleapis.com/css?family=Playfair+Display:400,400i,700&display=swap&subset=latin-ext: { external: true }
       //fonts.googleapis.com/css?family=Rubik:400,700&display=swap&subset=latin-ext: { external: true }
-      css/base.css: {}
+      css/base.css: { minified: true }
     layout:
-      css/layout.css: {}
+      css/layout.css: { minified: true }
     component:
       css/components.css: {}
     theme:
-      css/theme.css: {}
+      css/theme.css: { minified: true }
   js:
-    js/dist/theme.js: {}
+    js/dist/theme.js: { minified: true }
   dependencies:
     - core/jquery
     - core/drupal
@@ -20,6 +20,15 @@ global-styling:
 slick_slider:
   css:
     theme:
-      vendors/slick/slick.css: {}
+      vendors/slick-carousel/slick/slick.css: {}
   js:
-    vendors/slick/slick.js: {}
+    vendors/slick-carousel/slick/slick.min.js: { minified: true }
+  dependencies:
+    - core/jquery
+grayscale:
+  js:
+    vendors/jquery-gray/js/jquery.gray.min.js: { minified: true }
+    js/dist/grayscale.js: { minified: true }
+  dependencies:
+    - core/jquery
+    - core/drupal

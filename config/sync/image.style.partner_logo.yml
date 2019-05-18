@@ -1,0 +1,15 @@
+uuid: 79eefc8a-0339-4aaf-9384-7e6fd45afee6
+langcode: en
+status: true
+dependencies: {  }
+name: partner_logo
+label: 'Partner logo (160w)'
+effects:
+  79e004db-26f0-4591-9f02-6bb59bf18925:
+    uuid: 79e004db-26f0-4591-9f02-6bb59bf18925
+    id: image_scale
+    weight: 1
+    data:
+      width: 160
+      height: null
+      upscale: false
