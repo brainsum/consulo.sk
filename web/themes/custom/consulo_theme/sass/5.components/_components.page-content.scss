@@ -479,7 +479,7 @@
     }
 
     .field--name-field-section-2-title {
-      @include section-title(dark);
+      @include section-title(red);
     }
 
     .field--name-field-section-3-title {
@@ -487,11 +487,7 @@
     }
 
     .field--name-field-section-4-title {
-      @include section-title(light);
-
-      &:after {
-        background-color: $c--white;
-      }
+      @include section-title(white);
     }
 
     .field--name-field-section-2-title,
@@ -627,7 +623,7 @@
   }
 
   .block__title {
-    @include section-title(dark);
+    @include section-title(red);
   }
 }
 
