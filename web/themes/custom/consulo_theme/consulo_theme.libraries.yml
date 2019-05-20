@@ -23,8 +23,10 @@ slick_slider:
       vendors/slick-carousel/slick/slick.css: {}
   js:
     vendors/slick-carousel/slick/slick.min.js: { minified: true }
+    js/dist/sliders.js: { minified: true }
   dependencies:
     - core/jquery
+    - core/drupal
 grayscale:
   js:
     vendors/jquery-gray/js/jquery.gray.min.js: { minified: true }
