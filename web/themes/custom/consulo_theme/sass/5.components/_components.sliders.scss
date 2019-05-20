@@ -296,7 +296,11 @@
   background: url("../images/consulo_povedali-o-nas.jpg") no-repeat top center;
   background-size: cover;
   color: white;
-  padding: 5rem 0 6rem;
+  padding: 3rem 0 4rem;
+
+  @include breakpoint(tablet) {
+    padding: 5rem 0 6rem;
+  }
 
   @include breakpoint(desktop) {
     background-image: url("../images/consulo_povedali-o-nas--wide.jpg");
@@ -310,13 +314,26 @@
     &::after {
       position: absolute;
       top: 0;
-      right: 10.4rem;
+      right: 2.2rem;
       content: "";
       display: block;
       background: url("../images/quote-sign.svg") no-repeat;
-      width: 24.8rem;
-      height: 17.9rem;
+      width: (24.8 / 2) * 1rem;
+      height: (17.9 / 2) * 1rem;
+      background-size: 100%;
       z-index: 2;
+
+      @include breakpoint(bigmobile) {
+        right: 7.5%;
+        width: (24.8 / 1.5) * 1rem;
+        height: (17.9 / 1.5) * 1rem;
+      }
+
+      @include breakpoint(tablet) {
+        width: 24.8rem;
+        height: 17.9rem;
+        right: 10.4rem;
+      }
     }
   }
 
@@ -331,22 +348,54 @@
 
   .quote {
     &__text {
-      width: 65rem;
       margin: 0 auto 0;
+
+      @include breakpoint(smallmedium) {
+        width: 75%;
+      }
+
+      @include breakpoint(tablet) {
+        width: 65rem;
+      }
 
       p {
         font-style: italic;
-        font-size: 1.9rem;
+        font-size: 1.4rem;
         line-height: 1.9;
+
+        @include breakpoint(mobile) {
+          font-size: 1.6rem;
+        }
+
+        @include breakpoint(smallmedium) {
+          font-size: 1.7rem;
+        }
+
+        @include breakpoint(tablet) {
+          font-size: 1.9rem;
+        }
       }
     }
 
     &__author {
-      width: 65rem;
       margin: 3rem auto 0;
       text-align: right;
-      font-size: 1.9rem;
+      font-size: 1.4rem;
       line-height: 1.9;
+
+      @include breakpoint(mobile) {
+        font-size: 1.6rem;
+      }
+
+      @include breakpoint(smallmedium) {
+        width: 75%;
+        font-size: 1.7rem;
+      }
+
+      @include breakpoint(tablet) {
+        width: 65rem;
+        font-size: 1.9rem;
+      }
 
       &-company {
         &::before {
@@ -361,6 +410,7 @@
     @include translate(0, -50%);
 
     border: 0;
+    padding: 0;
     background-color: transparent;
     position: absolute;
     top: 50%;
@@ -444,21 +494,15 @@
         @include transition(all 0.3s);
 
         text-indent: -9999px;
-        width: 0.6rem;
-        height: 0.6rem;
+        width: 1.2rem;
+        height: 1.2rem;
+        margin: 0 0.7rem;
         border-radius: 50%;
         background-color: #afbccd;
         border: 0;
-        margin: 0 0.15rem;
         padding: 0;
         white-space: nowrap;
         overflow: hidden;
-
-        @include breakpoint(medium) {
-          width: 1.2rem;
-          height: 1.2rem;
-          margin: 0 0.7rem;
-        }
 
         &:focus {
           outline: none;
@@ -466,26 +510,16 @@
 
         &:focus,
         &:hover {
-          width: 0.7rem;
-          height: 0.7rem;
-
-          @include breakpoint(medium) {
-            width: 1.4rem;
-            height: 1.4rem;
-          }
+          width: 1.4rem;
+          height: 1.4rem;
         }
       }
 
       &.slick-active {
         button {
           background-color: white;
-          width: 0.7rem;
-          height: 0.7rem;
-
-          @include breakpoint(medium) {
-            width: 1.4rem;
-            height: 1.4rem;
-          }
+          width: 1.4rem;
+          height: 1.4rem;
         }
       }
     }
