@@ -19,13 +19,13 @@
 
 .hamburger {
   position: relative;
-  margin-top: 15px;
+  margin-top: 0.6rem;
 }
 
 .close {
   position: absolute;
-  right: 22px;
-  top: 15px;
+  right: 2.2rem;
+  top: 0.6rem;
 }
 
 .hamburger,
@@ -84,7 +84,7 @@
 
       @include breakpoint(medium) {
         padding: 2rem 1rem 0;
-        border-top: 0.5rem solid transparent;
+        border-top: 5px solid transparent;
 
         &--active-trail {
           border-top-color: $c--primary-red;
