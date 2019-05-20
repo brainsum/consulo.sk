@@ -29,18 +29,43 @@
   }
 
   .views-row {
-    $logo-border: 1px solid rgba($c--primary-brown, 0.2);
+    $logo-border: 1px solid lighten($c--primary-brown, 50%);
 
-    width: 100 / 5 * 1%;
+    @include flex-basis(100 / 1 * 1%);
+
     padding: 3rem;
-    border-left: $logo-border;
-    margin: 0 0 2.5rem;
+    border-top: $logo-border;
+    border-bottom: $logo-border;
+    margin: -1px 0 0;
 
-    &:last-child,
-    &:nth-child(5){
+    @include breakpoint(bigmobile) {
+      @include flex-basis(100 / 2 * 1%);
+
+      border-top: 0;
+      border-bottom: 0;
+      border-left: $logo-border;
       border-right: $logo-border;
+      margin: 0 -1px 2.5rem 0;
+    }
+
+    @include breakpoint(smallmedium) {
+      @include flex-basis(100 / 3 * 1%);
+    }
+
+    @include breakpoint(medium) {
+      @include flex-basis(100 / 4 * 1%);
+    }
+
+    @include breakpoint(desktop) {
+      @include flex-basis(100 / 5 * 1%);
     }
   }
+}
+
+.partner__logo {
+  @include flex;
+  @include justify-content(center);
+  @include align-items(center);
 }
 
 .image-style-partner-logo {
