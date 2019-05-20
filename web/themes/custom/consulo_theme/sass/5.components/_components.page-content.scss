@@ -840,3 +840,11 @@
     filter: none;
   }
 }
+
+.grayscale {
+  &:hover {
+    svg {
+      opacity: 0;
+    }
+  }
+}
