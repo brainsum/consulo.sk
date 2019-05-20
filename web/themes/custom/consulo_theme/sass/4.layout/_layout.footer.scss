@@ -26,6 +26,26 @@
       @include flex-direction(row);
       @include justify-content(space-between);
     }
+
+    span {
+      font-family: $font--rubik;
+      color: $c--white;
+      line-height: 2rem;
+      font-size: $fs--tiny;
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
+      text-align: center;
+
+      @include breakpoint(medium) {
+        opacity: 0.8;
+        line-height: 4rem;
+        text-align: initial;
+      }
+
+      a {
+        color: $c--white;
+      }
+    }
   }
 
   .path-frontpage & {

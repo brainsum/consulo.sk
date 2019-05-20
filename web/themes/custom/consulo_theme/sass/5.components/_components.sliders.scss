@@ -11,184 +11,248 @@
  * Frontpage slider
  */
 .view-id-consulo_frontpage {
-  .slick_slider {
-    .slick-prev,
-    .slick-next {
-      @include translate(0, -50%);
+  .slick-prev,
+  .slick-next {
+    @include translate(0, -50%);
 
+    border: 0;
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    z-index: 999;
+    display: none !important;
+
+    &:focus {
       border: 0;
-      background-color: transparent;
-      position: absolute;
-      top: 50%;
-      z-index: 999;
-      display: none !important;
+      outline: 0;
+    }
 
-      &:focus {
+    .icon {
+      $slider-icon-size: 1.8rem;
+
+      box-sizing: border-box;
+      display: inline-block;
+      font-size: inherit;
+      font-style: normal;
+      height: 6rem;
+      position: relative;
+      vertical-align: middle;
+      width: 6rem;
+
+      &:hover {
+        background-color: rgba($c--primary-red, 0.1);
+      }
+
+      &::before,
+      &::after {
+        content: "";
+        display: block;
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      &::before {
+        border: 0.3rem solid $c--primary-red;
+        border-bottom: 0;
+        border-right: 0;
+        height: $slider-icon-size;
+        width: $slider-icon-size;
+      }
+
+      &--arrow-left::before {
+        transform: translate(-25%, -50%) rotate(-45deg);
+      }
+
+      &--arrow-right::before {
+        transform: translate(-75%, -50%) rotate(135deg);
+      }
+    }
+
+    @include breakpoint(medium) {
+      display: inline-block !important;
+    }
+  }
+
+  .slick-prev {
+    left: 4.5rem;
+  }
+
+  .slick-next {
+    right: 4.5rem;
+  }
+
+  .slick-dots {
+    @include flex;
+    @include flex-direction(row);
+    @include justify-content(center);
+
+    display: flex !important;
+    position: absolute;
+    top: 27rem;
+    width: 100%;
+
+    @include breakpoint(medium) {
+      top: auto;
+      bottom: 25%;
+      right: 3.6rem;
+      width: auto;
+    }
+
+    li {
+      list-style: none;
+
+      button {
+        @include transition(all 0.3s);
+
+        text-indent: -9999px;
+        width: 0.6rem;
+        height: 0.6rem;
+        border-radius: 50%;
+        background-color: $c--grey;
         border: 0;
-        outline: 0;
-      }
-
-      .icon {
-        $slider-icon-size: 1.8rem;
-
-        box-sizing: border-box;
-        display: inline-block;
-        font-size: inherit;
-        font-style: normal;
-        height: 6rem;
-        position: relative;
-        vertical-align: middle;
-        width: 6rem;
-
-        &:hover {
-          background-color: rgba($c--primary-red, 0.1);
-        }
-
-        &::before,
-        &::after {
-          content: "";
-          display: block;
-          left: 50%;
-          position: absolute;
-          top: 50%;
-          transform: translate(-50%, -50%);
-        }
-
-        &::before {
-          border: 0.3rem solid $c--primary-red;
-          border-bottom: 0;
-          border-right: 0;
-          height: $slider-icon-size;
-          width: $slider-icon-size;
-        }
-
-        &--arrow-left::before {
-          transform: translate(-25%, -50%) rotate(-45deg);
-        }
-
-        &--arrow-right::before {
-          transform: translate(-75%, -50%) rotate(135deg);
-        }
-      }
-
-      @include breakpoint(medium) {
-        display: inline-block !important;
-      }
-    }
-
-    .slick-prev {
-      left: 4.5rem;
-    }
-
-    .slick-next {
-      right: 4.5rem;
-    }
-
-    .slick-dots {
-      @include flex;
-      @include flex-direction(row);
-      @include justify-content(center);
-
-      display: flex !important;
-      position: absolute;
-      top: 27rem;
-      width: 100%;
-
-      @include breakpoint(medium) {
-        top: auto;
-        bottom: 25%;
-        right: 3.6rem;
-        width: auto;
-      }
-
-      li {
-        list-style: none;
-
-        button {
-          @include transition(all 0.3s);
-
-          text-indent: -9999px;
-          width: 0.6rem;
-          height: 0.6rem;
-          border-radius: 50%;
-          background-color: $c--grey;
-          border: 0;
-          margin: 0 0.15rem;
-          padding: 0;
-          white-space: nowrap;
-          overflow: hidden;
-
-          @include breakpoint(medium) {
-            width: 1.2rem;
-            height: 1.2rem;
-            margin: 0 0.7rem;
-          }
-
-          &:focus {
-            outline: none;
-          }
-
-          &:focus,
-          &:hover {
-            width: 0.7rem;
-            height: 0.7rem;
-
-            @include breakpoint(medium) {
-              width: 1.4rem;
-              height: 1.4rem;
-            }
-          }
-        }
-
-        &.slick-active {
-          button {
-            background-color: $c--primary-red;
-            width: 0.7rem;
-            height: 0.7rem;
-
-            @include breakpoint(medium) {
-              width: 1.4rem;
-              height: 1.4rem;
-            }
-          }
-        }
-      }
-    }
-
-    .slick-background {
-      position: absolute;
-    }
-
-    .slider-item {
-      .slider-text-holder {
-        background-color: $c--light-grey;
-        padding: 2rem;
-        margin: -5rem 2rem 0;
-        z-index: 99;
-        text-align: center;
+        margin: 0 0.15rem;
+        padding: 0;
+        white-space: nowrap;
+        overflow: hidden;
 
         @include breakpoint(medium) {
-          position: absolute;
-          left: 61%;
-          top: 0;
-          bottom: 0;
-          max-width: 30%;
-          height: 100vh;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          background-color: transparent;
-          padding: 0;
-          text-align: left;
-          margin: auto;
+          width: 1.2rem;
+          height: 1.2rem;
+          margin: 0 0.7rem;
+        }
+
+        &:focus {
+          outline: none;
+        }
+
+        &:focus,
+        &:hover {
+          width: 0.7rem;
+          height: 0.7rem;
+
+          @include breakpoint(medium) {
+            width: 1.4rem;
+            height: 1.4rem;
+          }
         }
       }
+
+      &.slick-active {
+        button {
+          background-color: $c--primary-red;
+          width: 0.7rem;
+          height: 0.7rem;
+
+          @include breakpoint(medium) {
+            width: 1.4rem;
+            height: 1.4rem;
+          }
+        }
+      }
+    }
+  }
+
+  .slick-background {
+    position: absolute;
+  }
+
+  .slider-text-holder {
+    background-color: $c--light-grey;
+    padding: 2rem;
+    margin: -5rem 2rem 0;
+    z-index: 99;
+    text-align: center;
+
+    @include breakpoint(medium) {
+      position: absolute;
+      left: 61%;
+      top: 0;
+      bottom: 0;
+      max-width: 30%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: transparent;
+      padding: 0;
+      text-align: left;
+      margin: auto;
+
+      a:hover h2 {
+        color: $c--primary-red;
+      }
+    }
+
+    h2 {
+      @include transition(all 0.3s);
+
+      font-family: $font--playfair;
+      font-size: $fs--26;
+      margin-bottom: 0.5em;
+      line-height: 1.2;
+      color: $c--primary-brown;
+
+      @include breakpoint(bigmobile) {
+        font-size: $fs--28;
+        line-height: normal;
+      }
+
+      @include breakpoint(medium) {
+        font-size: $fs--36;
+      }
+
+      @include breakpoint(desktop) {
+        font-size: $fs--51;
+        line-height: 1.3;
+      }
+
+      @include breakpoint(1920) {
+        font-size: 7.2rem;
+      }
+    }
+  }
+
+  .slider-description {
+    font-family: $font--rubik;
+    font-size: $fs--12;
+    line-height: $lh--16;
+    margin-bottom: 3.5rem;
+
+    @include breakpoint(medium) {
+      font-size: $fs--14;
+      line-height: $lh--20;
+    }
+
+    @include breakpoint(1920) {
+      font-size: $fs--18;
     }
   }
 
   .slick-slide {
     @include breakpoint(medium) {
       height: 100vh !important;
+    }
+  }
+
+  .slider-button {
+    a {
+      @include transition(all 0.3s);
+
+      font-family: $font--rubik;
+      font-size: $fs--tiny-plus;
+      text-transform: uppercase;
+      color: $c--primary-brown;
+      font-weight: $fw--500;
+      display: inline-block;
+      border: 1px solid $c--primary-brown;
+      padding: 1.5rem 4.5rem;
+
+      &:hover {
+        background-color: rgba($c--primary-brown, 0.1);
+        color: $c--primary-red;
+      }
     }
   }
 }

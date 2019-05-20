@@ -1,0 +1,322 @@
+/**
+ * @file
+ * Team Members component
+ *
+ * Theming Team Members block on About page.
+ *
+ * @package: content
+ */
+
+#block-views-block-team-members {
+  background-color: $c--white;
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+
+  @include breakpoint(medium) {
+    padding-bottom: 15rem;
+  }
+
+  .inner-container {
+    @extend %wide-container;
+  }
+
+  .block__title {
+    @include section-title(light);
+  }
+
+  .view-team-members {
+    max-width: 108.8rem;
+    width: 100%;
+    padding: 2rem 0;
+    margin: 0 auto;
+
+    @include breakpoint(medium) {
+      padding: 0 4.4rem;
+    }
+
+    .view-content {
+      @include flex;
+      @include flex-direction(column);
+      @include align-items(center);
+
+      position: relative;
+      background-color: $c--light-grey;
+      padding: 2rem;
+
+      > div {
+        @include breakpoint(medium) {
+          @include flex-shrink(1);
+
+          max-width: 280px;
+          width: 33%;
+        }
+      }
+
+      > div:not(:last-child) {
+        @include breakpoint(medium) {
+          max-width: 300px;
+          padding-right: 2rem;
+        }
+
+        @include breakpoint(tablet) {
+          max-width: 330px;
+          padding-right: 5rem;
+        }
+      }
+
+      @include breakpoint(medium) {
+        @include flex-direction(row);
+        @include justify-content(center);
+
+        padding: 0 1rem 3rem;
+        background-color: transparent;
+      }
+
+      @include breakpoint(tablet) {
+        @include justify-content(flex-end);
+
+        padding: 0 0 5.5rem;
+      }
+
+      > div {
+        position: relative;
+        z-index: 10;
+        margin-bottom: 2.5rem;
+
+        @include breakpoint(medium) {
+          margin-bottom: 0;
+        }
+      }
+
+      &:after {
+        position: absolute;
+        width: 100%;
+        height: 34rem;
+        background-color: $c--light-grey;
+        z-index: 5;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        @include breakpoint(medium) {
+          content: "";
+        }
+
+        @include breakpoint(tablet) {
+          width: calc(100% - 4.4rem);
+          right: auto;
+        }
+      }
+    }
+  }
+
+  .view-header {
+    margin-bottom: 4rem;
+    font-family: $font--rubik;
+    font-size: $fs--15;
+    line-height: $lh--23;
+    padding: 0 2.2rem;
+
+    @include breakpoint(tablet) {
+      padding-left: 6rem;
+    }
+  }
+
+  .node--type-team-member {
+    overflow: hidden;
+
+    .image-holder {
+      width: 100%;
+      max-width: 280px;
+      height: 280px;
+      position: relative;
+      background-color: $c--light-red;
+
+      &:after {
+        content: "";
+        height: 5px;
+        width: 100px;
+        background-color: $c--dark-red;
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+      }
+
+      .image-text {
+        @extend %transition_slow;
+
+        @include flex-direction(column);
+        @include justify-content(space-between);
+
+        position: absolute;
+        top: -100%;
+        left: 0;
+        right: 0;
+        height: 100%;
+        padding: 4rem 2.5rem;
+        background-color: rgba($c--dark-red, 0.85);
+        margin-bottom: 2.5rem;
+        display: none;
+
+        .field--name-body p {
+          font-family: $font--playfair;
+          font-weight: $fw--400;
+          color: $c--white;
+          font-size: $fs--21;
+          font-style: italic;
+          line-height: $lh--28;
+        }
+
+        .field--name-field-praxis p {
+          font-family: $font--rubik;
+          font-weight: $fw--400;
+          color: $c--white;
+          font-size: $fs--15;
+          line-height: $lh--23;
+        }
+      }
+
+      @include breakpoint(medium) {
+        .image-text {
+          @include flex;
+        }
+
+        &:hover .image-text {
+          top: 0;
+          z-index: 100;
+        }
+      }
+
+      .slick-slider {
+        @include breakpoint(medium) {
+          width: 280px;
+
+          @include translate(-50%, 0);
+
+          margin-left: 50%;
+        }
+      }
+    }
+
+    .text-holder {
+      position: relative;
+      z-index: 10;
+      padding-top: 2.5rem;
+
+      &--name {
+        @include flex;
+        @include flex-direction(column);
+        @include align-items(flex-start);
+
+        font-size: $fs--20;
+        color: $c--primary-brown;
+        font-family: $font--rubik;
+        font-weight: $fw--500;
+        margin-bottom: 1.5rem;
+
+        @include breakpoint(medium) {
+          margin-bottom: 2rem;
+          min-height: 43px;
+        }
+
+        span {
+          font-size: $fs--15;
+          font-weight: $fw--400;
+        }
+      }
+      &--mobile {
+        margin-bottom: 1.5rem;
+
+        @include breakpoint(medium) {
+          display: none;
+        }
+
+        .field--name-body {
+          max-width: 28rem;
+          margin-bottom: 1.5rem;
+
+          p {
+            font-family: $font--playfair;
+            font-weight: $fw--400;
+            font-size: $fs--21;
+            font-style: italic;
+            line-height: $lh--28;
+          }
+        }
+
+        .field--name-field-praxis {
+          max-width: 28rem;
+          font-family: $font--rubik;
+          font-weight: $fw--400;
+          font-size: $fs--15;
+          line-height: $lh--23;
+        }
+      }
+
+      &--data {
+        @include flex;
+        @include justify-content(flex-start);
+        @include flex-direction(row);
+        @include flex-wrap(wrap);
+        @include align-items(center);
+      }
+
+      &--data a {
+        font-size: $fs--15;
+        color: $c--primary-brown;
+        font-family: $font--rubik;
+
+        &.icon-rounded {
+          @extend %transition;
+
+          width: 3.3rem;
+          height: 3.3rem;
+          border-radius: 100%;
+          background-color: $c--white;
+          text-align: center;
+          display: inline-block;
+          line-height: 3.3rem;
+
+          &:hover {
+            background-color: $c--dark-red;
+            color: $c--white;
+          }
+        }
+
+        &:not(:last-child) {
+          margin-right: 1.5rem;
+        }
+
+        &.icon-phone {
+          @include breakpoint(medium) {
+            display: block;
+            width: 100%;
+            margin-top: 1rem;
+          }
+
+          @include breakpoint(tablet) {
+            display: inline-block;
+            width: auto;
+            margin-top: auto;
+            margin-bottom: auto;
+          }
+
+          .fa-phone {
+            @extend %transition;
+
+            @include opacity(0.5);
+          }
+
+          &:hover {
+            .fa-phone {
+              @include opacity(1);
+
+              color: $c--dark-red;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,3 +1,11 @@
+/**
+ * @file
+ * Page Title component
+ *
+ * Theming all page title.
+ *
+ * @package: content
+ */
 
 .block-page-title-block {
   @include flex;
@@ -11,30 +19,6 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
-  .about-page & {
-    background-image: url("../images/consulo_about_header.jpg");
-
-    @include breakpoint(desktop) {
-      background-image: url("../images/consulo_about_header--wide.jpg");
-    }
-  }
-
-  .page-node-type-services-page & {
-    background-image: url("../images/consulo_services_header.jpg");
-
-    @include breakpoint(desktop) {
-      background-image: url("../images/consulo_services_header--wide.jpg");
-    }
-  }
-
-  .node-8 & {
-    background-image: url("../images/consulo_partners_header.jpg");
-
-    @include breakpoint(desktop) {
-      background-image: url("../images/consulo_partners_header--wide.jpg");
-    }
-  }
 
   @include breakpoint(mobile down) {
     z-index: -1;
@@ -55,6 +39,33 @@
 
     @include breakpoint(medium) {
       font-size: $fs--64;
+    }
+  }
+
+  // About page
+  .about-page & {
+    background-image: url("../images/consulo_about_header.jpg");
+
+    @include breakpoint(desktop) {
+      background-image: url("../images/consulo_about_header--wide.jpg");
+    }
+  }
+
+  // Services page
+  .page-node-type-services-page & {
+    background-image: url("../images/consulo_services_header.jpg");
+
+    @include breakpoint(desktop) {
+      background-image: url("../images/consulo_services_header--wide.jpg");
+    }
+  }
+
+  // Partners page
+  .node-8 & {
+    background-image: url("../images/consulo_partners_header.jpg");
+
+    @include breakpoint(desktop) {
+      background-image: url("../images/consulo_partners_header--wide.jpg");
     }
   }
 }

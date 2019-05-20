@@ -98,4 +98,65 @@
       }
     }
   }
+
+  .menu-item a {
+    @include transition(all 0.3s);
+
+    font-family: $font--rubik;
+    font-size: $fs--12;
+    color: $c--primary-brown;
+    font-weight: $fw--500;
+    text-transform: uppercase;
+
+    @include breakpoint(medium) {
+      font-size: $fs--14;
+
+      &:hover {
+        color: $c--primary-red;
+      }
+    }
+  }
+
+  .social-icons-holder {
+    @include flex;
+    @include justify-content(flex-start);
+    @include flex-direction(row);
+
+    margin-left: 1.5rem;
+    padding-top: 2rem;
+
+    @include breakpoint(tablet) {
+      margin-left: 4.5rem;
+    }
+
+    .social-icon {
+      @include transition(all 0.3s);
+      @include border-radius(100%);
+
+      width: 22px;
+      height: 22px;
+      background-color: $c--primary-brown;
+      text-align: center;
+      line-height: 24px;
+      color: #f3eef2;
+
+      &:not(:last-child) {
+        margin-right: 1.8rem;
+      }
+
+      @include breakpoint(medium) {
+        &:hover {
+          background-color: $c--primary-red;
+        }
+      }
+
+      .fa-facebook-f {
+        font-size: 1.3rem;
+      }
+
+      .fa-twitter {
+        font-size: 1.2rem;
+      }
+    }
+  }
 }

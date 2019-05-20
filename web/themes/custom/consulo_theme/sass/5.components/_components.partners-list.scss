@@ -1,0 +1,67 @@
+/**
+ * @file
+ * Partners List component
+ *
+ * Theming Partners list block on Partners page.
+ *
+ * @package: content
+ */
+
+.block-views-blockpartners-partners-block {
+  background: white;
+  padding: 8rem 0 20rem;
+
+  .inner-container {
+    @extend %wide-container;
+  }
+
+  .block__title {
+    @include section-title(light);
+  }
+}
+
+.view-partners {
+  > .view-content {
+    @include flex;
+    @include flex-direction(row);
+    @include flex-wrap(wrap);
+    @include align-items(center);
+  }
+
+  .views-row {
+    $logo-border: 1px solid rgba($c--primary-brown, 0.2);
+
+    width: 100 / 5 * 1%;
+    padding: 3rem;
+    border-left: $logo-border;
+    margin: 0 0 2.5rem;
+
+    &:last-child,
+    &:nth-child(5){
+      border-right: $logo-border;
+    }
+  }
+}
+
+.image-style-partner-logo {
+  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='saturate' values='0'/></filter></svg>#grayscale");
+  filter: grayscale(1);
+  filter: gray;
+  transition: filter 0.5s;
+
+  &:hover {
+    filter: grayscale(0);
+    filter: none;
+  }
+}
+
+/**
+ * Hover state on IE 10/11
+ */
+.grayscale {
+  &:hover {
+    svg {
+      opacity: 0;
+    }
+  }
+}
