@@ -13,14 +13,23 @@
 .view-id-consulo_frontpage {
   .slick-prev,
   .slick-next {
-    @include translate(0, -50%);
-
-    border: 0;
-    background-color: transparent;
-    position: absolute;
-    top: 50%;
-    z-index: 999;
     display: none !important;
+
+    @include breakpoint(medium) {
+      @include translate(0, -50%);
+
+      display: inline-block !important;
+      border: 0;
+      background-color: transparent;
+      position: absolute;
+      top: 35%;
+      z-index: 999;
+    }
+
+    // from landscape tablet (1024px) size
+    @media screen and (orientation: landscape) and (min-width: 64em) {
+      top: 50%;
+    }
 
     &:focus {
       border: 0;
@@ -69,10 +78,6 @@
         transform: translate(-75%, -50%) rotate(135deg);
       }
     }
-
-    @include breakpoint(medium) {
-      display: inline-block !important;
-    }
   }
 
   .slick-prev {
@@ -93,9 +98,14 @@
     top: 27rem;
     width: 100%;
 
-    @include breakpoint(medium) {
+    @include breakpoint(smallmedium) {
+      top: 65vh;
+    }
+
+    // from landscape medium (768px) size
+    @media screen and (orientation: landscape) and (min-width: 48em) {
       top: auto;
-      bottom: 25%;
+      bottom: 30%;
       right: 3.6rem;
       width: auto;
     }
@@ -112,7 +122,7 @@
         border-radius: 50%;
         background-color: $c--grey;
         border: 0;
-        margin: 0 0.15rem;
+        margin: 0 0.3rem;
         padding: 0;
         white-space: nowrap;
         overflow: hidden;
@@ -165,7 +175,13 @@
     z-index: 99;
     text-align: center;
 
-    @include breakpoint(medium) {
+    @include breakpoint(smallmedium) {
+      padding: 4rem;
+      margin: -5rem 6rem 0;
+    }
+
+    // from landscape medium (768px) size
+    @media screen and (orientation: landscape) and (min-width: 48em) {
       position: absolute;
       left: 61%;
       top: 0;
@@ -264,7 +280,12 @@
   display: block;
   z-index: -1;
 
-  @include breakpoint(medium) {
+  @include breakpoint(smallmedium) {
+    height: 68vh;
+  }
+
+  // from landscape medium (768px) size
+  @media screen and (orientation: landscape) and (min-width: 48em) {
     position: absolute;
     left: 0;
     right: 0;
@@ -281,8 +302,29 @@
   z-index: 0;
   height: 100%;
   width: 100%;
-  background: no-repeat left center;
+  background: no-repeat 3% center;
   background-size: cover;
+
+  @include breakpoint(mobile) {
+    background-position: 0 center;
+  }
+
+  @include breakpoint(bigmobile) {
+    background-position: 16% center;
+  }
+
+  @include breakpoint(smallmedium) {
+    background-position: 0 center;
+  }
+
+  // from landscape tablet (1024px) size
+  @media screen and (orientation: landscape) and (min-width: 64em) {
+    background-position: 40% center;
+  }
+
+  @include breakpoint(large) {
+    background-position: 0 center;
+  }
 
   @include breakpoint(2500) {
     background: no-repeat 0 60%;

@@ -49,12 +49,13 @@
   }
 
   .path-frontpage & {
-    @include breakpoint(mobile) {
+    // from landscape medium (768px) size or portrait mobile (375px) size
+    @media screen and (orientation: landscape) and (min-width: 48em),
+      screen and (orientation: portrait) and (min-width: 23em) {
       position: fixed;
       bottom: 0;
       left: 0;
       right: 0;
-      z-index: 100;
     }
 
     @include breakpoint(medium) {
