@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.team_member.body
+    - field.field.node.team_member.field_contact_page
     - field.field.node.team_member.field_email_address
     - field.field.node.team_member.field_facebook_link
     - field.field.node.team_member.field_image
@@ -13,10 +14,27 @@ dependencies:
     - image.style.thumbnail
     - node.type.team_member
   module:
+    - field_group
     - image
     - link
     - path
     - text
+third_party_settings:
+  field_group:
+    group_contact_page:
+      children:
+        - field_contact_page
+      parent_name: ''
+      weight: 14
+      format_type: fieldset
+      format_settings:
+        label: 'For Contact Page'
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+      label: 'For Contact Page'
+      region: content
 id: node.team_member.default
 targetEntityType: node
 bundle: team_member
@@ -36,6 +54,13 @@ content:
     weight: 2
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_contact_page:
+    type: boolean_checkbox
+    weight: 0
+    region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   field_email_address:
     weight: 11

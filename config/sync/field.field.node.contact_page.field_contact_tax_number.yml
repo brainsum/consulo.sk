@@ -1,0 +1,19 @@
+uuid: 17391df3-756c-4fa9-914f-022a926c0944
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contact_tax_number
+    - node.type.contact_page
+id: node.contact_page.field_contact_tax_number
+field_name: field_contact_tax_number
+entity_type: node
+bundle: contact_page
+label: IČO
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,19 @@
+uuid: 67e735cc-dbe6-47d1-b16e-ea204cf152a3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contact_company_name
+    - node.type.contact_page
+id: node.contact_page.field_contact_company_name
+field_name: field_contact_company_name
+entity_type: node
+bundle: contact_page
+label: 'Company name'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

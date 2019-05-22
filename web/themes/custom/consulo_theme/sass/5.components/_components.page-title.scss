@@ -68,4 +68,9 @@
       background-image: url("../images/consulo_partners_header--wide.jpg");
     }
   }
+
+  // Contact page
+  .page-node-type-contact-page & {
+    background-image: url("../images/consulo_contact_header.jpg");
+  }
 }

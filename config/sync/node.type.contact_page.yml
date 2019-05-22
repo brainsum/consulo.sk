@@ -1,0 +1,18 @@
+uuid: b57222b2-3514-4b7e-a0c4-9e03a10becd3
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Contact page'
+type: contact_page
+description: 'Subpage with all contact information, like company address, tax number. Note: to edit a contact person see in Team member content type and Google map embed into code.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

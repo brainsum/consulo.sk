@@ -1,0 +1,23 @@
+uuid: c70bc3c6-acd1-446b-8a15-08d399e5fc47
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contact_page
+    - node.type.team_member
+id: node.team_member.field_contact_page
+field_name: field_contact_page
+entity_type: node
+bundle: team_member
+label: 'Display on Contact Page'
+description: 'Check it if you want to show this person on "Kontakt" page.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

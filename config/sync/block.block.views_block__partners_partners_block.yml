@@ -12,7 +12,7 @@ dependencies:
 id: views_block__partners_partners_block
 theme: consulo_theme
 region: content
-weight: 1
+weight: 0
 provider: null
 plugin: 'views_block:partners-partners_block'
 settings:

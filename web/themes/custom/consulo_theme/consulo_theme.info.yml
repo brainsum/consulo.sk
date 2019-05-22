@@ -13,6 +13,8 @@ base theme: classy
 # Defines libraries group in which we can add css/js.
 libraries:
   - consulo_theme/global-styling
+stylesheets-remove:
+  - '@classy/css/components/field.css'
 # Regions, change it for your needs (don't forget change page template too)
 regions:
   header: Header

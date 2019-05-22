@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.team_member.body
+    - field.field.node.team_member.field_contact_page
     - field.field.node.team_member.field_email_address
     - field.field.node.team_member.field_facebook_link
     - field.field.node.team_member.field_image
@@ -28,6 +29,16 @@ content:
     weight: 1
     settings: {  }
     third_party_settings: {  }
+    region: content
+  field_contact_page:
+    weight: 8
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
     region: content
   field_email_address:
     weight: 4

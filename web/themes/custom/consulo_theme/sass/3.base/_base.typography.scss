@@ -40,3 +40,23 @@ p {
   line-height: 2rem;
   letter-spacing: 0.1rem;
 }
+
+a {
+  color: $c--primary-red;
+
+  &:link,
+  &:visited {
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus,
+  &:hover,
+  &:visited,
+  &:active {
+    color: $c--primary-brown;
+  }
+}

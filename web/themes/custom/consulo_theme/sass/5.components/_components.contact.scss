@@ -1,0 +1,227 @@
+/**
+ * @file
+ * Contact component
+ *
+ * Theming blocks of Contact page.
+ *
+ * @package: content
+ */
+
+.page-node-type-contact-page {
+  background: $c--white;
+
+  .region-content {
+    @include flex;
+    @include flex-direction(row);
+    @include flex-wrap(wrap);
+
+    padding: 3rem 2rem;
+    margin: 0 auto;
+    max-width: 76.8rem;
+
+    @include breakpoint(medium) {
+      padding: 5rem 4.4rem;
+    }
+
+    @include breakpoint(desktop) {
+      max-width: 120rem;
+    }
+
+    @include breakpoint(large) {
+      max-width: 144rem;
+    }
+
+    > div {
+      @include flex-basis(100%);
+
+      @include breakpoint(desktop) {
+        @include flex-basis(50%);
+      }
+
+      &.block-local-tasks-block {
+        @include flex-basis(100%);
+      }
+    }
+  }
+
+  .block-system-main-block {
+    @include breakpoint(desktop down) {
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  .node__fieldgroup {
+    @include flex;
+    @include flex-direction(row);
+    @include flex-wrap(wrap);
+
+    margin: 0 -1.5rem;
+  }
+
+  .company__group,
+  .contact__group {
+    @include flex-basis(100%);
+
+    padding: 0 1.5rem;
+
+    @include breakpoint(smallmedium) {
+      @include flex-basis(50%);
+    }
+  }
+
+  .company__group {
+    @include breakpoint(smallmedium down) {
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  .field {
+    line-height: 1.53;
+  }
+}
+
+.field--name-field-contact-company-name {
+  position: relative;
+  font-size: $fs--20;
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  font-weight: $fw--500;
+
+  &::after {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 7rem;
+    margin-top: 0.5rem;
+    height: 0.5rem;
+    background: $c--primary-red;
+  }
+}
+
+.field--name-field-contact-address {
+  margin-bottom: 2.5rem;
+
+  .field__label {
+    @include inline-flex;
+
+    &::after {
+      content: ":";
+    }
+  }
+}
+
+.field--name-field-company-phone,
+.field--name-field-company-email {
+  display: block;
+}
+
+.field--name-field-company-phone,
+.field--name-field-company-email,
+.contact__languages {
+  .fas {
+    color: #a9a4ab;
+    margin-right: 0.5rem;
+  }
+}
+
+.field--name-field-company-phone {
+  color: $c--primary-brown;
+}
+
+.contact__languages {
+  @include flex;
+  @include flex-direction(row);
+
+  margin-top: 0.5rem;
+
+  .fas {
+    @include flex;
+    @include flex-direction(column);
+    @include justify-content(center);
+  }
+}
+
+.contact__language {
+  @include flex;
+  @include justify-content(center);
+  @include align-items(center);
+
+  width: 2.4rem;
+  height: 2.4rem;
+  background: #eeecf1;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  font-weight: $fw--500;
+
+  &:not(:last-child) {
+    margin-right: 0.5rem;
+  }
+}
+
+.view-contact-persons {
+  .view-content {
+    @include flex;
+    @include flex-direction(row);
+    @include flex-wrap(wrap);
+
+    margin: 0 -1.5rem;
+  }
+}
+
+.contact-person {
+  @include flex-basis(100%);
+
+  padding: 0 1.5rem;
+
+  @include breakpoint(smallmedium) {
+    @include flex-basis(50%);
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 2.5rem;
+  }
+
+  &__photo {
+    margin-bottom: 1.5rem;
+
+    img {
+      max-width: 14rem;
+      height: auto;
+    }
+  }
+
+  &__name {
+    font-size: $fs--20;
+    font-weight: $fw--500;
+  }
+
+  &__position {
+    font-size: $fs--15;
+    font-weight: $fw--400;
+  }
+
+  &__email,
+  &__phone {
+    display: block;
+    line-height: 1.53;
+
+    .fas {
+      color: #a9a4ab;
+      margin-right: 0.5rem;
+    }
+  }
+
+  &__phone {
+    color: $c--primary-brown;
+  }
+}
+
+.contact-map {
+  line-height: 0;
+
+  iframe {
+    @media screen and (min-height: 69em) {
+      height: 60rem;
+    }
+  }
+}

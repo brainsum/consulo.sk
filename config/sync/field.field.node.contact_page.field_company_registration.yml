@@ -1,0 +1,21 @@
+uuid: 43993847-41fe-4b89-9114-1cab051ec295
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_company_registration
+    - node.type.contact_page
+  module:
+    - text
+id: node.contact_page.field_company_registration
+field_name: field_company_registration
+entity_type: node
+bundle: contact_page
+label: 'Company registration'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

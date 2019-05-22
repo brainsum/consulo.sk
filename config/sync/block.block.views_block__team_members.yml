@@ -12,7 +12,7 @@ dependencies:
 id: views_block__team_members
 theme: consulo_theme
 region: content
-weight: 2
+weight: 1
 provider: null
 plugin: 'views_block:team_members-team_members_block'
 settings:

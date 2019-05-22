@@ -2,14 +2,31 @@
  * @file
  * Form component
  *
- * Form and input elements, like:
+ * Filed,d form and input elements, like:
  *  - input (text, number, email, password...)*
  *  - textarea
  *  - select
  *  - radios and checkboxes
  *
- * *Buttons and `input[type="submit"]` are in Button component.
  *
  * @package: interactive
- * @see more 5.components/components.search
  */
+
+.field--label-inline {
+  .field__label,
+  .field__items {
+    float: left;
+  }
+
+  .field__label,
+  > .field__item,
+  .field__items {
+    padding-right: 0.5em;
+  }
+
+  .field__label {
+    &::after {
+      content: ":";
+    }
+  }
+}
