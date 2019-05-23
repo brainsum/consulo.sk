@@ -1,0 +1,21 @@
+uuid: ab7bdcc0-87c7-47cc-b180-088fb7580daf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_carrier_callout
+    - node.type.carrier_page
+  module:
+    - text
+id: node.carrier_page.field_carrier_callout
+field_name: field_carrier_callout
+entity_type: node
+bundle: carrier_page
+label: Callout
+description: 'Short multiline text above phone and email address.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

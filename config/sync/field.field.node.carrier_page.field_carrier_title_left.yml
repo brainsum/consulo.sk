@@ -1,0 +1,19 @@
+uuid: 3f5375a6-4e1a-445e-a669-9b3e371a5528
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_carrier_title_left
+    - node.type.carrier_page
+id: node.carrier_page.field_carrier_title_left
+field_name: field_carrier_title_left
+entity_type: node
+bundle: carrier_page
+label: 'Carrier title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

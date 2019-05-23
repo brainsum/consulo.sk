@@ -1,0 +1,131 @@
+/**
+ * @file
+ * Carrier component
+ *
+ * Theming blocks of Carrier page.
+ *
+ * @package: content
+ */
+
+.node--type-carrier-page {
+  background: $c--white;
+
+  .about-section {
+    background: #574b5a;
+    color: $c--white;
+    padding: 4rem 0;
+
+    .section {
+      &__inner {
+        @include flex;
+        @include flex-direction(row);
+        @include flex-wrap(wrap);
+        @include justify-content(center);
+      }
+
+      &__content,
+      &__illustration {
+        @include breakpoint(medium) {
+          @include flex-basis(50%);
+        }
+      }
+
+      &__illustration {
+        @include flex;
+        @include flex-direction(column);
+        @include justify-content(flex-end);
+        @include align-items(center);
+
+        position: relative;
+        margin: 0 0 -4rem;
+
+        @include breakpoint(medium) {
+          margin: -6rem 0 -4rem;
+        }
+      }
+    }
+  }
+
+  .contact-section {
+    padding: 1.5rem 0 9.5rem;
+    text-align: center;
+  }
+}
+
+.field--name-field-carrier-more-button {
+  margin: 4rem auto;
+  text-align: center;
+
+  @include breakpoint(medium) {
+    margin: 4rem auto 0;
+  }
+
+  a {
+    @include button(inverse);
+  }
+}
+
+.carrier-boxes-section {
+  padding: 6rem 0 5.5rem;
+
+  .section__inner {
+    @include flex;
+    @include flex-direction(row);
+    @include flex-wrap(wrap);
+
+    .carrier-box {
+      @include breakpoint(medium) {
+        flex: 1;
+      }
+
+      &--right {
+        border-top: 1px solid rgba($c--primary-brown, 0.2);
+        margin-top: 4rem;
+        padding-top: 3.5rem;
+
+        @include breakpoint(medium) {
+          border-top: 0;
+          border-left: 1px solid rgba($c--primary-brown, 0.2);
+          margin: 0 0 0 4rem;
+          padding: 0 0 0 4rem;
+        }
+      }
+
+      &__title {
+        @include subtitle_underline;
+
+        font-size: $fs--28;
+        font-family: $font--playfair;
+      }
+
+      .field--type-text-long {
+        &:first-child {
+          margin-top: 4.7rem;
+        }
+      }
+    }
+  }
+}
+
+.field--name-field-carrier-callout {
+
+  @include breakpoint(tablet) {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
+.field--name-field-carrier-phone,
+.field--name-field-carrier-email {
+  display: block;
+  font-size: $fs--21;
+  margin-top: 1em;
+
+  .fas {
+    margin-right: 0.5em;
+  }
+}
+
+.field--name-field-carrier-phone {
+  color: $c--primary-brown;
+}

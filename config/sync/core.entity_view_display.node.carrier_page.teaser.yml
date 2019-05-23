@@ -1,0 +1,20 @@
+uuid: 5945862a-b645-411f-af5e-0defc711cdfa
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.carrier_page
+  module:
+    - user
+id: node.carrier_page.teaser
+targetEntityType: node
+bundle: carrier_page
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

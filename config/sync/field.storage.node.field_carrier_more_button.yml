@@ -1,0 +1,19 @@
+uuid: f46225a7-6ae4-4a4b-8e1e-2e9df5e7487f
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_carrier_more_button
+field_name: field_carrier_more_button
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

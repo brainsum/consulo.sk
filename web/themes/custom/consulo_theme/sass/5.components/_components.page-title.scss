@@ -69,6 +69,11 @@
     }
   }
 
+  // Carrier page
+  .page-node-type-carrier-page & {
+    background-image: url("../images/consulo_carrier_header.jpg");
+  }
+
   // Contact page
   .page-node-type-contact-page & {
     background-image: url("../images/consulo_contact_header.jpg");

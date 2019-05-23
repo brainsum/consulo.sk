@@ -54,13 +54,13 @@
 
 {% if label_hidden %}
   {% for item in items %}
-    <a{{ attributes.addClass(classes, 'field__item') }} href="tel:{{ item.content|striptags|trim }}"><i class="fas fa-phone fa-flip-horizontal"></i>{{ item.content }}</a>
+    <a{{ attributes.addClass(classes, 'field__item') }} href="tel:{{ item.content }}"><i class="fas fa-phone fa-flip-horizontal"></i>{{ item.content }}</a>
   {% endfor %}
 {% else %}
   <div{{ attributes.addClass(classes) }}>
     <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
     {% for item in items %}
-      <a{{ attributes.addClass(classes, 'field__item') }} href="tel:{{ item.content|striptags|trim }}"><i class="fas fa-phone fa-flip-horizontal"></i>{{ item.content }}</a>
+      <a{{ attributes.addClass(classes, 'field__item') }} href="tel:{{ item.content }}"><i class="fas fa-phone fa-flip-horizontal"></i>{{ item.content }}</a>
     {% endfor %}
   </div>
 {% endif %}

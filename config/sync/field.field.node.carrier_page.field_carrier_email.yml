@@ -1,0 +1,19 @@
+uuid: b59077e6-2681-4129-827a-5f878aa5f166
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_carrier_email
+    - node.type.carrier_page
+id: node.carrier_page.field_carrier_email
+field_name: field_carrier_email
+entity_type: node
+bundle: carrier_page
+label: 'Email address'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

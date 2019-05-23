@@ -1,0 +1,19 @@
+uuid: ad0dbd27-3981-4352-9c81-916b81b1e5fb
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_carrier_box_right
+field_name: field_carrier_box_right
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

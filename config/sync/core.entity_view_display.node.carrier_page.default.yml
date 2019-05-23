@@ -1,0 +1,101 @@
+uuid: f8a8baab-87ce-4196-82fd-fce2cb42aa13
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.carrier_page.field_carrier_about
+    - field.field.node.carrier_page.field_carrier_box_left
+    - field.field.node.carrier_page.field_carrier_box_right
+    - field.field.node.carrier_page.field_carrier_callout
+    - field.field.node.carrier_page.field_carrier_email
+    - field.field.node.carrier_page.field_carrier_more_button
+    - field.field.node.carrier_page.field_carrier_phone
+    - field.field.node.carrier_page.field_carrier_title_left
+    - field.field.node.carrier_page.field_carrier_title_right
+    - node.type.carrier_page
+  module:
+    - link
+    - text
+    - user
+id: node.carrier_page.default
+targetEntityType: node
+bundle: carrier_page
+mode: default
+content:
+  field_carrier_about:
+    weight: 101
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_carrier_box_left:
+    weight: 106
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_carrier_box_right:
+    weight: 107
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_carrier_callout:
+    weight: 108
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_carrier_email:
+    weight: 110
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_carrier_more_button:
+    weight: 102
+    label: hidden
+    settings:
+      trim_length: 255
+      url_plain: true
+      url_only: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_carrier_phone:
+    weight: 109
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_carrier_title_left:
+    weight: 104
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_carrier_title_right:
+    weight: 105
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

@@ -15,19 +15,46 @@ settings:
     rows:
       -
         -
+          name: Navigation
+          items:
+            - Undo
+            - Redo
+        -
           name: Formatting
           items:
             - Bold
             - Italic
+            - Underline
+            - Strike
+            - Superscript
+            - Subscript
+        -
+          name: Lists
+          items:
+            - BulletedList
+            - NumberedList
+        -
+          name: Link
+          items:
+            - DrupalLink
+            - DrupalUnlink
         -
           name: Tools
           items:
+            - Copy
+            - Cut
+            - Paste
+            - PasteText
+            - PasteFromWord
+        -
+          name: Developer
+          items:
             - Source
   plugins:
-    language:
-      language_list: un
     stylescombo:
       styles: ''
+    language:
+      language_list: un
 image_upload:
   status: true
   scheme: public

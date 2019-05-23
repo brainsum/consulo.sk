@@ -81,21 +81,10 @@
 }
 
 .field--name-field-contact-company-name {
-  position: relative;
-  font-size: $fs--20;
-  padding-bottom: 1rem;
-  margin-bottom: 1.5rem;
-  font-weight: $fw--500;
+  @include subtitle_underline;
 
-  &::after {
-    position: absolute;
-    display: block;
-    content: "";
-    width: 7rem;
-    margin-top: 0.5rem;
-    height: 0.5rem;
-    background: $c--primary-red;
-  }
+  font-size: $fs--20;
+  font-weight: $fw--500;
 }
 
 .field--name-field-contact-address {

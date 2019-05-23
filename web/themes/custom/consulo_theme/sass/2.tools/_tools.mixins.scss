@@ -675,3 +675,50 @@ $-zf-flex-direction: (
     }
   }
 }
+
+@mixin subtitle_underline {
+  position: relative;
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+
+  &::after {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 7rem;
+    margin-top: 0.5rem;
+    height: 0.5rem;
+    background: $c--primary-red;
+  }
+}
+
+@mixin button($type: normal) {
+  @include transition(all 0.3s);
+
+  font-size: $fs--tiny-plus;
+  text-transform: uppercase;
+  font-weight: $fw--500;
+  display: inline-block;
+  border: 1px solid transparent;
+  padding: 1.5rem 4.5rem;
+
+  @if ($type == normal) {
+    color: $c--primary-brown;
+    border-color: $c--primary-brown;
+
+    &:hover {
+      background-color: rgba($c--primary-brown, 0.1);
+      color: $c--primary-red;
+    }
+  }
+
+  @if ($type == inverse) {
+    color: $c--white;
+    border-color: $c--white;
+
+    &:hover {
+      background-color: $c--white;
+      color: $c--primary-red;
+    }
+  }
+}

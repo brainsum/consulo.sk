@@ -1,0 +1,28 @@
+uuid: 0c3d28d2-c169-403d-b7fe-91d07f6c2897
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_carrier_more_button
+    - node.type.carrier_page
+  module:
+    - link
+id: node.carrier_page.field_carrier_more_button
+field_name: field_carrier_more_button
+entity_type: node
+bundle: carrier_page
+label: 'Read more button'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    attributes: {  }
+    uri: 'internal:/node/3'
+    title: 'Náš team'
+    options: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

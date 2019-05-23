@@ -1,0 +1,21 @@
+uuid: 4f3136d0-3db4-4e72-b7fd-3383c8d26780
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_carrier_about
+    - node.type.carrier_page
+  module:
+    - text
+id: node.carrier_page.field_carrier_about
+field_name: field_carrier_about
+entity_type: node
+bundle: carrier_page
+label: 'About Consulo'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

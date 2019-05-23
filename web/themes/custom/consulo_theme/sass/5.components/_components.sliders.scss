@@ -254,21 +254,7 @@
 
   .slider-button {
     a {
-      @include transition(all 0.3s);
-
-      font-family: $font--rubik;
-      font-size: $fs--tiny-plus;
-      text-transform: uppercase;
-      color: $c--primary-brown;
-      font-weight: $fw--500;
-      display: inline-block;
-      border: 1px solid $c--primary-brown;
-      padding: 1.5rem 4.5rem;
-
-      &:hover {
-        background-color: rgba($c--primary-brown, 0.1);
-        color: $c--primary-red;
-      }
+      @include button;
     }
   }
 }

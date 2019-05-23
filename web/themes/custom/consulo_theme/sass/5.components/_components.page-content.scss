@@ -53,3 +53,7 @@
     }
   }
 }
+
+.section__inner {
+  @extend %wide-container;
+}
