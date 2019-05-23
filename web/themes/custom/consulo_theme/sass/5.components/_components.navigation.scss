@@ -70,6 +70,9 @@
     @include flex-direction(column);
     @include justify-content(flex-start);
 
+    margin: 0;
+    padding: 0;
+
     @include breakpoint(medium) {
       @include flex-direction(row);
     }
