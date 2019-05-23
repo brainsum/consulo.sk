@@ -99,8 +99,10 @@
       }
 
       .field--type-text-long {
-        &:first-child {
-          margin-top: 4.7rem;
+        @include breakpoint(medium) {
+          &:first-child {
+            margin-top: 6.2rem;
+          }
         }
       }
     }
