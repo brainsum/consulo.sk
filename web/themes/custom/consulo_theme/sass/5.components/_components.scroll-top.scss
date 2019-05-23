@@ -1,0 +1,55 @@
+/**
+ * @file
+ * Scroll to top button component
+ *
+ * In mobile we can scroll to top of page via this button.
+ *
+ * @package: interactive
+ */
+
+.scroll-top-button {
+  color: $c--primary-brown;
+  display: block;
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  transition: color 0.3s ease, opacity 0.5s ease, visibility 0.5s ease, transform 300ms ease, box-shadow 300ms ease;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+  cursor: pointer;
+
+  @include breakpoint(medium) {
+    display: none;
+  }
+
+  &:hover {
+    transform: translateY(-0.3rem);
+
+    .fa-circle::before {
+      box-shadow: 0 1rem 2rem rgba(black, 0.2);
+    }
+  }
+
+  &:active,
+  &:focus {
+    transform: translateY(-0.1rem);
+
+    .fa-circle::before {
+      box-shadow: 0 0.5rem 1rem rgba(black, 0.2);
+    }
+  }
+
+  &.is-active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .fa-chevron-up {
+    color: $c--white;
+  }
+
+  .fa-circle::before {
+    border-radius: 50%;
+  }
+}
