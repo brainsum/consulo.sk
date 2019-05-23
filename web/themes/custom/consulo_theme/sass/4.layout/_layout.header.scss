@@ -7,6 +7,16 @@
  * Navigation component.
  */
 
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+
+  @include breakpoint(medium) {
+    position: static;
+  }
+}
+
 .region-header {
   @include flex;
   @include flex-direction(row);

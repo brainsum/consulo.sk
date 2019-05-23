@@ -7,6 +7,15 @@
  * @package: content
  */
 
+// make space for fixed mobile menu
+.region-top {
+  padding-top: 4rem;
+
+  @include breakpoint(medium) {
+    padding-top: 0;
+  }
+}
+
 .block-page-title-block {
   @include flex;
   @include flex-direction(colum);
