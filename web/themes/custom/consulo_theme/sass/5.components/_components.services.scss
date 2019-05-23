@@ -219,7 +219,6 @@
         }
 
         @include breakpoint(tablet) {
-          width: 20%;
           margin-bottom: 4rem;
           padding: 0 1.7rem;
         }
@@ -232,7 +231,7 @@
           background-color: $c--lighter-red;
           padding: 2rem;
           text-align: center;
-          height: 13rem;
+          height: 15rem;
           font-weight: $fw--500;
         }
       }
