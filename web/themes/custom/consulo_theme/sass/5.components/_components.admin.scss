@@ -1,0 +1,35 @@
+/**
+ * @file
+ * Admin component
+ *
+ * Theming admin and user related pages, blocks.
+ *
+ * @package: content
+ */
+
+.path-admin,
+.path-user {
+  .block-system-main-block {
+    background: $c--white;
+    padding: 6rem 0;
+  }
+
+  .inner-container {
+    @extend %wide-container;
+  }
+
+  .button {
+    @include button;
+
+    padding: 1rem 4rem;
+    margin: 2rem 0;
+  }
+}
+
+ul.tabs {
+  @extend %wide-container;
+
+  > li a {
+    padding: 1em;
+  }
+}

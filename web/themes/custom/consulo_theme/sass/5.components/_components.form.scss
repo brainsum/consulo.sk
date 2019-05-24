@@ -30,3 +30,12 @@
     }
   }
 }
+
+.form-text {
+  padding: 0.5em 1em;
+  border: 1px solid $c--primary-brown;
+
+  & + .description {
+    margin-top: 0.5em;
+  }
+}

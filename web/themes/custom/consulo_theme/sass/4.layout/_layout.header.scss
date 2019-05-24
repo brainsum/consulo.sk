@@ -40,6 +40,14 @@ header {
     margin-bottom: 0;
   }
 
+  .path-frontpage.toolbar-tray-open.toolbar-fixed & {
+    top: 39px;
+  }
+
+  .path-frontpage.toolbar-tray-open.toolbar-fixed.toolbar-horizontal & {
+    top: 79px;
+  }
+
   #block-consulo-theme-branding {
     position: relative;
     z-index: 100;

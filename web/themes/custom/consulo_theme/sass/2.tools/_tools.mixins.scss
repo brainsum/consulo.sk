@@ -727,8 +727,7 @@ $-zf-flex-direction: (
   @media
     only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1200px),
     only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 1200px),
-    only screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 1200px),
-    only screen and (min-device-pixel-ratio: 2) and (min-width: 1200px) {
+    only screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 1200px) {
     @content;
   }
 }
