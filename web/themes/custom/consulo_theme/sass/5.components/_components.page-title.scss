@@ -58,6 +58,10 @@
     @include breakpoint(desktop) {
       background-image: url("../images/consulo_about_header--wide.jpg");
     }
+
+    @include retina {
+      background-image: url("../images/consulo_about_header--wide@2x.jpg");
+    }
   }
 
   // Services page
@@ -66,6 +70,10 @@
 
     @include breakpoint(desktop) {
       background-image: url("../images/consulo_services_header--wide.jpg");
+    }
+
+    @include retina {
+      background-image: url("../images/consulo_services_header--wide@2x.jpg");
     }
   }
 
@@ -76,15 +84,35 @@
     @include breakpoint(desktop) {
       background-image: url("../images/consulo_partners_header--wide.jpg");
     }
+
+    @include retina {
+      background-image: url("../images/consulo_partners_header--wide@2x.jpg");
+    }
   }
 
   // Carrier page
   .page-node-type-carrier-page & {
     background-image: url("../images/consulo_carrier_header.jpg");
+
+    @include breakpoint(desktop) {
+      background-image: url("../images/consulo_carrier_header--wide.jpg");
+    }
+
+    @include retina {
+      background-image: url("../images/consulo_carrier_header--wide@2x.jpg");
+    }
   }
 
   // Contact page
   .page-node-type-contact-page & {
     background-image: url("../images/consulo_contact_header.jpg");
+
+    @include breakpoint(desktop) {
+      background-image: url("../images/consulo_contact_header--wide.jpg");
+    }
+
+    @include retina {
+      background-image: url("../images/consulo_contact_header--wide@2x.jpg");
+    }
   }
 }
