@@ -1,17 +1,17 @@
-uuid: ede8e0b9-404e-4d11-8bd1-3ef26949220d
+uuid: 17e4289c-0edc-41fd-8656-48ad212191a6
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - consulo_theme
+    - adminimal_theme
 _core:
-  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
-id: consulo_theme_content
-theme: consulo_theme
+  default_config_hash: 80N66GdzEvwqi1m-_GZ-ulkk8AJG9beoXcZ4-pMVKjI
+id: adminimal_theme_content
+theme: adminimal_theme
 region: content
-weight: -2
+weight: 0
 provider: null
 plugin: system_main_block
 settings:

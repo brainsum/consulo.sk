@@ -1,17 +1,17 @@
-uuid: 1b0474ce-a263-4279-b9f8-19e4f9e013ab
+uuid: 6ac42800-c511-4cfc-8d0e-b27ed1b30526
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - consulo_theme
+    - adminimal_theme
 _core:
-  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
-id: consulo_theme_messages
-theme: consulo_theme
-region: content
-weight: -5
+  default_config_hash: YqKTtloWJ8FjLtfVNfrHaK6kVgxT67lC1cJ3j6i6WLo
+id: adminimal_theme_messages
+theme: adminimal_theme
+region: highlighted
+weight: 0
 provider: null
 plugin: system_messages_block
 settings:

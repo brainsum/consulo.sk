@@ -1,0 +1,15 @@
+uuid: 6dde5de4-6fb4-4128-8ae3-921b8202c27e
+langcode: en
+status: true
+dependencies: {  }
+name: contact_person
+label: 'Contact person (140x140)'
+effects:
+  27a14eaf-da25-4408-ac13-2c5c6659bfa5:
+    uuid: 27a14eaf-da25-4408-ac13-2c5c6659bfa5
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 140
+      height: 140
+      anchor: center-center

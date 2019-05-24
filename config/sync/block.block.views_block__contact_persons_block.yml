@@ -12,7 +12,7 @@ dependencies:
 id: views_block__contact_persons_block
 theme: consulo_theme
 region: content
-weight: -2
+weight: -1
 provider: null
 plugin: 'views_block:contact_persons-contact_persons_block'
 settings:

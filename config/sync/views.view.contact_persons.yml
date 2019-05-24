@@ -7,7 +7,7 @@ dependencies:
     - field.storage.node.field_image
     - field.storage.node.field_phone
     - field.storage.node.field_position
-    - image.style.team_member_slider
+    - image.style.contact_person
     - node.type.team_member
   module:
     - image
@@ -122,7 +122,7 @@ display:
           click_sort_column: alt
           type: image
           settings:
-            image_style: team_member_slider
+            image_style: contact_person
             image_link: ''
           group_column: ''
           group_columns: {  }
