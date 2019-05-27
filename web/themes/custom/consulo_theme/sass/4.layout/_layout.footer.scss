@@ -49,9 +49,9 @@
   }
 
   .path-frontpage & {
-    // from landscape medium (768px) size or portrait mobile (375px) size
+    // from landscape medium (768px) size or portrait bigmobile (414px) size
     @media screen and (orientation: landscape) and (min-width: 48em),
-      screen and (orientation: portrait) and (min-width: 23em) {
+      screen and (orientation: portrait) and (min-width: 26em) {
       position: fixed;
       bottom: 0;
       left: 0;
