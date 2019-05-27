@@ -25,7 +25,15 @@
           dots: true,
           fade: true,
           pauseOnFocus: true,
-          swipe: true
+          swipe: true,
+          responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                dots: false
+              }
+            }
+          ]
         });
       }
     }

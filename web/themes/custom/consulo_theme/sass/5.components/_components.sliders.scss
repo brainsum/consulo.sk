@@ -13,17 +13,16 @@
 .view-id-consulo_frontpage {
   .slick-prev,
   .slick-next {
-    display: none !important;
+    @include translate(0, -50%);
 
-    @include breakpoint(medium) {
-      @include translate(0, -50%);
+    border: 0;
+    background-color: transparent;
+    position: absolute;
+    top: 15.5rem;
+    z-index: 999;
 
-      display: inline-block !important;
-      border: 0;
-      background-color: transparent;
-      position: absolute;
-      top: 35%;
-      z-index: 999;
+    @include breakpoint(smallmedium) {
+      top: 37vh;
     }
 
     // from landscape tablet (1024px) size
@@ -81,11 +80,19 @@
   }
 
   .slick-prev {
-    left: 4.5rem;
+    left: 0;
+
+    @include breakpoint(medium) {
+      left: 4.5rem;
+    }
   }
 
   .slick-next {
-    right: 4.5rem;
+    right: 0;
+
+    @include breakpoint(medium) {
+      right: 4.5rem;
+    }
   }
 
   .slick-dots {
