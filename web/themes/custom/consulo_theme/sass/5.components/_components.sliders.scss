@@ -19,7 +19,7 @@
     background-color: transparent;
     position: absolute;
     top: 15.5rem;
-    z-index: 999;
+    z-index: 99;
 
     @include breakpoint(smallmedium) {
       top: 37vh;
