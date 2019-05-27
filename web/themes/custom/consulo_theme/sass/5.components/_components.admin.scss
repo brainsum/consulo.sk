@@ -34,6 +34,11 @@ ul.tabs {
 
   .inner-container > nav.tabs > & {
     padding: 0;
+
+    .page-node-type-contact-page & {
+      max-width: 100%;
+      margin-bottom: 1em;
+    }
   }
 
   > li a {
