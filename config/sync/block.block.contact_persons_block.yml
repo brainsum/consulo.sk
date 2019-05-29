@@ -1,4 +1,4 @@
-uuid: ec3691f4-f8dd-4943-861d-4bb30198a825
+uuid: ee2b2f0a-5cd3-4ef6-820c-3793d2bf3dbe
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ dependencies:
     - views
   theme:
     - consulo_theme
-id: views_block__contact_persons_block
+id: contact_persons_block
 theme: consulo_theme
 region: content
 weight: -1
@@ -19,7 +19,7 @@ settings:
   id: 'views_block:contact_persons-contact_persons_block'
   label: ''
   provider: views
-  label_display: '0'
+  label_display: visible
   views_label: ''
   items_per_page: none
 visibility:

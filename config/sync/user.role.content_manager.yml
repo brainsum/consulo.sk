@@ -13,7 +13,6 @@ permissions:
   - 'administer shortcuts'
   - 'create partner content'
   - 'create partner_quote content'
-  - 'create team_member content'
   - 'customize shortcut links'
   - 'delete any partner content'
   - 'delete any partner_quote content'

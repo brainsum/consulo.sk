@@ -71,7 +71,7 @@ content:
     type: email_default
     region: content
   field_facebook_link:
-    weight: 12
+    weight: 13
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -87,7 +87,7 @@ content:
     type: image_image
     region: content
   field_phone:
-    weight: 13
+    weight: 12
     settings:
       size: 60
       placeholder: ''
