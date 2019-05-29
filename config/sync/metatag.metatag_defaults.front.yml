@@ -7,5 +7,7 @@ _core:
 id: front
 label: 'Front page'
 tags:
-  canonical_url: '[site:url]'
+  title: 'Vaše účtovníctvo je naša vizitka | Consulo'
   shortlink: '[site:url]'
+  canonical_url: '[site:url]'
+  description: 'Nájdeme spoločnú reč a výstupy dostanete v zrozumiteľnej podobe, aby ste ich mohli skutočne využiť pri rozhodovaní a riadení vašej spoločnosti. Snažíme sa vidieť vašimi očami a rozmýšľať vašou hlavou. Veríme, že dobre spravované účtovníctvo nemá slúžiť iba daňovému úradu, ale vie aktívne a výrazne podporiť úspech firmy.'
