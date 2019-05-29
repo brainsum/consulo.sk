@@ -17,14 +17,15 @@
           arrows: true,
           prevArrow: '<button class="slick-prev" aria-label="Previous" type="button"><i class="icon icon--arrow-left"></i></button>',
           nextArrow: '<button class="slick-next" aria-label="Next" type="button"><i class="icon icon--arrow-right"></i></button>',
-          autoplay: false,
+          autoplay: true,
           slidesToShow: 1,
           slidesToScroll: 1,
-          autoplaySpeed: 4000,
+          autoplaySpeed: 3000,
           speed: 800,
           dots: true,
           fade: true,
-          pauseOnFocus: true,
+          pauseOnFocus: false,
+          pauseOnHover: false,
           swipe: true,
           responsive: [
             {
@@ -55,7 +56,8 @@
           speed: 800,
           dots: false,
           fade: true,
-          pauseOnFocus: true,
+          pauseOnFocus: false,
+          pauseOnHover: false,
           swipe: true
         });
       }
@@ -73,7 +75,8 @@
           speed: 800,
           dots: false,
           fade: true,
-          pauseOnFocus: true,
+          pauseOnFocus: false,
+          pauseOnHover: false,
           swipe: true
         });
       }
@@ -91,7 +94,8 @@
           speed: 800,
           dots: false,
           fade: true,
-          pauseOnFocus: true,
+          pauseOnFocus: false,
+          pauseOnHover: false,
           swipe: true
         });
       }
@@ -105,6 +109,7 @@
       if (quouesSlider.length > 0 ) {
         quouesSlider.slick({
           accessibility: false,
+          autoplay: true,
           arrows: true,
           prevArrow: '<button class="slick-prev" aria-label="Previous" type="button"><i class="icon icon--arrow-left"></i></button>',
           nextArrow: '<button class="slick-next" aria-label="Next" type="button"><i class="icon icon--arrow-right"></i></button>',
@@ -115,7 +120,8 @@
           autoplaySpeed: 4000,
           speed: 800,
           dots: true,
-          pauseOnFocus: true,
+          pauseOnFocus: false,
+          pauseOnHover: false,
           swipe: true
         });
       }
