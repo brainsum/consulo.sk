@@ -321,6 +321,7 @@
 
   @include breakpoint(2500) {
     background: no-repeat 0 60%;
+    background-size: cover;
   }
 }
 
