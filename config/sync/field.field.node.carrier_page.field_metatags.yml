@@ -1,0 +1,21 @@
+uuid: cbbe31d5-4625-49af-add8-2a9731469664
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatags
+    - node.type.carrier_page
+  module:
+    - metatag
+id: node.carrier_page.field_metatags
+field_name: field_metatags
+entity_type: node
+bundle: carrier_page
+label: Metatags
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

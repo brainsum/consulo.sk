@@ -12,9 +12,11 @@ dependencies:
     - field.field.node.carrier_page.field_carrier_phone
     - field.field.node.carrier_page.field_carrier_title_left
     - field.field.node.carrier_page.field_carrier_title_right
+    - field.field.node.carrier_page.field_metatags
     - node.type.carrier_page
   module:
     - link
+    - metatag
     - text
     - user
 id: node.carrier_page.default
@@ -92,6 +94,13 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_metatags:
+    weight: 111
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
     region: content
   links:
     weight: 100

@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.services_page.field_element_3_icon
     - field.field.node.services_page.field_element_3_item
     - field.field.node.services_page.field_element_3_title
+    - field.field.node.services_page.field_metatags
     - field.field.node.services_page.field_section_2_item
     - field.field.node.services_page.field_section_2_title
     - field.field.node.services_page.field_section_3_item
@@ -23,6 +24,7 @@ dependencies:
   module:
     - field_group
     - image
+    - metatag
     - path
     - text
 third_party_settings:
@@ -256,6 +258,12 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_metatags:
+    weight: 51
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
+    region: content
   field_section_2_item:
     weight: 27
     settings:
@@ -340,4 +348,9 @@ content:
       placeholder: ''
     region: content
     third_party_settings: {  }
+  url_redirects:
+    weight: 50
+    settings: {  }
+    third_party_settings: {  }
+    region: content
 hidden: {  }

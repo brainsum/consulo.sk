@@ -10,9 +10,11 @@ dependencies:
     - field.field.node.contact_page.field_contact_company_name
     - field.field.node.contact_page.field_contact_tax_number
     - field.field.node.contact_page.field_contact_tax_number_other
+    - field.field.node.contact_page.field_metatags
     - node.type.contact_page
   module:
     - field_group
+    - metatag
     - path
     - text
 third_party_settings:
@@ -130,6 +132,12 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_metatags:
+    weight: 51
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
+    region: content
   path:
     type: path
     weight: 5
@@ -174,4 +182,9 @@ content:
       placeholder: ''
     region: content
     third_party_settings: {  }
+  url_redirects:
+    weight: 50
+    settings: {  }
+    third_party_settings: {  }
+    region: content
 hidden: {  }

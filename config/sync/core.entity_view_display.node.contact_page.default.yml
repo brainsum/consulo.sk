@@ -10,8 +10,10 @@ dependencies:
     - field.field.node.contact_page.field_contact_company_name
     - field.field.node.contact_page.field_contact_tax_number
     - field.field.node.contact_page.field_contact_tax_number_other
+    - field.field.node.contact_page.field_metatags
     - node.type.contact_page
   module:
+    - metatag
     - text
     - user
 id: node.contact_page.default
@@ -71,6 +73,13 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_metatags:
+    weight: 8
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
     region: content
   links:
     weight: 7

@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.services_page.field_element_3_icon
     - field.field.node.services_page.field_element_3_item
     - field.field.node.services_page.field_element_3_title
+    - field.field.node.services_page.field_metatags
     - field.field.node.services_page.field_section_2_item
     - field.field.node.services_page.field_section_2_title
     - field.field.node.services_page.field_section_3_item
@@ -23,6 +24,7 @@ dependencies:
   module:
     - field_group
     - image
+    - metatag
     - text
     - user
 third_party_settings:
@@ -250,6 +252,13 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_metatags:
+    weight: 23
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
     region: content
   field_section_2_item:
     weight: 4
