@@ -38,5 +38,6 @@ hidden:
   field_email_address: true
   field_facebook_link: true
   field_image: true
+  field_phone: true
   field_position: true
   field_praxis: true
