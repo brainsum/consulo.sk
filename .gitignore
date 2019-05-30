@@ -25,4 +25,3 @@
 
 # Ignore theme node_modules
 /web/themes/custom/consulo_theme/node_modules/
-/web/sites/development.services.yml
