@@ -7,5 +7,7 @@ _core:
 id: global
 label: Global
 tags:
-  canonical_url: '[current-page:url]'
+  image_src: /themes/custom/consulo_theme/images/og_consulo_logo.jpg
   title: '[current-page:title] | [site:name]'
+  canonical_url: '[current-page:url]'
+  og_image: /themes/custom/consulo_theme/images/og_consulo_logo.jpg
