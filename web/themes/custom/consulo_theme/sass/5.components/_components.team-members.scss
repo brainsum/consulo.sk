@@ -288,11 +288,9 @@
         }
 
         &.icon-phone {
-          @include breakpoint(medium) {
-            display: block;
-            width: 100%;
-            margin-top: 1rem;
-          }
+          display: block;
+          width: 100%;
+          margin-top: 1rem;
 
           @include breakpoint(desktop) {
             display: inline-block;
