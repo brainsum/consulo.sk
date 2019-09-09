@@ -1,1 +1,1 @@
-!function(a){"use strict";Drupal.behaviors.grayscale={attach:function(){a(".image-style-partner-logo").gray()}}}(jQuery);
+"use strict";!function(a){Drupal.behaviors.grayscale={attach:function(){a(".image-style-partner-logo").gray()}}}(jQuery);

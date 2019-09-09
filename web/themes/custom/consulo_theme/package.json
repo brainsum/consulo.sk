@@ -1,12 +1,12 @@
 {
-  "name": "brainsum_drupal8_startertheme",
-  "version": "1.0.0",
-  "description": "Drupal 8 coding standards ready startertheme powered by Gulp 4 based on Classy.",
+  "name": "Consulo_theme",
+  "version": "1.1.0",
+  "description": "Mobile first theme based on Brainsum's Drupal 8 startertheme.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/brainsum/drupal8-startertheme.git"
+    "url": "https://github.com/brainsum/consulo.sk.git"
   },
-  "author": "Krisztian Pinter <kpinter@brainsum.com>",
+  "author": "Krisztian Pinter <kpinter@brainsum.com>, Peter Zajacz <pzajacz@brainsum.com>",
   "license": "ISC",
   "scripts": {
     "start": "gulp",
@@ -25,32 +25,36 @@
     "gulp",
     "gulp4",
     "sass",
-    "startertheme",
+    "consulo",
     "theme",
     "twig"
   ],
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.6.3",
-    "eslint-plugin-import": "^2.16.0",
     "jquery-gray": "^1.6.0",
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
-    "browser-sync": "^2.26.3",
-    "eslint-config-airbnb-base": "^13.1.0",
+    "autoprefixer": "^9.6.1",
+    "browser-sync": "^2.26.7",
+    "eslint": "^6.2.2",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
     "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^6.0.0",
-    "gulp-css-purge": "^3.0.9",
-    "gulp-csscomb": "^3.0.8",
-    "gulp-eslint": "^5.0.0",
-    "gulp-npm-dist": "^1.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-eslint": "^6.0.0",
+    "gulp-npm-dist": "^1.0.3",
+    "gulp-postcss": "^8.0.0",
     "gulp-sass": "^4.0.2",
-    "gulp-sourcemaps": "^2.6.4",
-    "gulp-stylelint": "^8.0.0",
-    "gulp-uglify": "^3.0.1",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-split-media-queries": "^1.0.3",
+    "gulp-stylelint": "^9.0.0",
+    "gulp-uglify": "^3.0.2",
     "gulp-yaml-validate": "^1.0.2",
-    "stylelint": "^9.10.1",
-    "stylelint-config-standard": "^18.2.0",
-    "stylelint-scss": "^3.5.1"
+    "stylelint": "^10.1.0",
+    "stylelint-config-scss": "^1.0.0-security",
+    "stylelint-config-standard": "^18.3.0",
+    "stylelint-scss": "^3.10.0"
   }
 }
