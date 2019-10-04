@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.carrier_page.field_carrier_phone
     - field.field.node.carrier_page.field_carrier_title_left
     - field.field.node.carrier_page.field_carrier_title_right
+    - field.field.node.carrier_page.field_metatags
     - node.type.carrier_page
   module:
     - user
@@ -36,3 +37,5 @@ hidden:
   field_carrier_phone: true
   field_carrier_title_left: true
   field_carrier_title_right: true
+  field_metatags: true
+  langcode: true

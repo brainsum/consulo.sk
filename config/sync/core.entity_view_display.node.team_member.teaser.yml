@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.team_member.field_email_address
     - field.field.node.team_member.field_facebook_link
     - field.field.node.team_member.field_image
+    - field.field.node.team_member.field_phone
     - field.field.node.team_member.field_position
     - field.field.node.team_member.field_praxis
     - node.type.team_member
@@ -41,3 +42,4 @@ hidden:
   field_phone: true
   field_position: true
   field_praxis: true
+  langcode: true

@@ -1,0 +1,11 @@
+uuid: 8636040b-20f7-4a0e-b290-b99ba496ee81
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.frontpage_slider
+id: node.frontpage_slider
+target_entity_type_id: node
+target_bundle: frontpage_slider
+default_langcode: site_default
+language_alterable: false

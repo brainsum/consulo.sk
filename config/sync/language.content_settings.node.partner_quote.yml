@@ -1,0 +1,11 @@
+uuid: ec35c235-b7a0-43a8-bcb0-a3a18095e458
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.partner_quote
+id: node.partner_quote
+target_entity_type_id: node
+target_bundle: partner_quote
+default_langcode: site_default
+language_alterable: false

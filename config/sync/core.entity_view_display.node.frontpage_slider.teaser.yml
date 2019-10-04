@@ -5,6 +5,8 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.frontpage_slider.body
+    - field.field.node.frontpage_slider.field_slider_image
+    - field.field.node.frontpage_slider.field_slider_link
     - node.type.frontpage_slider
   module:
     - text
@@ -30,3 +32,4 @@ content:
 hidden:
   field_slider_image: true
   field_slider_link: true
+  langcode: true
