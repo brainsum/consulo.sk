@@ -1,25 +1,40 @@
 'use strict';
 
-var browserSync = require('browser-sync').create();
-var gulp = require('gulp');
-var autoprefixer = require('gulp-autoprefixer');
-var purge = require('gulp-css-purge');
-var csscomb = require('gulp-csscomb');
-var eslint = require('gulp-eslint');
-var npmDist = require('gulp-npm-dist');
-var sass = require('gulp-sass');
-var sourcemaps = require('gulp-sourcemaps');
-var stylelint = require('gulp-stylelint');
-var uglify = require('gulp-uglify');
-var yaml = require('gulp-yaml-validate');
+const browserSync       = require('browser-sync').create();
+const clean             = require('gulp-clean');
+const cleanCSS          = require('gulp-clean-css');
+const gulp              = require('gulp');
+const autoprefixer      = require('autoprefixer');
+const eslint            = require('gulp-eslint');
+const npmDist           = require('gulp-npm-dist');
+const postcss           = require('gulp-postcss');
+const sass              = require('gulp-sass');
+const sourcemaps        = require('gulp-sourcemaps');
+const splitMediaQueries = require('gulp-split-media-queries');
+const stylelint         = require('gulp-stylelint');
+const uglify            = require('gulp-uglify');
+const yaml              = require('gulp-yaml-validate');
 
-// Store all paths
-var paths = {
-  sass: './sass/**/*.scss',
-  css: './css/',
-  jsSrc: './js/src/*.js',
-  jsDist: './js/dist/',
-  img: './images/'
+const config = {
+  paths: {
+    sass: './sass/**/*.scss',
+    css: './css/',
+    jsSrc: './js/src/*.js',
+    jsDist: './js/dist/',
+    img: './images/',
+  },
+  // Desktop/tablet media queries in a separated CSS file.
+  cssSplitting: {
+    // If you change this, change it in libraries.yaml too!
+    breakpoint: 48, // 768px and above (from your mqs, here we use in ems)
+  },
+  browserSync: {
+    proxy: 'consulo.test',
+    autoOpen: false,
+    browsers: [
+      'Google Chrome',
+    ],
+  },
 };
 
 /**
@@ -32,9 +47,23 @@ var paths = {
 function copyVendorTask() {
   return gulp
     .src(npmDist(), { base: './node_modules' })
-    .pipe(
-      gulp.dest('./vendors/')
-    );
+    .pipe(gulp.dest('./vendors/'));
+}
+
+/**
+ * CSS: Cleaning Task
+ *
+ * Remove all compiled CSS file to make a clean start before Sass tasks and
+ * avoid duplicated and conflicted CSS rules.
+ * @return {object} empty directory
+ */
+function cssCleanTask() {
+  return gulp
+    .src(config.paths.css, {
+      read: false,
+      allowEmpty: true
+    })
+    .pipe(clean());
 }
 
 /**
@@ -45,19 +74,15 @@ function copyVendorTask() {
  */
 function sassDevTask() {
   return gulp
-    .src(paths.sass)
+    .src(config.paths.sass)
     .pipe(sourcemaps.init({ largeFile: true }))
     .pipe(sass({ outputStyle: 'expanded', precision: 10 }))
     .on('error', sass.logError)
+    .pipe(postcss([autoprefixer()]))
     .pipe(sourcemaps.write({ includeContent: false }))
     .pipe(sourcemaps.init({ loadMaps: true }))
-    .pipe(
-      autoprefixer({
-        browsers: ['last 3 version', 'ie >= 10']
-      })
-    )
     .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest(paths.css))
+    .pipe(gulp.dest(config.paths.css))
     .pipe(browserSync.stream());
 }
 
@@ -71,29 +96,38 @@ function sassDevTask() {
  */
 function sassProdTask() {
   return gulp
-    .src(paths.sass)
+    .src(config.paths.sass)
     .pipe(stylelint({
       fix: true,
       reporters: [
-        { formatter: 'verbose', console: true }
-      ]
+        {
+          formatter: 'verbose',
+          console: true,
+        },
+      ],
     }))
     .pipe(sass({ outputStyle: 'compact', precision: 10 }))
     .on('error', sass.logError)
-    .pipe(
-      autoprefixer({
-        browsers: ['last 3 version', 'ie >= 10']
-      })
-    )
-    .pipe(csscomb())
-    .pipe(
-      purge({
-        trim: true,
-        shorten: true,
-        verbose: true
-      })
-    )
-    .pipe(gulp.dest(paths.css));
+    .pipe(postcss([autoprefixer()]))
+    .pipe(splitMediaQueries({
+      breakpoint: config.cssSplitting.breakpoint,
+    }))
+    .pipe(cleanCSS({
+      compatibility: {
+        colors: {
+          opacity: true
+        },
+        units: {
+          rem: true,
+          vh: true,
+          vm: true,
+          vmax: true,
+          vmin: true
+        }
+      },
+      level: 2
+    }))
+    .pipe(gulp.dest(config.paths.css));
 }
 
 /**
@@ -104,12 +138,15 @@ function sassProdTask() {
  */
 function sassLintTask() {
   return gulp
-    .src(paths.sass)
+    .src(config.paths.sass)
     .pipe(stylelint({
       fix: true,
       reporters: [
-        { formatter: 'verbose', console: true }
-      ]
+        {
+          formatter: 'verbose',
+          console: true,
+        },
+      ],
     }));
 }
 
@@ -119,15 +156,15 @@ function sassLintTask() {
  * Currently there is only one JavaScript task (no separated for dev and prod).
  * @return {object} Linted (auto fixable, warnings printed to console about
  * others) and minified JavaScript files.
-*/
+ */
 function scriptsTask() {
   return gulp
-    .src(paths.jsSrc)
+    .src(config.paths.jsSrc)
     .pipe(eslint({ fix: true }))
     .pipe(eslint.format())
     .pipe(eslint.failAfterError())
     .pipe(uglify())
-    .pipe(gulp.dest(paths.jsDist))
+    .pipe(gulp.dest(config.paths.jsDist))
     .pipe(browserSync.stream());
 }
 
@@ -136,10 +173,10 @@ function scriptsTask() {
  *
  * @return {object} Linted (auto fixable, warnings printed to console about
  * others) JavaScript files.
-*/
+ */
 function scriptsLintTask() {
   return gulp
-    .src(paths.jsSrc)
+    .src(config.paths.jsSrc)
     .pipe(eslint({ fix: true }))
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());
@@ -165,11 +202,12 @@ function yamlLintTask() {
  */
 function browserSyncTask(done) {
   browserSync.init({
-    proxy: 'consulo.test',
-    open: false
+    proxy: config.browserSync.proxy,
+    open: config.browserSync.autoOpen,
+    browser: config.browserSync.browsers,
   });
-  gulp.watch(paths.sass, sassDevTask);
-  gulp.watch(paths.jsSrc, scriptsTask);
+  gulp.watch(config.paths.sass, sassDevTask);
+  gulp.watch(config.paths.jsSrc, scriptsTask);
   done();
 }
 
@@ -186,10 +224,11 @@ function browserSyncReloadTask(done) {
 
 // Define complex tasks
 var compileTask = gulp.parallel(sassDevTask, scriptsTask);
+var compileProdTask = gulp.parallel(sassProdTask, scriptsTask);
 
 // export tasks
-exports.default = gulp.series(copyVendorTask, compileTask, browserSyncTask);
-exports.prod = gulp.parallel(copyVendorTask, sassProdTask, scriptsTask);
+exports.default = gulp.series(copyVendorTask, cssCleanTask, compileTask, browserSyncTask);
+exports.prod = gulp.series(copyVendorTask, cssCleanTask, compileProdTask);
 exports.lint = gulp.parallel(sassLintTask, scriptsLintTask, yamlLintTask);
 exports.vendors = copyVendorTask;
 exports.sassDev = sassDevTask;

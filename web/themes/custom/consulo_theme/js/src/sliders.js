@@ -3,9 +3,9 @@
  * Slick slider configs.
  */
 
-(function ($) {
-  'use strict';
+'use strict';
 
+(function drupalJqueryFrontpageslider($) {
   Drupal.behaviors.frontpageSlider = {
     attach: function (context) {
       var slickElement = $('.slick_slider', context);

@@ -3,9 +3,9 @@
  * Attaches behaviors for consulo_theme.
  */
 
-(function ($) {
-  'use strict';
+'use strict';
 
+(function drupalJqueryTheme($) {
   Drupal.behaviors.mobileMenu = {
     attach: function () {
       var hamburgerIcon;
@@ -41,7 +41,6 @@
         e.preventDefault();
         $('html, body').animate({ scrollTop: 0 }, '300');
       });
-
     }
   };
 
