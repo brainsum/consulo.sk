@@ -1,5 +1,5 @@
 uuid: 773cc499-9336-46fc-9524-a3869f7748d3
-langcode: en
+langcode: sk
 status: true
 dependencies:
   config:
@@ -22,6 +22,7 @@ content:
       rows: 9
       summary_rows: 3
       placeholder: ''
+      show_summary: false
     third_party_settings: {  }
   info:
     type: string_textfield

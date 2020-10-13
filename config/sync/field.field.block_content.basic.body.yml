@@ -1,5 +1,5 @@
 uuid: 0e1b46ba-edb4-4d30-a033-5acb52f5b588
-langcode: en
+langcode: sk
 status: true
 dependencies:
   config:
@@ -13,7 +13,7 @@ id: block_content.basic.body
 field_name: body
 entity_type: block_content
 bundle: basic
-label: Body
+label: Text
 description: ''
 required: false
 translatable: true
@@ -21,4 +21,5 @@ default_value: {  }
 default_value_callback: ''
 settings:
   display_summary: false
+  required_summary: false
 field_type: text_with_summary

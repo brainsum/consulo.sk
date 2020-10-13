@@ -1,5 +1,5 @@
 uuid: 422d3f3a-70a4-47e6-a184-0578983278c9
-langcode: en
+langcode: sk
 status: true
 dependencies:
   module:
@@ -8,13 +8,12 @@ dependencies:
 _core:
   default_config_hash: sqwEJaSgef4rCaRMf-JdNAdV_kCICU1SfQh5Wl2sUrc
 id: content_recent
-label: 'Recent content'
+label: 'Najnovší obsah'
 module: node
 description: 'Recent content.'
 tag: default
 base_table: node_field_data
 base_field: nid
-core: 8.x
 display:
   default:
     display_plugin: default
@@ -40,13 +39,13 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: Apply
+          submit_button: Použiť
           reset_button: false
           reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
+          exposed_sorts_label: 'Zoradiť podľa'
           expose_sort_order: true
-          sort_asc_label: Asc
-          sort_desc_label: Desc
+          sort_asc_label: Vzostupne
+          sort_desc_label: Zostupne
       pager:
         type: some
         options:
@@ -188,6 +187,8 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -227,6 +228,8 @@ display:
             remember_roles:
               authenticated: authenticated
             reduce: false
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -258,7 +261,7 @@ display:
           entity_type: node
           entity_field: changed
           plugin_id: date
-      title: 'Recent content'
+      title: 'Najnovší obsah'
       header: {  }
       footer: {  }
       empty:
@@ -271,7 +274,7 @@ display:
           admin_label: ''
           empty: true
           tokenize: false
-          content: 'No content available.'
+          content: 'Žiaden obsah nie je dostupný.'
           plugin_id: text_custom
       relationships:
         uid:
@@ -289,7 +292,7 @@ display:
       display_extenders: {  }
       use_more: false
       use_more_always: false
-      use_more_text: More
+      use_more_text: Viac
       link_url: ''
       link_display: '0'
     cache_metadata:
@@ -304,7 +307,7 @@ display:
   block_1:
     display_plugin: block
     id: block_1
-    display_title: Block
+    display_title: Blok
     position: 1
     display_options:
       display_extenders: {  }

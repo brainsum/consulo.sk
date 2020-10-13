@@ -1,5 +1,5 @@
 uuid: 6233f3ec-8054-4c0d-b6ea-374d39fb4d57
-langcode: en
+langcode: sk
 status: true
 dependencies:
   config:
@@ -25,6 +25,7 @@ content:
       rows: 9
       summary_rows: 3
       placeholder: ''
+      show_summary: false
     third_party_settings: {  }
   created:
     type: datetime_timestamp
@@ -88,6 +89,7 @@ content:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
+      match_limit: 10
     third_party_settings: {  }
   url_redirects:
     weight: 50

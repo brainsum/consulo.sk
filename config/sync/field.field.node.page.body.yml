@@ -1,5 +1,5 @@
 uuid: fb9d2c65-3418-4767-a206-eb07fc899093
-langcode: en
+langcode: sk
 status: true
 dependencies:
   config:
@@ -13,7 +13,7 @@ id: node.page.body
 field_name: body
 entity_type: node
 bundle: page
-label: Body
+label: Text
 description: ''
 required: false
 translatable: true
@@ -21,4 +21,5 @@ default_value: {  }
 default_value_callback: ''
 settings:
   display_summary: true
+  required_summary: false
 field_type: text_with_summary
