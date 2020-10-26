@@ -109,9 +109,9 @@ function sassProdTask() {
     .pipe(sass({ outputStyle: 'compact', precision: 10 }))
     .on('error', sass.logError)
     .pipe(postcss([autoprefixer()]))
-    .pipe(splitMediaQueries({
-      breakpoint: config.cssSplitting.breakpoint,
-    }))
+    // .pipe(splitMediaQueries({
+    //   breakpoint: config.cssSplitting.breakpoint,
+    // }))
     .pipe(cleanCSS({
       compatibility: {
         colors: {
