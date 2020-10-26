@@ -1,0 +1,19 @@
+uuid: 2c9f811a-9622-4dfe-b905-6cdea2a7607f
+langcode: sk
+status: true
+dependencies:
+  config:
+    - contact.form.contact
+    - field.storage.contact_message.field_contact_description
+id: contact_message.contact.field_contact_description
+field_name: field_contact_description
+entity_type: contact_message
+bundle: contact
+label: 'Hello, I am interested in…'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

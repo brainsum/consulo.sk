@@ -3,8 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.contact_page.field_company_email
-    - field.field.node.contact_page.field_company_phone
     - field.field.node.contact_page.field_company_registration
     - field.field.node.contact_page.field_contact_address
     - field.field.node.contact_page.field_contact_company_name
@@ -21,21 +19,6 @@ targetEntityType: node
 bundle: contact_page
 mode: default
 content:
-  field_company_email:
-    weight: 5
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: basic_string
-    region: content
-  field_company_phone:
-    weight: 6
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
   field_company_registration:
     weight: 3
     label: hidden

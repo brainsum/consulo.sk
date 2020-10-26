@@ -4,8 +4,6 @@ status: false
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.contact_page.field_company_email
-    - field.field.node.contact_page.field_company_phone
     - field.field.node.contact_page.field_company_registration
     - field.field.node.contact_page.field_contact_address
     - field.field.node.contact_page.field_contact_company_name
@@ -26,8 +24,6 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
-  field_company_email: true
-  field_company_phone: true
   field_company_registration: true
   field_contact_address: true
   field_contact_company_name: true

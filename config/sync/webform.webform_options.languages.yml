@@ -1,0 +1,14 @@
+uuid: c10e25b4-d85d-44fa-bbf9-7e32b01c7154
+langcode: sk
+status: true
+dependencies:
+  enforced:
+    module:
+      - webform
+_core:
+  default_config_hash: mYH14Vi65Ixj10c_GFa7CipxU3D0Bt9wgo8zE8zjOfE
+id: languages
+label: Languages
+category: Language
+likert: false
+options: ''

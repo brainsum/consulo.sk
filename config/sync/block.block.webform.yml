@@ -1,0 +1,33 @@
+uuid: 0247ab06-2750-4d87-a684-522c4fa0f8b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - webform.webform.contact
+  module:
+    - node
+    - webform
+  theme:
+    - consulo_theme
+id: webform
+theme: consulo_theme
+region: content
+weight: -1
+provider: null
+plugin: webform_block
+settings:
+  id: webform_block
+  label: 'Contact form'
+  provider: webform
+  label_display: '0'
+  webform_id: contact
+  default_data: ''
+  redirect: false
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      contact_page: contact_page
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

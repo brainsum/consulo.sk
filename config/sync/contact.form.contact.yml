@@ -1,0 +1,12 @@
+uuid: 66216c8b-74e6-4457-b9cd-76033400ccbd
+langcode: sk
+status: true
+dependencies: {  }
+id: contact
+label: Contact
+recipients:
+  - devel+consulo@brainsum.com
+reply: ''
+weight: 0
+message: 'Thank you for your inquiry. We will contact you soon.'
+redirect: ''

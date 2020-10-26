@@ -3,8 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.contact_page.field_company_email
-    - field.field.node.contact_page.field_company_phone
     - field.field.node.contact_page.field_company_registration
     - field.field.node.contact_page.field_contact_address
     - field.field.node.contact_page.field_contact_company_name
@@ -76,22 +74,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_company_email:
-    weight: 2
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: email_default
-    region: content
-  field_company_phone:
-    weight: 1
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_company_registration:
     type: text_textarea
     weight: 3

@@ -45,6 +45,8 @@
   }
 
   .block-system-main-block {
+    order: 1;
+
     @include breakpoint(desktop down) {
       margin-bottom: 2.5rem;
     }
@@ -147,6 +149,15 @@
   }
 }
 
+.block-views-blockcontact-persons-contact-persons-block {
+  order: 2;
+
+  @include breakpoint(desktop) {
+    margin-top: -23rem;
+    order: 3;
+  }
+}
+
 .view-contact-persons {
   .view-content {
     @include flex;
@@ -202,6 +213,66 @@
 
   &__phone {
     color: $c--primary-brown;
+  }
+}
+
+.block-webform-block {
+  order: 3;
+
+  @include breakpoint(desktop) {
+    order: 2;
+  }
+}
+
+.webform-submission-contact-form {
+  padding-top: 5.5rem;
+
+  .webform-flexbox {
+    @include flex;
+    @include flex-direction(row);
+    @include flex-wrap(wrap);
+
+    margin: 0 -1.5rem;
+  }
+
+  .webform-flex {
+    @include flex-basis(100%);
+
+    margin: 0;
+    padding: 0 1.5rem;
+
+    @include breakpoint(smallmedium) {
+      @include flex-basis(50%);
+    }
+  }
+
+  .webform-flex--container {
+    margin: 0;
+  }
+
+  .form-item {
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  .form-item-form-title {
+    @include breakpoint(large) {
+      margin-bottom: 11rem;
+    }
+
+    h2 {
+      font-size: 1.17em;
+    }
+  }
+
+  .form-actions {
+    display: flex;
+    flex-direction: row;
+
+    .form-submit {
+      margin-left: auto;
+    }
   }
 }
 

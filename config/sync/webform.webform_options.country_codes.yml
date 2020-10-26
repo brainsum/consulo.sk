@@ -1,0 +1,14 @@
+uuid: 1140417e-bd7a-461f-894b-53aa1602d653
+langcode: sk
+status: true
+dependencies:
+  enforced:
+    module:
+      - webform
+_core:
+  default_config_hash: adQ16YGDPk7QfUKrfrC35o2sKdHEozdNtdpiH7CftQQ
+id: country_codes
+label: 'Country codes'
+category: Geographic
+likert: false
+options: ''

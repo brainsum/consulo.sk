@@ -1,0 +1,32 @@
+uuid: 4a5e4d13-3a77-4014-9e38-939abae96b2e
+langcode: sk
+status: true
+dependencies:
+  config:
+    - views.view.contact_persons
+  module:
+    - node
+    - views
+  theme:
+    - consulo_theme
+id: views_block__contact_persons_contact_persons_block
+theme: consulo_theme
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:contact_persons-contact_persons_block'
+settings:
+  id: 'views_block:contact_persons-contact_persons_block'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      contact_page: contact_page
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

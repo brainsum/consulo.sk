@@ -1,0 +1,14 @@
+uuid: e2c6c949-b9db-4508-ab42-dc833fb35d83
+langcode: sk
+status: true
+dependencies:
+  enforced:
+    module:
+      - webform
+_core:
+  default_config_hash: K8qTfK5-87DpwTQBkqhgTMR4P0Zz8Z9aNI7OnMlTb0Q
+id: gender
+label: Gender
+category: Demographic
+likert: false
+options: "Male: Male\nFemale: Female\n"

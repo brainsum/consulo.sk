@@ -1,0 +1,14 @@
+uuid: dfef9675-8f37-4b5e-bc2a-8476406bd1a4
+langcode: sk
+status: true
+dependencies:
+  enforced:
+    module:
+      - webform
+_core:
+  default_config_hash: Mb_L3vE-0IBZH5s2rjpk2LNn0QHClQP9AARQdCmVLt4
+id: translations
+label: Preklady
+category: Language
+likert: false
+options: ''

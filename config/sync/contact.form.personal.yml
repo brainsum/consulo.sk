@@ -1,0 +1,13 @@
+uuid: 27d9adcc-ef6e-4562-8b2b-86f52c4933cf
+langcode: sk
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: jonvgt3CkUM2eMLTFwWfHileWWDC4YtXCuIlCahTk_I
+id: personal
+label: 'Personal contact form'
+recipients: {  }
+reply: ''
+weight: 0
+message: 'Thank you for your inquiry. We will contact you soon.'
+redirect: ''
