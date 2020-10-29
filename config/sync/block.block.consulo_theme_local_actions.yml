@@ -8,7 +8,7 @@ _core:
   default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
 id: consulo_theme_local_actions
 theme: consulo_theme
-region: content
+region: helper
 weight: -3
 provider: null
 plugin: local_actions_block

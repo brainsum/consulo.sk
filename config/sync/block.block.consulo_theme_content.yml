@@ -11,7 +11,7 @@ _core:
 id: consulo_theme_content
 theme: consulo_theme
 region: content
-weight: -2
+weight: -6
 provider: null
 plugin: system_main_block
 settings:

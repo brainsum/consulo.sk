@@ -1,7 +1,7 @@
 site_key: 6Ld9KtcZAAAAAJV2OrppKinfcVz5HRZsHwaAhjT0
 secret_key: 6Ld9KtcZAAAAAM8_m27iKyjnpUL7ijK3MuXBRQkD
 verify_hostname: true
-default_challenge: ''
+default_challenge: captcha/Math
 error_message: 'Antibot verification failed.'
 cacheable: false
 _core:

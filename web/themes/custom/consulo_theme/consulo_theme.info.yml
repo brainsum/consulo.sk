@@ -20,6 +20,7 @@ stylesheets-remove:
 regions:
   header: Header
   top: Top
+  helper: Helper
   content: Content
   bottom: Bottom
   footer: Footer

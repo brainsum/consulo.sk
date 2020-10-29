@@ -12,7 +12,7 @@ dependencies:
 id: webform
 theme: consulo_theme
 region: content
-weight: -1
+weight: -5
 provider: null
 plugin: webform_block
 settings:

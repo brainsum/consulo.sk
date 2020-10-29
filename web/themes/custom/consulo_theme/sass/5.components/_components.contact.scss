@@ -10,7 +10,8 @@
 .page-node-type-contact-page {
   background: $c--white;
 
-  .region-content {
+  .region-content,
+  .region-helper {
     @include flex;
     @include flex-direction(row);
     @include flex-wrap(wrap);
@@ -42,6 +43,10 @@
         @include flex-basis(100%);
       }
     }
+  }
+
+  .region-helper {
+    padding-bottom: 0;
   }
 
   .block-system-main-block {

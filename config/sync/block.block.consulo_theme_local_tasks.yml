@@ -8,7 +8,7 @@ _core:
   default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
 id: consulo_theme_local_tasks
 theme: consulo_theme
-region: content
+region: helper
 weight: -6
 provider: null
 plugin: local_tasks_block

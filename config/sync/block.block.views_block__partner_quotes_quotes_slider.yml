@@ -12,7 +12,7 @@ dependencies:
 id: views_block__partner_quotes_quotes_slider
 theme: consulo_theme
 region: content
-weight: 1
+weight: -3
 provider: null
 plugin: 'views_block:partner_quotes-quotes_slider'
 settings:
