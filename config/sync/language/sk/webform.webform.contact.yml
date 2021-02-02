@@ -1,4 +1,13 @@
 title: Kontakt
 elements: "form_title:\n  '#markup': '<h2>V prípade akýchkoľvek otázok nás neváhajte kontaktovať</h2>'\nname:\n  '#title': 'Meno / názov spoločnosti'\n  '#placeholder': 'Meno / názov spoločnosti*'\nphone:\n  '#title': 'Tel. číslo'\n  '#placeholder': 'Tel. číslo'\ndescription:\n  '#placeholder': 'Dobrý deň, mám záujem o…*'\nfooter:\n  '#text': \"<p>Polia označené * sú povinné.</p>\\n\"\nactions:\n  '#submit__label': Odoslať\n"
 settings:
-  confirmation_message: 'Ďakujeme za Váš dotaz. Čoskoro sa Vám ozveme.'
+  confirmation_message: 'Ďakujeme za Vašu dôveru. Ozveme sa Vám v čo najkratšom čase. Team CONSULO'
+handlers:
+  notify_owners:
+    settings:
+      subject: 'Na stránke [site:name] bol vyplnení kontaktný formulár'
+      body: "Bol vyplnený kontaktný formulár.<br />\r\n<br />\r\nDotaz bol poslaný:&nbsp;[webform_submission:created]<br />\r\n<br />\r\nÚdaje:<br />\r\n<br />\r\n[webform_submission:values]"
+  comfirm_email:
+    settings:
+      subject: 'Ďakujeme, za vyplnenie kontaktného formulára na stránke [site:name].'
+      body: "Ďakujeme za Vašu dôveru. Ozveme sa Vám v čo najkratšom čase. Team CONSULO<br />\r\n<br />\r\nDotaz bol poslaný:&nbsp;[webform_submission:created]<br />\r\n<br />\r\nÚdaje, ktoré ste vyplnili:&nbsp;<br />\r\n<br />\r\n[webform_submission:values]<br />\r\n&nbsp;"
