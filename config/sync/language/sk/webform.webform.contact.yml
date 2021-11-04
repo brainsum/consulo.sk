@@ -1,5 +1,19 @@
 title: Kontakt
-elements: "form_title:\n  '#markup': '<h2>V prípade akýchkoľvek otázok nás neváhajte kontaktovať</h2>'\nname:\n  '#title': 'Meno / názov spoločnosti'\n  '#placeholder': 'Meno / názov spoločnosti*'\nphone:\n  '#title': 'Tel. číslo'\n  '#placeholder': 'Tel. číslo'\ndescription:\n  '#placeholder': 'Dobrý deň, mám záujem o…*'\nfooter:\n  '#text': \"<p>Polia označené * sú povinné.</p>\\n\"\nactions:\n  '#submit__label': Odoslať\n"
+elements: |
+  form_title:
+    '#markup': '<h2>V prípade akýchkoľvek otázok nás neváhajte kontaktovať</h2>'
+  name:
+    '#title': 'Meno / názov spoločnosti'
+    '#placeholder': 'Meno / názov spoločnosti*'
+  phone:
+    '#title': 'Tel. číslo'
+    '#placeholder': 'Tel. číslo'
+  description:
+    '#placeholder': 'Dobrý deň, mám záujem o…*'
+  footer:
+    '#text': "<p>Polia označené * sú povinné.</p>\n"
+  actions:
+    '#submit__label': Odoslať
 settings:
   confirmation_message: 'Ďakujeme za Vašu dôveru. Ozveme sa Vám v čo najkratšom čase. Team CONSULO'
 handlers:

@@ -12,7 +12,71 @@ id: contact
 title: Contact
 description: 'Contact form on Contact page.'
 category: ''
-elements: "'#attributes':\n  class:\n    - contact-form\n  id: base-contact-form\nflexbox:\n  '#type': webform_flexbox\n  static_container:\n    '#type': container\n    form_title:\n      '#type': webform_markup\n      '#markup': '<h2>If you have any questions, do not hesitate to contact us</h2>'\n    static_phone:\n      '#type': processed_text\n      '#text': '<a class=\"field field--name-field-company-phone field--type-string\" href=\"tel:+421904308139\"><i class=\"fas fa-phone fa-flip-horizontal\"></i>+421&nbsp;904&nbsp;308&nbsp;139</a>'\n      '#format': full_html\n    static_email:\n      '#type': processed_text\n      '#text': |\n        <a class=\"field field--name-field-company-email field--type-email\" href=\"mailto:finance@consulo.sk\"><i class=\"fas fa-envelope\"></i>finance@consulo.sk</a>\n        \n      '#format': full_html\n    static_languages:\n      '#type': processed_text\n      '#text': |\n        <div class=\"contact__languages\"><span class=\"contact__language language--sk\">SK</span> <span class=\"contact__language language--hu\">HU</span> <span class=\"contact__language language--en\">EN</span></div>\n        \n      '#format': full_html\n  form_container:\n    '#type': container\n    name:\n      '#type': textfield\n      '#title': 'Name / company name'\n      '#title_display': none\n      '#placeholder': 'Name / company name*'\n      '#required': true\n    phone:\n      '#type': textfield\n      '#title': 'Phone number'\n      '#title_display': none\n      '#placeholder': 'Phone number'\n    email:\n      '#type': email\n      '#title': E-mail\n      '#title_display': none\n      '#placeholder': 'E-mail*'\n      '#required': true\n    description:\n      '#type': textarea\n      '#title': Description\n      '#title_display': none\n      '#placeholder': 'Hello, I am interested in…*'\n      '#required': true\n    footer:\n      '#type': processed_text\n      '#text': |\n        <p>Fields marked with * are required.</p>\n        \n      '#format': basic_html\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': Submit\n  '#submit__attributes':\n    id: contact-form-submit-btn"
+elements: |-
+  '#attributes':
+    class:
+      - contact-form
+    id: base-contact-form
+  flexbox:
+    '#type': webform_flexbox
+    static_container:
+      '#type': container
+      form_title:
+        '#type': webform_markup
+        '#markup': '<h2>If you have any questions, do not hesitate to contact us</h2>'
+      static_phone:
+        '#type': processed_text
+        '#text': '<a class="field field--name-field-company-phone field--type-string" href="tel:+421904308139"><i class="fas fa-phone fa-flip-horizontal"></i>+421&nbsp;904&nbsp;308&nbsp;139</a>'
+        '#format': full_html
+      static_email:
+        '#type': processed_text
+        '#text': |
+          <a class="field field--name-field-company-email field--type-email" href="mailto:finance@consulo.sk"><i class="fas fa-envelope"></i>finance@consulo.sk</a>
+          
+        '#format': full_html
+      static_languages:
+        '#type': processed_text
+        '#text': |
+          <div class="contact__languages"><span class="contact__language language--sk">SK</span> <span class="contact__language language--hu">HU</span> <span class="contact__language language--en">EN</span></div>
+          
+        '#format': full_html
+    form_container:
+      '#type': container
+      name:
+        '#type': textfield
+        '#title': 'Name / company name'
+        '#title_display': none
+        '#placeholder': 'Name / company name*'
+        '#required': true
+      phone:
+        '#type': textfield
+        '#title': 'Phone number'
+        '#title_display': none
+        '#placeholder': 'Phone number'
+      email:
+        '#type': email
+        '#title': E-mail
+        '#title_display': none
+        '#placeholder': 'E-mail*'
+        '#required': true
+      description:
+        '#type': textarea
+        '#title': Description
+        '#title_display': none
+        '#placeholder': 'Hello, I am interested in…*'
+        '#required': true
+      footer:
+        '#type': processed_text
+        '#text': |
+          <p>Fields marked with * are required.</p>
+          
+        '#format': basic_html
+  actions:
+    '#type': webform_actions
+    '#title': 'Submit button(s)'
+    '#submit__label': Submit
+    '#submit__attributes':
+      id: contact-form-submit-btn
 css: ''
 javascript: ''
 settings:
@@ -33,7 +97,7 @@ settings:
   form_previous_submissions: true
   form_confidential: false
   form_confidential_message: ''
-  form_remote_addr: true
+  form_disable_remote_addr: false
   form_convert_anonymous: false
   form_prepopulate: false
   form_prepopulate_source_entity: false
@@ -142,6 +206,7 @@ settings:
   results_customize: false
   token_view: false
   token_update: false
+  token_delete: false
   serial_disabled: false
 access:
   create:
