@@ -21,48 +21,48 @@ third_party_settings:
       children:
         - group_company_information
         - group_contact_information
+      label: Information
+      region: content
       parent_name: ''
       weight: 7
       format_type: tabs
       format_settings:
-        id: ''
         classes: ''
+        id: ''
         direction: horizontal
-      label: Information
-      region: content
     group_company_information:
       children:
         - field_contact_company_name
         - field_contact_tax_number
         - field_contact_tax_number_other
         - field_company_registration
+      label: 'Company information'
+      region: content
       parent_name: group_information
       weight: 20
       format_type: tab
       format_settings:
-        id: ''
         classes: ''
+        id: ''
         formatter: open
         description: ''
         required_fields: true
-      label: 'Company information'
-      region: content
     group_contact_information:
       children:
         - field_contact_address
         - field_company_phone
         - field_company_email
+      label: 'Contact information'
+      region: content
       parent_name: group_information
       weight: 21
       format_type: tab
       format_settings:
-        id: ''
         classes: ''
+        id: ''
         formatter: closed
         description: ''
         required_fields: true
-      label: 'Contact information'
-      region: content
 id: node.contact_page.default
 targetEntityType: node
 bundle: contact_page
@@ -115,11 +115,11 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_metatags:
+    type: metatag_firehose
     weight: 51
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: metatag_firehose
-    region: content
   langcode:
     type: language_select
     weight: 2
@@ -135,24 +135,24 @@ content:
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 3
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 6
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 4
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -165,16 +165,16 @@ content:
   uid:
     type: entity_reference_autocomplete
     weight: 1
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
-    region: content
     third_party_settings: {  }
   url_redirects:
     weight: 50
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden: {  }

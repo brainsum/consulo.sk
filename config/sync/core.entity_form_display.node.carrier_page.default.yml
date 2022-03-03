@@ -26,59 +26,59 @@ third_party_settings:
       children:
         - field_carrier_about
         - field_carrier_more_button
+      label: 'About section'
+      region: content
       parent_name: ''
       weight: 1
       format_type: fieldset
       format_settings:
-        id: ''
         classes: ''
+        id: ''
         description: ''
         required_fields: true
-      label: 'About section'
-      region: content
     group_carrier:
       children:
         - group_carrier_left
         - group_carrier_right
+      label: 'Carrier blocks'
+      region: content
       parent_name: ''
       weight: 2
       format_type: tabs
       format_settings:
-        id: ''
         classes: ''
+        id: ''
         direction: horizontal
-      label: 'Carrier blocks'
-      region: content
     group_carrier_left:
       children:
         - field_carrier_title_left
         - field_carrier_box_left
+      label: 'Left Carrier block'
+      region: content
       parent_name: group_carrier
       weight: 20
       format_type: tab
       format_settings:
-        id: ''
         classes: ''
+        id: ''
         formatter: open
         description: ''
         required_fields: true
-      label: 'Left Carrier block'
-      region: content
     group_carrier_right:
       children:
         - field_carrier_title_right
         - field_carrier_box_right
+      label: 'Right Carrier block'
+      region: content
       parent_name: group_carrier
       weight: 21
       format_type: tab
       format_settings:
-        id: ''
         classes: ''
+        id: ''
         formatter: closed
         description: ''
         required_fields: true
-      label: 'Right Carrier block'
-      region: content
 id: node.carrier_page.default
 targetEntityType: node
 bundle: carrier_page
@@ -91,83 +91,83 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_carrier_about:
+    type: text_textarea
     weight: 8
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: text_textarea
-    region: content
   field_carrier_box_left:
+    type: text_textarea
     weight: 27
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: text_textarea
-    region: content
   field_carrier_box_right:
+    type: text_textarea
     weight: 28
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: text_textarea
-    region: content
   field_carrier_callout:
+    type: text_textarea
     weight: 3
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: text_textarea
-    region: content
   field_carrier_email:
-    weight: 5
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
     type: email_default
+    weight: 5
     region: content
+    settings:
+      placeholder: ''
+      size: 60
+    third_party_settings: {  }
   field_carrier_more_button:
+    type: link_default
     weight: 9
+    region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
-    type: link_default
-    region: content
   field_carrier_phone:
+    type: string_textfield
     weight: 4
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_carrier_title_left:
+    type: string_textfield
     weight: 26
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_carrier_title_right:
+    type: string_textfield
     weight: 27
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_metatags:
+    type: metatag_firehose
     weight: 51
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: metatag_firehose
-    region: content
   langcode:
     type: language_select
     weight: 2
@@ -183,24 +183,24 @@ content:
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 8
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 11
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 9
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -213,16 +213,16 @@ content:
   uid:
     type: entity_reference_autocomplete
     weight: 6
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
-    region: content
     third_party_settings: {  }
   url_redirects:
     weight: 50
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden: {  }

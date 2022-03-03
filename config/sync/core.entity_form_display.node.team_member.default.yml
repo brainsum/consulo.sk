@@ -24,17 +24,17 @@ third_party_settings:
     group_contact_page:
       children:
         - field_contact_page
+      label: 'For Contact Page'
+      region: content
       parent_name: ''
       weight: 14
       format_type: fieldset
       format_settings:
         label: 'For Contact Page'
+        classes: ''
+        id: ''
         description: ''
         required_fields: true
-        id: ''
-        classes: ''
-      label: 'For Contact Page'
-      region: content
 id: node.team_member.default
 targetEntityType: node
 bundle: team_member
@@ -43,13 +43,13 @@ content:
   body:
     type: text_textarea_with_summary
     weight: 7
+    region: content
     settings:
       rows: 9
       summary_rows: 3
       placeholder: ''
       show_summary: false
     third_party_settings: {  }
-    region: content
   created:
     type: datetime_timestamp
     weight: 2
@@ -64,53 +64,53 @@ content:
       display_label: true
     third_party_settings: {  }
   field_email_address:
-    weight: 11
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
     type: email_default
+    weight: 11
     region: content
+    settings:
+      placeholder: ''
+      size: 60
+    third_party_settings: {  }
   field_facebook_link:
+    type: link_default
     weight: 13
+    region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
-    type: link_default
-    region: content
   field_image:
+    type: image_image
     weight: 8
+    region: content
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
-    type: image_image
-    region: content
   field_phone:
+    type: string_textfield
     weight: 12
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_position:
+    type: string_textfield
     weight: 10
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_praxis:
+    type: text_textarea
     weight: 9
+    region: content
     settings:
       rows: 1
       placeholder: ''
     third_party_settings: {  }
-    type: text_textarea
-    region: content
   langcode:
     type: language_select
     weight: 2
@@ -126,24 +126,24 @@ content:
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 3
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 6
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 4
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -156,16 +156,16 @@ content:
   uid:
     type: entity_reference_autocomplete
     weight: 1
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
-    region: content
     third_party_settings: {  }
   url_redirects:
     weight: 50
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden: {  }

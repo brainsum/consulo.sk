@@ -17,30 +17,30 @@ bundle: partner
 mode: default
 content:
   field_partner_logo:
-    weight: 0
+    type: image
     label: hidden
     settings:
-      image_style: partner_logo
       image_link: ''
+      image_style: partner_logo
     third_party_settings: {  }
-    type: image
+    weight: 0
     region: content
   field_partner_website:
-    weight: 1
+    type: link
     label: hidden
     settings:
       trim_length: 255
-      rel: nofollow
-      target: _blank
       url_only: false
       url_plain: false
+      rel: nofollow
+      target: _blank
     third_party_settings: {  }
-    type: link
+    weight: 1
     region: content
   links:
-    weight: 2
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 2
+    region: content
 hidden:
   langcode: true

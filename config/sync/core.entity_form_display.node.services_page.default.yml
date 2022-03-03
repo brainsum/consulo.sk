@@ -35,137 +35,137 @@ third_party_settings:
         - group_section_2
         - group_section_3
         - group_section_4
+      label: Sections
+      region: content
       parent_name: ''
       weight: 2
       format_type: tabs
       format_settings:
-        id: ''
         classes: ''
+        id: ''
         direction: horizontal
-      label: Sections
-      region: content
     group_section_1:
       children:
         - group_elements
+      label: 'Section 1'
+      region: content
       parent_name: group_sections
       weight: 9
       format_type: tab
       format_settings:
-        id: section1
         classes: ''
+        id: section1
         formatter: open
         description: ''
         required_fields: false
-      label: 'Section 1'
-      region: content
     group_section_2:
       children:
         - field_section_2_title
         - field_section_2_item
+      label: 'Section 2'
+      region: content
       parent_name: group_sections
       weight: 10
       format_type: tab
       format_settings:
-        id: section2
         classes: ''
+        id: section2
         formatter: closed
         description: ''
         required_fields: false
-      label: 'Section 2'
-      region: content
     group_section_3:
       children:
         - field_section_3_title
         - field_section_3_item
+      label: 'Section 3'
+      region: content
       parent_name: group_sections
       weight: 11
       format_type: tab
       format_settings:
-        id: section3
         classes: ''
+        id: section3
         formatter: closed
         description: ''
         required_fields: false
-      label: 'Section 3'
-      region: content
     group_section_4:
       children:
         - field_section_4_title
         - body
+      label: 'Section 4'
+      region: content
       parent_name: group_sections
       weight: 12
       format_type: tab
       format_settings:
-        id: section4
         classes: ''
+        id: section4
         formatter: closed
         description: ''
         required_fields: false
-      label: 'Section 4'
-      region: content
     group_elements:
       children:
         - group_element_1
         - group_element_2
         - group_element_3
+      label: Elements
+      region: content
       parent_name: group_section_1
       weight: 20
       format_type: tabs
       format_settings:
         label: Elements
-        direction: vertical
-        id: ''
         classes: ''
-      label: Elements
-      region: content
+        id: ''
+        direction: vertical
     group_element_1:
       children:
         - field_element_1_icon
         - field_element_1_title
         - field_element_1_item
+      label: 'Element 1'
+      region: content
       parent_name: group_elements
       weight: 20
       format_type: tab
       format_settings:
-        id: element1
         classes: ''
+        id: element1
         formatter: open
         description: ''
         required_fields: false
-      label: 'Element 1'
-      region: content
     group_element_2:
       children:
         - field_element_2_icon
         - field_element_2_title
         - field_element_2_item
+      label: 'Element 2'
+      region: content
       parent_name: group_elements
       weight: 21
       format_type: tab
       format_settings:
-        id: element2
         classes: ''
+        id: element2
         formatter: closed
         description: ''
         required_fields: false
-      label: 'Element 2'
-      region: content
     group_element_3:
       children:
         - field_element_3_icon
         - field_element_3_title
         - field_element_3_item
+      label: 'Element 3'
+      region: content
       parent_name: group_elements
       weight: 22
       format_type: tab
       format_settings:
-        id: element3
         classes: ''
+        id: element3
         formatter: closed
         description: ''
         required_fields: false
-      label: 'Element 3'
-      region: content
 id: node.services_page.default
 targetEntityType: node
 bundle: services_page
@@ -174,13 +174,13 @@ content:
   body:
     type: text_textarea_with_summary
     weight: 29
+    region: content
     settings:
       rows: 9
       summary_rows: 3
       placeholder: ''
       show_summary: false
     third_party_settings: {  }
-    region: content
   created:
     type: datetime_timestamp
     weight: 4
@@ -188,123 +188,123 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_element_1_icon:
+    type: image_image
     weight: 30
+    region: content
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
-    type: image_image
-    region: content
   field_element_1_item:
+    type: string_textfield
     weight: 32
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_element_1_title:
+    type: string_textfield
     weight: 31
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_element_2_icon:
+    type: image_image
     weight: 31
+    region: content
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
-    type: image_image
-    region: content
   field_element_2_item:
+    type: string_textfield
     weight: 33
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_element_2_title:
+    type: string_textfield
     weight: 32
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_element_3_icon:
+    type: image_image
     weight: 32
+    region: content
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
-    type: image_image
-    region: content
   field_element_3_item:
+    type: string_textfield
     weight: 34
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_element_3_title:
+    type: string_textfield
     weight: 33
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_metatags:
+    type: metatag_firehose
     weight: 51
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: metatag_firehose
-    region: content
   field_section_2_item:
+    type: string_textfield
     weight: 27
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_section_2_title:
+    type: string_textfield
     weight: 26
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_section_3_item:
+    type: string_textfield
     weight: 28
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_section_3_title:
+    type: string_textfield
     weight: 27
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_section_4_title:
+    type: string_textfield
     weight: 28
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   langcode:
     type: language_select
     weight: 2
@@ -320,24 +320,24 @@ content:
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 5
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 8
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 6
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -350,16 +350,16 @@ content:
   uid:
     type: entity_reference_autocomplete
     weight: 3
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
-    region: content
     third_party_settings: {  }
   url_redirects:
     weight: 50
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden: {  }

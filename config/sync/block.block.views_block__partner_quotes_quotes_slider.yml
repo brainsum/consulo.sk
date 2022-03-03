@@ -18,13 +18,13 @@ plugin: 'views_block:partner_quotes-quotes_slider'
 settings:
   id: 'views_block:partner_quotes-quotes_slider'
   label: ''
-  provider: views
   label_display: visible
+  provider: views
   views_label: ''
   items_per_page: none
 visibility:
   request_path:
     id: request_path
-    pages: /node/8
     negate: false
     context_mapping: {  }
+    pages: /node/8

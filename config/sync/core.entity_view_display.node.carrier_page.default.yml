@@ -25,87 +25,87 @@ bundle: carrier_page
 mode: default
 content:
   field_carrier_about:
-    weight: 101
+    type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 101
     region: content
   field_carrier_box_left:
-    weight: 106
+    type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 106
     region: content
   field_carrier_box_right:
-    weight: 107
+    type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 107
     region: content
   field_carrier_callout:
-    weight: 108
+    type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 108
     region: content
   field_carrier_email:
-    weight: 110
+    type: basic_string
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: basic_string
+    weight: 110
     region: content
   field_carrier_more_button:
-    weight: 102
+    type: link
     label: hidden
     settings:
       trim_length: 255
-      url_plain: true
       url_only: false
+      url_plain: true
       rel: '0'
       target: '0'
     third_party_settings: {  }
-    type: link
+    weight: 102
     region: content
   field_carrier_phone:
-    weight: 109
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 109
     region: content
   field_carrier_title_left:
-    weight: 104
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 104
     region: content
   field_carrier_title_right:
-    weight: 105
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 105
     region: content
   field_metatags:
-    weight: 111
+    type: metatag_empty_formatter
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: metatag_empty_formatter
+    weight: 111
     region: content
   links:
-    weight: 100
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 100
+    region: content
 hidden:
   langcode: true

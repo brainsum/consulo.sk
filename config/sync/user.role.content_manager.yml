@@ -1,7 +1,21 @@
 uuid: 2de40be3-41a7-4a50-82bb-45e6fd06e8f9
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - node.type.carrier_page
+    - node.type.contact_page
+    - node.type.frontpage_slider
+    - node.type.page
+    - node.type.partner
+    - node.type.partner_quote
+    - node.type.services_page
+    - node.type.team_member
+  module:
+    - node
+    - shortcut
+    - system
+    - toolbar
 id: content_manager
 label: 'Content manager'
 weight: 3

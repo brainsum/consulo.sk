@@ -1,9 +1,9 @@
+_core:
+  default_config_hash: jv0PKCJEOq2bOwY9RspuPZCf67ifVJ4tfTk-BfZMw8k
+langcode: sk
 site_key: 6Ld9KtcZAAAAAJV2OrppKinfcVz5HRZsHwaAhjT0
 secret_key: 6Ld9KtcZAAAAAM8_m27iKyjnpUL7ijK3MuXBRQkD
 verify_hostname: true
 default_challenge: captcha/Math
-error_message: 'Antibot verification failed.'
+error_message: 'Overenie antibotom zlyhalo.'
 cacheable: false
-_core:
-  default_config_hash: jv0PKCJEOq2bOwY9RspuPZCf67ifVJ4tfTk-BfZMw8k
-langcode: sk

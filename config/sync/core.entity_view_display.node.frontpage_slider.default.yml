@@ -18,22 +18,22 @@ bundle: frontpage_slider
 mode: default
 content:
   body:
-    label: hidden
     type: text_default
-    weight: 2
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 2
     region: content
   field_slider_image:
-    weight: 1
+    type: image_url
     label: hidden
     settings:
       image_style: ''
     third_party_settings: {  }
-    type: image_url
+    weight: 1
     region: content
   field_slider_link:
-    weight: 3
+    type: link
     label: hidden
     settings:
       trim_length: 80
@@ -42,12 +42,12 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
+    weight: 3
     region: content
   links:
-    weight: 0
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   langcode: true

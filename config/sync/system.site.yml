@@ -1,6 +1,9 @@
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
+langcode: sk
 uuid: dbbffbdb-92ab-48aa-b86e-227856d925ba
 name: Consulo
-mail: finance@consulo.sk
+mail: web@consulo.sk
 slogan: ''
 page:
   403: ''
@@ -8,8 +11,5 @@ page:
   front: /node
 admin_compact_mode: false
 weight_select_max: 100
-langcode: sk
 default_langcode: sk
-_core:
-  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
 mail_notification: ''

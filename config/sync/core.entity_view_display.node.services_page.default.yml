@@ -34,271 +34,271 @@ third_party_settings:
         - group_section_element_1
         - group_section_element_2
         - group_section_element_3
+      label: 'Section 1'
       parent_name: ''
+      region: content
       weight: 0
       format_type: html_element
       format_settings:
         label: 'Section 1'
+        classes: services-section
+        id: services_section1
         element: div
         show_label: false
         label_element: h3
         attributes: ''
         effect: none
         speed: fast
-        id: services_section1
-        classes: services-section
-      label: 'Section 1'
-      region: content
     group_section_2:
       children:
         - field_section_2_title
         - field_section_2_item
+      label: 'Section 2'
       parent_name: ''
+      region: content
       weight: 1
       format_type: html_element
       format_settings:
         label: 'Section 2'
+        classes: services-section
+        id: services_section2
         element: div
         show_label: false
         label_element: h3
         attributes: ''
         effect: none
         speed: fast
-        id: services_section2
-        classes: services-section
-      label: 'Section 2'
-      region: content
     group_section_3:
       children:
         - field_section_3_title
         - field_section_3_item
+      label: 'Section 3'
       parent_name: ''
+      region: content
       weight: 2
       format_type: html_element
       format_settings:
         label: 'Section 3'
+        classes: services-section
+        id: services_section3
         element: div
         show_label: false
         label_element: h3
         attributes: ''
         effect: none
         speed: fast
-        id: services_section3
-        classes: services-section
-      label: 'Section 3'
-      region: content
     group_section_4:
       children:
         - field_section_4_title
         - body
+      label: 'Section 4'
       parent_name: ''
+      region: content
       weight: 3
       format_type: html_element
       format_settings:
         label: 'Section 4'
+        classes: services-section
+        id: services_section4
         element: div
         show_label: false
         label_element: h3
         attributes: ''
         effect: none
         speed: fast
-        id: services_section4
-        classes: services-section
-      label: 'Section 4'
-      region: content
     group_section_element_1:
       children:
         - field_element_1_icon
         - field_element_1_title
         - field_element_1_item
+      label: 'Section element 1'
       parent_name: group_section_1
+      region: content
       weight: 20
       format_type: html_element
       format_settings:
         label: 'Section element 1'
+        classes: section-element
+        id: ''
         element: span
         show_label: false
         label_element: h3
         attributes: ''
         effect: none
         speed: fast
-        id: ''
-        classes: section-element
-      label: 'Section element 1'
-      region: content
     group_section_element_2:
       children:
         - field_element_2_icon
         - field_element_2_title
         - field_element_2_item
+      label: 'Section element 2'
       parent_name: group_section_1
+      region: content
       weight: 21
       format_type: html_element
       format_settings:
         label: 'Section element 2'
+        classes: section-element
+        id: ''
         element: span
         show_label: false
         label_element: h3
         attributes: ''
         effect: none
         speed: fast
-        id: ''
-        classes: section-element
-      label: 'Section element 2'
-      region: content
     group_section_element_3:
       children:
         - field_element_3_icon
         - field_element_3_title
         - field_element_3_item
+      label: 'Section element 3'
       parent_name: group_section_1
+      region: content
       weight: 22
       format_type: html_element
       format_settings:
         label: 'Section element 3'
+        classes: section-element
+        id: ''
         element: span
         show_label: false
         label_element: h3
         attributes: ''
         effect: none
         speed: fast
-        id: ''
-        classes: section-element
-      label: 'Section element 3'
-      region: content
 id: node.services_page.default
 targetEntityType: node
 bundle: services_page
 mode: default
 content:
   body:
-    label: hidden
     type: text_default
-    weight: 6
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 6
     region: content
   field_element_1_icon:
-    weight: 4
+    type: image
     label: hidden
     settings:
-      image_style: services_icon
       image_link: ''
+      image_style: services_icon
     third_party_settings: {  }
-    type: image
+    weight: 4
     region: content
   field_element_1_item:
-    weight: 6
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 6
     region: content
   field_element_1_title:
-    weight: 5
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 5
     region: content
   field_element_2_icon:
-    weight: 5
+    type: image
     label: hidden
     settings:
-      image_style: services_icon
       image_link: ''
+      image_style: services_icon
     third_party_settings: {  }
-    type: image
+    weight: 5
     region: content
   field_element_2_item:
-    weight: 7
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 7
     region: content
   field_element_2_title:
-    weight: 6
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 6
     region: content
   field_element_3_icon:
-    weight: 6
+    type: image
     label: hidden
     settings:
-      image_style: services_icon
       image_link: ''
+      image_style: services_icon
     third_party_settings: {  }
-    type: image
+    weight: 6
     region: content
   field_element_3_item:
-    weight: 8
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 8
     region: content
   field_element_3_title:
-    weight: 7
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 7
     region: content
   field_metatags:
-    weight: 23
+    type: metatag_empty_formatter
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: metatag_empty_formatter
+    weight: 23
     region: content
   field_section_2_item:
-    weight: 4
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 4
     region: content
   field_section_2_title:
-    weight: 3
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 3
     region: content
   field_section_3_item:
-    weight: 5
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 5
     region: content
   field_section_3_title:
-    weight: 4
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 4
     region: content
   field_section_4_title:
-    weight: 5
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 5
     region: content
 hidden:
   langcode: true

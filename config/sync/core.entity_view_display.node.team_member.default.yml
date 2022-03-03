@@ -24,31 +24,31 @@ bundle: team_member
 mode: default
 content:
   body:
-    label: hidden
     type: text_default
-    weight: 1
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 1
     region: content
   field_contact_page:
-    weight: 8
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 8
     region: content
   field_email_address:
-    weight: 4
+    type: basic_string
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: basic_string
+    weight: 4
     region: content
   field_facebook_link:
-    weight: 5
+    type: link_separate
     label: hidden
     settings:
       trim_length: 80
@@ -57,44 +57,44 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link_separate
+    weight: 5
     region: content
   field_image:
-    weight: 2
+    type: image
     label: hidden
     settings:
-      image_style: team_member_slider
       image_link: ''
+      image_style: team_member_slider
     third_party_settings: {  }
-    type: image
+    weight: 2
     region: content
   field_phone:
-    weight: 6
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 6
     region: content
   field_position:
-    weight: 7
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 7
     region: content
   field_praxis:
-    weight: 3
+    type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 3
     region: content
   links:
-    weight: 0
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   langcode: true
