@@ -12,7 +12,11 @@ id: contact
 title: Contact
 description: 'Contact form on Contact page.'
 category: ''
-elements: |-
+elements: |
+  '#attributes':
+    class:
+      - contact-form
+    id: base-contact-form
   flexbox:
     '#type': webform_flexbox
     static_container:
@@ -22,17 +26,19 @@ elements: |-
         '#markup': '<h2>If you have any questions, do not hesitate to contact us</h2>'
       static_phone:
         '#type': processed_text
-        '#text': '<a class="field field--name-field-company-phone field--type-string" href="tel:+421904308139"><i class="fas fa-phone fa-flip-horizontal"></i>+421&nbsp;904&nbsp;308&nbsp;139</a>'
+        '#text': '<a class="field field--name-field-company-phone field--type-string" href="tel:+421904&n308139"><i class="fas fa-phone fa-flip-horizontal"></i>+421&nbsp;904&nbsp;308&nbsp;139</a>'
         '#format': full_html
       static_email:
         '#type': processed_text
         '#text': |
           <a class="field field--name-field-company-email field--type-email" href="mailto:finance@consulo.sk"><i class="fas fa-envelope"></i>finance@consulo.sk</a>
+          
         '#format': full_html
       static_languages:
         '#type': processed_text
         '#text': |
           <div class="contact__languages"><span class="contact__language language--sk">SK</span> <span class="contact__language language--hu">HU</span> <span class="contact__language language--en">EN</span></div>
+          
         '#format': full_html
     form_container:
       '#type': container
@@ -63,6 +69,7 @@ elements: |-
         '#type': processed_text
         '#text': |
           <p>Fields marked with * are required.</p>
+          
         '#format': basic_html
   actions:
     '#type': webform_actions
@@ -90,7 +97,6 @@ settings:
   form_previous_submissions: true
   form_confidential: false
   form_confidential_message: ''
-  form_disable_remote_addr: false
   form_convert_anonymous: false
   form_prepopulate: false
   form_prepopulate_source_entity: false
@@ -111,12 +117,6 @@ settings:
   form_access_denied_message: ''
   form_access_denied_attributes: {  }
   form_file_limit: ''
-  form_attributes:
-    class:
-      - contact-form
-    id: base-contact-form
-  form_method: ''
-  form_action: ''
   share: false
   share_node: false
   share_theme_name: ''
@@ -178,7 +178,7 @@ settings:
   confirmation_type: message
   confirmation_url: ''
   confirmation_title: ''
-  confirmation_message: 'Thank you for your trust. We will contact you as soon as possible. Team CONSULO'
+  confirmation_message: 'Thank you for your inquiry. We will contact you soon.'
   confirmation_attributes: {  }
   confirmation_back: true
   confirmation_back_label: ''
@@ -205,8 +205,8 @@ settings:
   results_customize: false
   token_view: false
   token_update: false
-  token_delete: false
   serial_disabled: false
+  form_remote_addr: true
 access:
   create:
     roles:
@@ -266,9 +266,9 @@ handlers:
     settings:
       states:
         - completed
-      to_mail: finance@consulo.sk
+      to_mail: devel+consulo@brainsum.com
       to_options: {  }
-      bcc_mail: dev+consulo@brainsum.com
+      bcc_mail: ''
       bcc_options: {  }
       cc_mail: ''
       cc_options: {  }
@@ -280,7 +280,7 @@ handlers:
       sender_mail: ''
       sender_name: ''
       subject: 'New Contact message from [site:name]'
-      body: "The contact form has been filled out.<br />\r\n<br />\r\nQuery sent at:&nbsp;[webform_submission:created]<br />\r\n<br />\r\nData:<br />\r\n<br />\r\n[webform_submission:values]"
+      body: _default
       excluded_elements:
         form_title: form_title
         static_phone: static_phone
@@ -317,12 +317,12 @@ handlers:
       from_mail: _default
       from_options: {  }
       from_name: _default
-      reply_to: finance@consulo.sk
+      reply_to: ''
       return_path: ''
       sender_mail: ''
       sender_name: ''
       subject: 'Thank you for your message!'
-      body: "Thank you for your trust. We will contact you as soon as possible.&nbsp;Team CONSULO<br />\r\n<br />\r\nQuery sent:&nbsp;[webform_submission:created]<br />\r\n<br />\r\nThe data you filled in:&nbsp;<br />\r\n<br />\r\n[webform_submission:values]<br />\r\n&nbsp;"
+      body: _default
       excluded_elements:
         form_title: form_title
         static_phone: static_phone

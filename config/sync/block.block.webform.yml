@@ -6,7 +6,6 @@ dependencies:
     - webform.webform.contact
   module:
     - node
-    - user
     - webform
   theme:
     - consulo_theme
@@ -32,12 +31,3 @@ visibility:
       node: '@node.node_route_context:node'
     bundles:
       contact_page: contact_page
-  user_role:
-    id: user_role
-    negate: false
-    context_mapping:
-      user: '@user.current_user_context:current_user'
-    roles:
-      authenticated: authenticated
-      administrator: administrator
-      content_manager: content_manager
