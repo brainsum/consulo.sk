@@ -2,12 +2,16 @@ uuid: 5196441d-10ea-4f95-b291-87f5c57c09c9
 langcode: en
 status: true
 dependencies:
+  content:
+    - 'block_content:basic:6f5867b0-554c-4b74-be79-17810250ea4a'
+  module:
+    - block_content
   theme:
     - consulo_theme
 id: footer
 theme: consulo_theme
 region: footer
-weight: -6
+weight: 0
 provider: null
 plugin: 'block_content:6f5867b0-554c-4b74-be79-17810250ea4a'
 settings:
