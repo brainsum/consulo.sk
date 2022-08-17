@@ -1,0 +1,19 @@
+uuid: a6f6412d-1ce9-4c64-b735-f2cf100cc6cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_company_phone
+    - node.type.contact_page
+id: node.contact_page.field_company_phone
+field_name: field_company_phone
+entity_type: node
+bundle: contact_page
+label: Phone
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

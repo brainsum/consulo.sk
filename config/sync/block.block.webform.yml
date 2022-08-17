@@ -11,8 +11,8 @@ dependencies:
     - consulo_theme
 id: webform
 theme: consulo_theme
-region: content
-weight: -5
+region: footer
+weight: -4
 provider: null
 plugin: webform_block
 settings:

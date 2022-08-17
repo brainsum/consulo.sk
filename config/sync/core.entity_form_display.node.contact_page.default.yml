@@ -3,6 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.contact_page.field_company_email
+    - field.field.node.contact_page.field_company_phone
     - field.field.node.contact_page.field_company_registration
     - field.field.node.contact_page.field_contact_address
     - field.field.node.contact_page.field_contact_company_name
@@ -36,6 +38,8 @@ third_party_settings:
         - field_contact_tax_number
         - field_contact_tax_number_other
         - field_company_registration
+        - field_company_phone
+        - field_company_email
       label: 'Company information'
       region: content
       parent_name: group_information
@@ -50,8 +54,6 @@ third_party_settings:
     group_contact_information:
       children:
         - field_contact_address
-        - field_company_phone
-        - field_company_email
       label: 'Contact information'
       region: content
       parent_name: group_information
@@ -73,6 +75,22 @@ content:
     weight: 2
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_company_email:
+    type: email_default
+    weight: 5
+    region: content
+    settings:
+      placeholder: ''
+      size: 60
+    third_party_settings: {  }
+  field_company_phone:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_company_registration:
     type: text_textarea
@@ -118,7 +136,8 @@ content:
     type: metatag_firehose
     weight: 51
     region: content
-    settings: {  }
+    settings:
+      sidebar: true
     third_party_settings: {  }
   langcode:
     type: language_select
