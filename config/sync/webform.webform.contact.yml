@@ -266,7 +266,7 @@ handlers:
     settings:
       states:
         - completed
-      to_mail: devel+consulo@brainsum.com
+      to_mail: 'finance@consulo.sk, pkovacs@brainsum.com'
       to_options: {  }
       bcc_mail: ''
       bcc_options: {  }
