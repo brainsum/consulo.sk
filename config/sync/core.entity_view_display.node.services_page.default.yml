@@ -184,6 +184,8 @@ content:
     settings:
       image_link: ''
       image_style: services_icon
+      image_loading:
+        attribute: lazy
     third_party_settings: {  }
     weight: 4
     region: content
@@ -209,6 +211,8 @@ content:
     settings:
       image_link: ''
       image_style: services_icon
+      image_loading:
+        attribute: lazy
     third_party_settings: {  }
     weight: 5
     region: content
@@ -234,6 +238,8 @@ content:
     settings:
       image_link: ''
       image_style: services_icon
+      image_loading:
+        attribute: lazy
     third_party_settings: {  }
     weight: 6
     region: content
