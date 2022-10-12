@@ -17,7 +17,6 @@
     .about-page & {
       padding: 2rem 2.2rem;
       position: relative;
-      min-height: 350px;
 
       @include breakpoint(medium) {
         padding: 4rem 4.4rem;
@@ -31,14 +30,14 @@
       line-height: $lh--23;
 
       @include breakpoint(medium) {
-        max-width: 50%;
+        max-width: 40%;
       }
     }
 
     .content-bgr {
       position: relative;
       width: 100%;
-      max-width: 440px;
+      max-width: 540px;
       margin: 2.5rem auto -2rem;
       display: block;
 
@@ -46,7 +45,7 @@
         position: absolute;
         bottom: 0;
         right: 4.4rem;
-        width: 40%;
+        width: 50%;
         z-index: 20;
         margin: auto;
       }
