@@ -24,7 +24,6 @@
         "drupal/config_split": "^1.4",
         "drupal/console": "^1.0.2",
         "drupal/contact_block": "^1.5",
-        "drupal/core": "^9.0",
         "drupal/core-composer-scaffold": "~9.4.3",
         "drupal/core-project-message": "~9.4.3",
         "drupal/core-recommended": "~9.4.3",
