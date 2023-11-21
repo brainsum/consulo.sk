@@ -4,8 +4,10 @@ status: true
 dependencies:
   config:
     - filter.format.basic_html
+    - filter.format.webform_default
   module:
     - contact
+    - file
     - filter
     - google_analytics
     - shortcut
@@ -20,5 +22,7 @@ permissions:
   - 'access content'
   - 'access shortcuts'
   - 'access site-wide contact form'
+  - 'delete own files'
   - 'opt-in or out of google analytics tracking'
   - 'use text format basic_html'
+  - 'use text format webform_default'

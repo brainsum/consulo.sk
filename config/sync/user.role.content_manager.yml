@@ -12,6 +12,7 @@ dependencies:
     - node.type.services_page
     - node.type.team_member
   module:
+    - file
     - node
     - shortcut
     - system
@@ -31,6 +32,7 @@ permissions:
   - 'delete any partner content'
   - 'delete any partner_quote content'
   - 'delete any team_member content'
+  - 'delete own files'
   - 'delete own partner content'
   - 'delete own partner_quote content'
   - 'delete own team_member content'

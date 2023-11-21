@@ -181,7 +181,7 @@ display:
           entity_type: file
           entity_field: filesize
           plugin_id: field
-          label: Size
+          label: Veľkosť
           exclude: false
           alter:
             alter_text: false
@@ -335,6 +335,15 @@ display:
             date_format: medium
             custom_date_format: ''
             timezone: ''
+            tooltip:
+              date_format: ''
+              custom_date_format: ''
+            time_diff:
+              enabled: false
+              future_format: '@interval hence'
+              past_format: '@interval ago'
+              granularity: 2
+              refresh: 60
         changed:
           id: changed
           table: file_managed
@@ -391,6 +400,15 @@ display:
             date_format: medium
             custom_date_format: ''
             timezone: ''
+            tooltip:
+              date_format: ''
+              custom_date_format: ''
+            time_diff:
+              enabled: false
+              future_format: '@interval hence'
+              past_format: '@interval ago'
+              granularity: 2
+              refresh: 60
         count:
           id: count
           table: file_usage
@@ -1017,7 +1035,7 @@ display:
           exception:
             value: all
             title_enable: false
-            title: All
+            title: Všetko
           title_enable: true
           title: 'File usage information for {{ arguments.fid }}'
           default_argument_type: fixed
