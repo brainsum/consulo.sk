@@ -23,9 +23,9 @@
         "drupal/classy": "^1.0",
         "drupal/config_split": "^1.4",
         "drupal/contact_block": "^1.5",
-        "drupal/core-composer-scaffold": "~10.2.0",
-        "drupal/core-project-message": "~10.2.0",
-        "drupal/core-recommended": "~10.2.0",
+        "drupal/core-composer-scaffold": "^10.2.0",
+        "drupal/core-project-message": "^10.2.0",
+        "drupal/core-recommended": "^10.2.0",
         "drupal/field_group": "^3.0",
         "drupal/gin": "^3.0@RC",
         "drupal/gin_toolbar": "^1.0@RC",
@@ -104,9 +104,6 @@
             }
         },
         "patches": {
-            "drupal/core": {
-              "#3138421": "https://www.drupal.org/files/issues/2020-05-27/3138421-75.patch"
-            }
         }
     },
     "require-dev": {
