@@ -55,6 +55,7 @@ permissions:
   - 'edit own partner_quote content'
   - 'edit own services_page content'
   - 'edit own team_member content'
+  - 'rebuild node access permissions'
   - 'revert carrier_page revisions'
   - 'revert contact_page revisions'
   - 'revert frontpage_slider revisions'

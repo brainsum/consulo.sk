@@ -16,8 +16,8 @@ global-styling:
   dependencies:
     - core/jquery
     - core/drupal
-    - core/modernizr
 slick_slider:
+  version: 2.0.0
   css:
     theme:
       vendors/slick-carousel/slick/slick.css: {}
