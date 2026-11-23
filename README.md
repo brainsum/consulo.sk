@@ -17,7 +17,7 @@ DDEV adds its database settings to `web/sites/default/settings.php`. Add the fol
 $settings['config_sync_directory'] = '../config/sync';
 ```
 
-If you reuse local settings from Wodby, remove any database credentials that override `settings.ddev.php`.
+If you reuse an existing local settings file, remove any database credentials that override `settings.ddev.php`.
 
 Import an approved local copy of the Drupal 10.6 database. This replaces the current database in this DDEV project. If you already have the database in DDEV, skip the import and take the snapshot before running updates.
 
@@ -33,4 +33,4 @@ Restore the site's public files into `web/sites/default/files/`. A database dump
 
 Use `ddev drush user:login --uid=<active-admin-uid>` to sign in locally. Check the home page, main navigation, the contact form and the content editor. DDEV captures mail sent through PHP in Mailpit, which you can open with `ddev mailpit`. reCAPTCHA submission testing needs credentials approved for the local hostname.
 
-For subsequent updates, run `ddev composer install`, then repeat the Drush update, import and cache rebuild commands. The legacy Wodby Compose configuration is for the older Drupal 10 setup.
+For subsequent updates, run `ddev composer install`, then repeat the Drush update, import and cache rebuild commands.
