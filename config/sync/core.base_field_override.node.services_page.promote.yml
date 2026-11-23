@@ -1,0 +1,22 @@
+uuid: 8c3fe798-2798-45ad-8c11-b16d24177ec3
+langcode: sk
+status: true
+dependencies:
+  config:
+    - node.type.services_page
+id: node.services_page.promote
+field_name: promote
+entity_type: node
+bundle: services_page
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Zapnúť
+  off_label: Vypnúť
+field_type: boolean
