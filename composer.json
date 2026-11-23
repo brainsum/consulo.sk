@@ -32,7 +32,7 @@
         "drupal/gin_toolbar": "^3.0",
         "drupal/google_analytics": "^4.0.0",
         "drupal/google_tag": "^2",
-        "drupal/metatag": "^2",
+        "drupal/metatag": "^2.2.7",
         "drupal/recaptcha": "^3.0",
         "drupal/recaptcha_v3": "^2.0",
         "drupal/redirect": "^1.3",
