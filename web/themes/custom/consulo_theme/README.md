@@ -104,6 +104,10 @@ and place the compiled js files to `dist` directory.
 
 ### Vendor libraries
 
+Drupal loads `vendors/slick-carousel/slick/slick.css` and `slick.min.js`
+directly. When upgrading Slick, copy both files from the locked npm release
+and update `slick_slider` in `consulo_theme.libraries.yml` to match.
+
 If you need a third party css/sass/js library and you want use it as library
 (don't merge it our src files): install it with npm to `node_modules`, then
 just run the `copyVendorsTask` from gulp.js. (It's in default/start and prod

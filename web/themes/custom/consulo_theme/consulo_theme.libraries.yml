@@ -17,6 +17,7 @@ global-styling:
     - core/jquery
     - core/drupal
 slick_slider:
+  version: 2.0.0
   css:
     theme:
       vendors/slick-carousel/slick/slick.css: {}
